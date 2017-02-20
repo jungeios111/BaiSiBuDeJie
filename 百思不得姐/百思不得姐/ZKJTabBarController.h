@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  ZKJTabBarController.h
 //  百思不得姐
 //
 //  Created by ZKJ on 2017/2/20.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface ZKJTabBarController : UITabBarController
 
 @end
-

@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		7B6938771E5ABFA0002BA43A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B6938761E5ABFA0002BA43A /* main.m */; };
 		7B69387A1E5ABFA0002BA43A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B6938791E5ABFA0002BA43A /* AppDelegate.m */; };
-		7B69387D1E5ABFA0002BA43A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B69387C1E5ABFA0002BA43A /* ViewController.m */; };
 		7B6938821E5ABFA0002BA43A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B6938811E5ABFA0002BA43A /* Assets.xcassets */; };
+		7B69388E1E5AC9C0002BA43A /* ZKJTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B69388D1E5AC9C0002BA43A /* ZKJTabBarController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -18,10 +18,10 @@
 		7B6938761E5ABFA0002BA43A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7B6938781E5ABFA0002BA43A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		7B6938791E5ABFA0002BA43A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		7B69387B1E5ABFA0002BA43A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		7B69387C1E5ABFA0002BA43A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		7B6938811E5ABFA0002BA43A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7B6938861E5ABFA0002BA43A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7B69388C1E5AC9C0002BA43A /* ZKJTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKJTabBarController.h; sourceTree = "<group>"; };
+		7B69388D1E5AC9C0002BA43A /* ZKJTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKJTabBarController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,8 +56,8 @@
 			children = (
 				7B6938781E5ABFA0002BA43A /* AppDelegate.h */,
 				7B6938791E5ABFA0002BA43A /* AppDelegate.m */,
-				7B69387B1E5ABFA0002BA43A /* ViewController.h */,
-				7B69387C1E5ABFA0002BA43A /* ViewController.m */,
+				7B69388C1E5AC9C0002BA43A /* ZKJTabBarController.h */,
+				7B69388D1E5AC9C0002BA43A /* ZKJTabBarController.m */,
 				7B6938751E5ABFA0002BA43A /* Supporting Files */,
 			);
 			path = "百思不得姐";
@@ -99,6 +99,7 @@
 		7B69386A1E5ABFA0002BA43A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = ZKJ;
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = ZKJ;
 				TargetAttributes = {
@@ -143,7 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7B69387D1E5ABFA0002BA43A /* ViewController.m in Sources */,
+				7B69388E1E5AC9C0002BA43A /* ZKJTabBarController.m in Sources */,
 				7B69387A1E5ABFA0002BA43A /* AppDelegate.m in Sources */,
 				7B6938771E5ABFA0002BA43A /* main.m in Sources */,
 			);

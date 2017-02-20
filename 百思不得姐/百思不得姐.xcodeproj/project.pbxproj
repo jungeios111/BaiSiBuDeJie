@@ -11,6 +11,10 @@
 		7B69387A1E5ABFA0002BA43A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B6938791E5ABFA0002BA43A /* AppDelegate.m */; };
 		7B6938821E5ABFA0002BA43A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B6938811E5ABFA0002BA43A /* Assets.xcassets */; };
 		7B69388E1E5AC9C0002BA43A /* ZKJTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B69388D1E5AC9C0002BA43A /* ZKJTabBarController.m */; };
+		7B6938911E5AD3F2002BA43A /* ZKJEssenceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B6938901E5AD3F2002BA43A /* ZKJEssenceController.m */; };
+		7B6938941E5AD428002BA43A /* ZKJNewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B6938931E5AD428002BA43A /* ZKJNewController.m */; };
+		7B6938971E5AD455002BA43A /* ZKJFriendTrendsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B6938961E5AD455002BA43A /* ZKJFriendTrendsController.m */; };
+		7B69389A1E5AD46B002BA43A /* ZKJMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B6938991E5AD46B002BA43A /* ZKJMeViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,14 @@
 		7B6938861E5ABFA0002BA43A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7B69388C1E5AC9C0002BA43A /* ZKJTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKJTabBarController.h; sourceTree = "<group>"; };
 		7B69388D1E5AC9C0002BA43A /* ZKJTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKJTabBarController.m; sourceTree = "<group>"; };
+		7B69388F1E5AD3F2002BA43A /* ZKJEssenceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKJEssenceController.h; sourceTree = "<group>"; };
+		7B6938901E5AD3F2002BA43A /* ZKJEssenceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKJEssenceController.m; sourceTree = "<group>"; };
+		7B6938921E5AD428002BA43A /* ZKJNewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKJNewController.h; sourceTree = "<group>"; };
+		7B6938931E5AD428002BA43A /* ZKJNewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKJNewController.m; sourceTree = "<group>"; };
+		7B6938951E5AD455002BA43A /* ZKJFriendTrendsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKJFriendTrendsController.h; sourceTree = "<group>"; };
+		7B6938961E5AD455002BA43A /* ZKJFriendTrendsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKJFriendTrendsController.m; sourceTree = "<group>"; };
+		7B6938981E5AD46B002BA43A /* ZKJMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKJMeViewController.h; sourceTree = "<group>"; };
+		7B6938991E5AD46B002BA43A /* ZKJMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKJMeViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +70,14 @@
 				7B6938791E5ABFA0002BA43A /* AppDelegate.m */,
 				7B69388C1E5AC9C0002BA43A /* ZKJTabBarController.h */,
 				7B69388D1E5AC9C0002BA43A /* ZKJTabBarController.m */,
+				7B69388F1E5AD3F2002BA43A /* ZKJEssenceController.h */,
+				7B6938901E5AD3F2002BA43A /* ZKJEssenceController.m */,
+				7B6938921E5AD428002BA43A /* ZKJNewController.h */,
+				7B6938931E5AD428002BA43A /* ZKJNewController.m */,
+				7B6938951E5AD455002BA43A /* ZKJFriendTrendsController.h */,
+				7B6938961E5AD455002BA43A /* ZKJFriendTrendsController.m */,
+				7B6938981E5AD46B002BA43A /* ZKJMeViewController.h */,
+				7B6938991E5AD46B002BA43A /* ZKJMeViewController.m */,
 				7B6938751E5ABFA0002BA43A /* Supporting Files */,
 			);
 			path = "百思不得姐";
@@ -146,7 +166,11 @@
 			files = (
 				7B69388E1E5AC9C0002BA43A /* ZKJTabBarController.m in Sources */,
 				7B69387A1E5ABFA0002BA43A /* AppDelegate.m in Sources */,
+				7B69389A1E5AD46B002BA43A /* ZKJMeViewController.m in Sources */,
+				7B6938911E5AD3F2002BA43A /* ZKJEssenceController.m in Sources */,
+				7B6938971E5AD455002BA43A /* ZKJFriendTrendsController.m in Sources */,
 				7B6938771E5ABFA0002BA43A /* main.m in Sources */,
+				7B6938941E5AD428002BA43A /* ZKJNewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

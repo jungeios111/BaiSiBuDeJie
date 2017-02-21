@@ -477,7 +477,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer: Zhihao Song (5Z36TS2C63)";
 				DEVELOPMENT_TEAM = PU39U8DFF5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "百思不得姐/ZkjBaiSi.pch";
+				GCC_PREFIX_HEADER = "百思不得姐/Classes/Other-其他/其他/ZkjBaiSi.pch";
 				INFOPLIST_FILE = "百思不得姐/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -496,7 +496,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer: Zhihao Song (5Z36TS2C63)";
 				DEVELOPMENT_TEAM = PU39U8DFF5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "百思不得姐/ZkjBaiSi.pch";
+				GCC_PREFIX_HEADER = "百思不得姐/Classes/Other-其他/其他/ZkjBaiSi.pch";
 				INFOPLIST_FILE = "百思不得姐/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

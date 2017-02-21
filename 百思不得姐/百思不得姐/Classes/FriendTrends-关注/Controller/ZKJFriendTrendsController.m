@@ -17,6 +17,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    // 设置背景色
+    self.view.backgroundColor = ZKJGlobalBGColor;
     self.navigationItem.title = @"我的关注";
     self.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithImage:@"friendsRecommentIcon" andHighLightImage:@"friendsRecommentIcon-click" andTarget:self andAction:@selector(btnClick)];
 }

@@ -17,8 +17,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    // 设置背景色
+    self.view.backgroundColor = ZKJGlobalBGColor;
     self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"MainTitle"]];
     self.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithImage:@"MainTagSubIcon" andHighLightImage:@"MainTagSubIconClick" andTarget:self andAction:@selector(btnClick)];
+    
+    
+    
 }
 
 - (void)btnClick

@@ -16,22 +16,35 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    self.navigationItem.title = @"我的";
+    
+    UIButton *setBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [setBtn setBackgroundImage:[UIImage imageNamed:@"mine-setting-icon"] forState:UIControlStateNormal];
+    [setBtn setBackgroundImage:[UIImage imageNamed:@"mine-setting-icon-click"] forState:UIControlStateHighlighted];
+    setBtn.size = setBtn.currentBackgroundImage.size;
+    [setBtn addTarget:self action:@selector(setClick) forControlEvents:UIControlEventTouchUpInside];
+    
+    UIButton *moonBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [moonBtn setBackgroundImage:[UIImage imageNamed:@"mine-moon-icon"] forState:UIControlStateNormal];
+    [moonBtn setBackgroundImage:[UIImage imageNamed:@"mine-moon-icon-click"] forState:UIControlStateHighlighted];
+    moonBtn.size = moonBtn.currentBackgroundImage.size;
+    [moonBtn addTarget:self action:@selector(moonClick) forControlEvents:UIControlEventTouchUpInside];
+    
+    UIBarButtonItem *item1 = [[UIBarButtonItem alloc] initWithCustomView:setBtn];
+    UIBarButtonItem *item2 = [[UIBarButtonItem alloc] initWithCustomView:moonBtn];
+    self.navigationItem.rightBarButtonItems = @[item1, item2];
+    
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)setClick
+{
+    ZKJLogFunC;
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)moonClick
+{
+    ZKJLogFunC;
 }
-*/
 
 @end

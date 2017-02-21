@@ -11,4 +11,12 @@
 
 #import "UIView+ZKJExtension.h"
 
+#ifdef DEBUG
+#define ZKJLog(...) NSLog(__VA_ARGS__)
+#else
+#define ZKJLog(...)
+#endif
+
+#define ZKJLogFunC ZKJLog(@"%s", __func__)
+
 #endif /* ZkjBaiSi_pch */

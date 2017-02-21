@@ -18,6 +18,8 @@
 @property(nonatomic,assign) CGFloat width;
 /** H */
 @property(nonatomic,assign) CGFloat height;
+/** size */
+@property(nonatomic,assign) CGSize size;
 
 //- (CGFloat)x;
 //- (void)setX:(CGFloat)x;

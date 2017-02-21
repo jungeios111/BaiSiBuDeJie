@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7B457CCB1E5BDC32009149A1 /* UIView+ZKJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B457CCA1E5BDC32009149A1 /* UIView+ZKJExtension.m */; };
 		7B6938771E5ABFA0002BA43A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B6938761E5ABFA0002BA43A /* main.m */; };
 		7B69387A1E5ABFA0002BA43A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B6938791E5ABFA0002BA43A /* AppDelegate.m */; };
 		7B6938821E5ABFA0002BA43A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B6938811E5ABFA0002BA43A /* Assets.xcassets */; };
@@ -19,6 +20,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7B457CC91E5BDC32009149A1 /* UIView+ZKJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ZKJExtension.h"; sourceTree = "<group>"; };
+		7B457CCA1E5BDC32009149A1 /* UIView+ZKJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ZKJExtension.m"; sourceTree = "<group>"; };
+		7B457CCC1E5BDF40009149A1 /* ZkjBaiSi.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZkjBaiSi.pch; sourceTree = "<group>"; };
 		7B6938721E5ABFA0002BA43A /* 百思不得姐.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "百思不得姐.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B6938761E5ABFA0002BA43A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7B6938781E5ABFA0002BA43A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -83,6 +87,9 @@
 				7B6938991E5AD46B002BA43A /* ZKJMeViewController.m */,
 				7B69389B1E5AE66D002BA43A /* ZKJTabBar.h */,
 				7B69389C1E5AE66D002BA43A /* ZKJTabBar.m */,
+				7B457CC91E5BDC32009149A1 /* UIView+ZKJExtension.h */,
+				7B457CCA1E5BDC32009149A1 /* UIView+ZKJExtension.m */,
+				7B457CCC1E5BDF40009149A1 /* ZkjBaiSi.pch */,
 				7B6938751E5ABFA0002BA43A /* Supporting Files */,
 			);
 			path = "百思不得姐";
@@ -169,6 +176,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B457CCB1E5BDC32009149A1 /* UIView+ZKJExtension.m in Sources */,
 				7B69388E1E5AC9C0002BA43A /* ZKJTabBarController.m in Sources */,
 				7B69389D1E5AE66D002BA43A /* ZKJTabBar.m in Sources */,
 				7B69387A1E5ABFA0002BA43A /* AppDelegate.m in Sources */,
@@ -278,6 +286,8 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Zhihao Song (5Z36TS2C63)";
 				DEVELOPMENT_TEAM = PU39U8DFF5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "百思不得姐/ZkjBaiSi.pch";
 				INFOPLIST_FILE = "百思不得姐/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -295,6 +305,8 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Zhihao Song (5Z36TS2C63)";
 				DEVELOPMENT_TEAM = PU39U8DFF5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "百思不得姐/ZkjBaiSi.pch";
 				INFOPLIST_FILE = "百思不得姐/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -324,6 +336,7 @@
 				7B69388B1E5ABFA0002BA43A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

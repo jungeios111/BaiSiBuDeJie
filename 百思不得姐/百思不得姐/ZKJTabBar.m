@@ -33,15 +33,18 @@
 {
     [super layoutSubviews];
     
+    CGFloat width = self.width;
+    CGFloat height = self.height;
+    
     // 设置发布按钮的frame
     self.publishBtn.bounds = CGRectMake(0, 0, self.publishBtn.currentBackgroundImage.size.width, self.publishBtn.currentBackgroundImage.size.height);
-    self.publishBtn.center = CGPointMake(self.frame.size.width * 0.5, self.frame.size.height * 0.5);
+    self.publishBtn.center = CGPointMake(width * 0.5, height * 0.5);
     
     // 设置其他UITabBarButton的frame
     CGFloat X = 0;
     CGFloat Y = 0;
-    CGFloat W = self.frame.size.width / 5;
-    CGFloat H = self.frame.size.height;
+    CGFloat W = width / 5;
+    CGFloat H = height;
     NSInteger index = 0;
     for (UIView *btn in self.subviews) {
         if (![btn isKindOfClass:[UIControl class]] || btn == self.publishBtn) continue;

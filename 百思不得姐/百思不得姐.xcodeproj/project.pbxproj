@@ -7,43 +7,43 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7B457CCB1E5BDC32009149A1 /* UIView+ZKJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B457CCA1E5BDC32009149A1 /* UIView+ZKJExtension.m */; };
-		7B457CD21E5C2135009149A1 /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B457CD11E5C2135009149A1 /* UIBarButtonItem+Extension.m */; };
-		7B6938771E5ABFA0002BA43A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B6938761E5ABFA0002BA43A /* main.m */; };
-		7B69387A1E5ABFA0002BA43A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B6938791E5ABFA0002BA43A /* AppDelegate.m */; };
+		7B457CFE1E5C2FC6009149A1 /* ZKJEssenceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B457CD71E5C2FC6009149A1 /* ZKJEssenceController.m */; };
+		7B457CFF1E5C2FC6009149A1 /* ZKJFriendTrendsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B457CDD1E5C2FC6009149A1 /* ZKJFriendTrendsController.m */; };
+		7B457D001E5C2FC6009149A1 /* ZKJMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B457CE31E5C2FC6009149A1 /* ZKJMeViewController.m */; };
+		7B457D011E5C2FC6009149A1 /* ZKJNewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B457CE91E5C2FC6009149A1 /* ZKJNewController.m */; };
+		7B457D021E5C2FC6009149A1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B457CEE1E5C2FC6009149A1 /* AppDelegate.m */; };
+		7B457D031E5C2FC6009149A1 /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B457CF11E5C2FC6009149A1 /* UIBarButtonItem+Extension.m */; };
+		7B457D041E5C2FC6009149A1 /* UIView+ZKJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B457CF31E5C2FC6009149A1 /* UIView+ZKJExtension.m */; };
+		7B457D051E5C2FC6009149A1 /* ZKJTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B457CF61E5C2FC6009149A1 /* ZKJTabBarController.m */; };
+		7B457D061E5C2FC6009149A1 /* ZKJTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B457CFA1E5C2FC6009149A1 /* ZKJTabBar.m */; };
+		7B457D071E5C2FC6009149A1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B457CFC1E5C2FC6009149A1 /* main.m */; };
 		7B6938821E5ABFA0002BA43A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B6938811E5ABFA0002BA43A /* Assets.xcassets */; };
-		7B69388E1E5AC9C0002BA43A /* ZKJTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B69388D1E5AC9C0002BA43A /* ZKJTabBarController.m */; };
-		7B6938911E5AD3F2002BA43A /* ZKJEssenceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B6938901E5AD3F2002BA43A /* ZKJEssenceController.m */; };
-		7B6938941E5AD428002BA43A /* ZKJNewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B6938931E5AD428002BA43A /* ZKJNewController.m */; };
-		7B6938971E5AD455002BA43A /* ZKJFriendTrendsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B6938961E5AD455002BA43A /* ZKJFriendTrendsController.m */; };
-		7B69389A1E5AD46B002BA43A /* ZKJMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B6938991E5AD46B002BA43A /* ZKJMeViewController.m */; };
-		7B69389D1E5AE66D002BA43A /* ZKJTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B69389C1E5AE66D002BA43A /* ZKJTabBar.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		7B457CC91E5BDC32009149A1 /* UIView+ZKJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ZKJExtension.h"; sourceTree = "<group>"; };
-		7B457CCA1E5BDC32009149A1 /* UIView+ZKJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ZKJExtension.m"; sourceTree = "<group>"; };
-		7B457CCC1E5BDF40009149A1 /* ZkjBaiSi.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZkjBaiSi.pch; sourceTree = "<group>"; };
-		7B457CD01E5C2135009149A1 /* UIBarButtonItem+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Extension.h"; sourceTree = "<group>"; };
-		7B457CD11E5C2135009149A1 /* UIBarButtonItem+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Extension.m"; sourceTree = "<group>"; };
+		7B457CD61E5C2FC6009149A1 /* ZKJEssenceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKJEssenceController.h; sourceTree = "<group>"; };
+		7B457CD71E5C2FC6009149A1 /* ZKJEssenceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKJEssenceController.m; sourceTree = "<group>"; };
+		7B457CDC1E5C2FC6009149A1 /* ZKJFriendTrendsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKJFriendTrendsController.h; sourceTree = "<group>"; };
+		7B457CDD1E5C2FC6009149A1 /* ZKJFriendTrendsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKJFriendTrendsController.m; sourceTree = "<group>"; };
+		7B457CE21E5C2FC6009149A1 /* ZKJMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKJMeViewController.h; sourceTree = "<group>"; };
+		7B457CE31E5C2FC6009149A1 /* ZKJMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKJMeViewController.m; sourceTree = "<group>"; };
+		7B457CE81E5C2FC6009149A1 /* ZKJNewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKJNewController.h; sourceTree = "<group>"; };
+		7B457CE91E5C2FC6009149A1 /* ZKJNewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKJNewController.m; sourceTree = "<group>"; };
+		7B457CED1E5C2FC6009149A1 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		7B457CEE1E5C2FC6009149A1 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		7B457CF01E5C2FC6009149A1 /* UIBarButtonItem+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Extension.h"; sourceTree = "<group>"; };
+		7B457CF11E5C2FC6009149A1 /* UIBarButtonItem+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Extension.m"; sourceTree = "<group>"; };
+		7B457CF21E5C2FC6009149A1 /* UIView+ZKJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ZKJExtension.h"; sourceTree = "<group>"; };
+		7B457CF31E5C2FC6009149A1 /* UIView+ZKJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ZKJExtension.m"; sourceTree = "<group>"; };
+		7B457CF51E5C2FC6009149A1 /* ZKJTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKJTabBarController.h; sourceTree = "<group>"; };
+		7B457CF61E5C2FC6009149A1 /* ZKJTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKJTabBarController.m; sourceTree = "<group>"; };
+		7B457CF91E5C2FC6009149A1 /* ZKJTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKJTabBar.h; sourceTree = "<group>"; };
+		7B457CFA1E5C2FC6009149A1 /* ZKJTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKJTabBar.m; sourceTree = "<group>"; };
+		7B457CFC1E5C2FC6009149A1 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7B457CFD1E5C2FC6009149A1 /* ZkjBaiSi.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZkjBaiSi.pch; sourceTree = "<group>"; };
 		7B6938721E5ABFA0002BA43A /* 百思不得姐.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "百思不得姐.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		7B6938761E5ABFA0002BA43A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		7B6938781E5ABFA0002BA43A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		7B6938791E5ABFA0002BA43A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		7B6938811E5ABFA0002BA43A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7B6938861E5ABFA0002BA43A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7B69388C1E5AC9C0002BA43A /* ZKJTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKJTabBarController.h; sourceTree = "<group>"; };
-		7B69388D1E5AC9C0002BA43A /* ZKJTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKJTabBarController.m; sourceTree = "<group>"; };
-		7B69388F1E5AD3F2002BA43A /* ZKJEssenceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKJEssenceController.h; sourceTree = "<group>"; };
-		7B6938901E5AD3F2002BA43A /* ZKJEssenceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKJEssenceController.m; sourceTree = "<group>"; };
-		7B6938921E5AD428002BA43A /* ZKJNewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKJNewController.h; sourceTree = "<group>"; };
-		7B6938931E5AD428002BA43A /* ZKJNewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKJNewController.m; sourceTree = "<group>"; };
-		7B6938951E5AD455002BA43A /* ZKJFriendTrendsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKJFriendTrendsController.h; sourceTree = "<group>"; };
-		7B6938961E5AD455002BA43A /* ZKJFriendTrendsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKJFriendTrendsController.m; sourceTree = "<group>"; };
-		7B6938981E5AD46B002BA43A /* ZKJMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKJMeViewController.h; sourceTree = "<group>"; };
-		7B6938991E5AD46B002BA43A /* ZKJMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKJMeViewController.m; sourceTree = "<group>"; };
-		7B69389B1E5AE66D002BA43A /* ZKJTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKJTabBar.h; sourceTree = "<group>"; };
-		7B69389C1E5AE66D002BA43A /* ZKJTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKJTabBar.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +57,209 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7B457CD31E5C2FC6009149A1 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				7B457CD41E5C2FC6009149A1 /* Essence-精华 */,
+				7B457CE61E5C2FC6009149A1 /* New-新帖 */,
+				7B457CDA1E5C2FC6009149A1 /* FriendTrends-关注 */,
+				7B457CE01E5C2FC6009149A1 /* Me-我 */,
+				7B457CEC1E5C2FC6009149A1 /* Other-其他 */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		7B457CD41E5C2FC6009149A1 /* Essence-精华 */ = {
+			isa = PBXGroup;
+			children = (
+				7B457CD51E5C2FC6009149A1 /* Controller */,
+				7B457CD81E5C2FC6009149A1 /* Model */,
+				7B457CD91E5C2FC6009149A1 /* View */,
+			);
+			path = "Essence-精华";
+			sourceTree = "<group>";
+		};
+		7B457CD51E5C2FC6009149A1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				7B457CD61E5C2FC6009149A1 /* ZKJEssenceController.h */,
+				7B457CD71E5C2FC6009149A1 /* ZKJEssenceController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		7B457CD81E5C2FC6009149A1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7B457CD91E5C2FC6009149A1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7B457CDA1E5C2FC6009149A1 /* FriendTrends-关注 */ = {
+			isa = PBXGroup;
+			children = (
+				7B457CDB1E5C2FC6009149A1 /* Controller */,
+				7B457CDE1E5C2FC6009149A1 /* Model */,
+				7B457CDF1E5C2FC6009149A1 /* View */,
+			);
+			path = "FriendTrends-关注";
+			sourceTree = "<group>";
+		};
+		7B457CDB1E5C2FC6009149A1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				7B457CDC1E5C2FC6009149A1 /* ZKJFriendTrendsController.h */,
+				7B457CDD1E5C2FC6009149A1 /* ZKJFriendTrendsController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		7B457CDE1E5C2FC6009149A1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7B457CDF1E5C2FC6009149A1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7B457CE01E5C2FC6009149A1 /* Me-我 */ = {
+			isa = PBXGroup;
+			children = (
+				7B457CE11E5C2FC6009149A1 /* Controller */,
+				7B457CE41E5C2FC6009149A1 /* Model */,
+				7B457CE51E5C2FC6009149A1 /* View */,
+			);
+			path = "Me-我";
+			sourceTree = "<group>";
+		};
+		7B457CE11E5C2FC6009149A1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				7B457CE21E5C2FC6009149A1 /* ZKJMeViewController.h */,
+				7B457CE31E5C2FC6009149A1 /* ZKJMeViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		7B457CE41E5C2FC6009149A1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7B457CE51E5C2FC6009149A1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7B457CE61E5C2FC6009149A1 /* New-新帖 */ = {
+			isa = PBXGroup;
+			children = (
+				7B457CE71E5C2FC6009149A1 /* Controller */,
+				7B457CEA1E5C2FC6009149A1 /* Model */,
+				7B457CEB1E5C2FC6009149A1 /* View */,
+			);
+			path = "New-新帖";
+			sourceTree = "<group>";
+		};
+		7B457CE71E5C2FC6009149A1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				7B457CE81E5C2FC6009149A1 /* ZKJNewController.h */,
+				7B457CE91E5C2FC6009149A1 /* ZKJNewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		7B457CEA1E5C2FC6009149A1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7B457CEB1E5C2FC6009149A1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7B457CEC1E5C2FC6009149A1 /* Other-其他 */ = {
+			isa = PBXGroup;
+			children = (
+				7B457CED1E5C2FC6009149A1 /* AppDelegate.h */,
+				7B457CEE1E5C2FC6009149A1 /* AppDelegate.m */,
+				7B457CEF1E5C2FC6009149A1 /* Category-类别 */,
+				7B457CF41E5C2FC6009149A1 /* Controller */,
+				7B457CF71E5C2FC6009149A1 /* Model */,
+				7B457CF81E5C2FC6009149A1 /* View */,
+				7B457CFB1E5C2FC6009149A1 /* 其他 */,
+			);
+			path = "Other-其他";
+			sourceTree = "<group>";
+		};
+		7B457CEF1E5C2FC6009149A1 /* Category-类别 */ = {
+			isa = PBXGroup;
+			children = (
+				7B457CF01E5C2FC6009149A1 /* UIBarButtonItem+Extension.h */,
+				7B457CF11E5C2FC6009149A1 /* UIBarButtonItem+Extension.m */,
+				7B457CF21E5C2FC6009149A1 /* UIView+ZKJExtension.h */,
+				7B457CF31E5C2FC6009149A1 /* UIView+ZKJExtension.m */,
+			);
+			path = "Category-类别";
+			sourceTree = "<group>";
+		};
+		7B457CF41E5C2FC6009149A1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				7B457CF51E5C2FC6009149A1 /* ZKJTabBarController.h */,
+				7B457CF61E5C2FC6009149A1 /* ZKJTabBarController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		7B457CF71E5C2FC6009149A1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7B457CF81E5C2FC6009149A1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7B457CF91E5C2FC6009149A1 /* ZKJTabBar.h */,
+				7B457CFA1E5C2FC6009149A1 /* ZKJTabBar.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7B457CFB1E5C2FC6009149A1 /* 其他 */ = {
+			isa = PBXGroup;
+			children = (
+				7B457CFC1E5C2FC6009149A1 /* main.m */,
+				7B457CFD1E5C2FC6009149A1 /* ZkjBaiSi.pch */,
+			);
+			path = "其他";
+			sourceTree = "<group>";
+		};
 		7B6938691E5ABFA0002BA43A = {
 			isa = PBXGroup;
 			children = (
@@ -76,25 +279,7 @@
 		7B6938741E5ABFA0002BA43A /* 百思不得姐 */ = {
 			isa = PBXGroup;
 			children = (
-				7B6938781E5ABFA0002BA43A /* AppDelegate.h */,
-				7B6938791E5ABFA0002BA43A /* AppDelegate.m */,
-				7B69388C1E5AC9C0002BA43A /* ZKJTabBarController.h */,
-				7B69388D1E5AC9C0002BA43A /* ZKJTabBarController.m */,
-				7B69388F1E5AD3F2002BA43A /* ZKJEssenceController.h */,
-				7B6938901E5AD3F2002BA43A /* ZKJEssenceController.m */,
-				7B6938921E5AD428002BA43A /* ZKJNewController.h */,
-				7B6938931E5AD428002BA43A /* ZKJNewController.m */,
-				7B6938951E5AD455002BA43A /* ZKJFriendTrendsController.h */,
-				7B6938961E5AD455002BA43A /* ZKJFriendTrendsController.m */,
-				7B6938981E5AD46B002BA43A /* ZKJMeViewController.h */,
-				7B6938991E5AD46B002BA43A /* ZKJMeViewController.m */,
-				7B69389B1E5AE66D002BA43A /* ZKJTabBar.h */,
-				7B69389C1E5AE66D002BA43A /* ZKJTabBar.m */,
-				7B457CC91E5BDC32009149A1 /* UIView+ZKJExtension.h */,
-				7B457CCA1E5BDC32009149A1 /* UIView+ZKJExtension.m */,
-				7B457CD01E5C2135009149A1 /* UIBarButtonItem+Extension.h */,
-				7B457CD11E5C2135009149A1 /* UIBarButtonItem+Extension.m */,
-				7B457CCC1E5BDF40009149A1 /* ZkjBaiSi.pch */,
+				7B457CD31E5C2FC6009149A1 /* Classes */,
 				7B6938751E5ABFA0002BA43A /* Supporting Files */,
 			);
 			path = "百思不得姐";
@@ -105,7 +290,6 @@
 			children = (
 				7B6938811E5ABFA0002BA43A /* Assets.xcassets */,
 				7B6938861E5ABFA0002BA43A /* Info.plist */,
-				7B6938761E5ABFA0002BA43A /* main.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -181,16 +365,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7B457CCB1E5BDC32009149A1 /* UIView+ZKJExtension.m in Sources */,
-				7B69388E1E5AC9C0002BA43A /* ZKJTabBarController.m in Sources */,
-				7B69389D1E5AE66D002BA43A /* ZKJTabBar.m in Sources */,
-				7B69387A1E5ABFA0002BA43A /* AppDelegate.m in Sources */,
-				7B457CD21E5C2135009149A1 /* UIBarButtonItem+Extension.m in Sources */,
-				7B69389A1E5AD46B002BA43A /* ZKJMeViewController.m in Sources */,
-				7B6938911E5AD3F2002BA43A /* ZKJEssenceController.m in Sources */,
-				7B6938971E5AD455002BA43A /* ZKJFriendTrendsController.m in Sources */,
-				7B6938771E5ABFA0002BA43A /* main.m in Sources */,
-				7B6938941E5AD428002BA43A /* ZKJNewController.m in Sources */,
+				7B457D071E5C2FC6009149A1 /* main.m in Sources */,
+				7B457D031E5C2FC6009149A1 /* UIBarButtonItem+Extension.m in Sources */,
+				7B457D001E5C2FC6009149A1 /* ZKJMeViewController.m in Sources */,
+				7B457CFE1E5C2FC6009149A1 /* ZKJEssenceController.m in Sources */,
+				7B457D011E5C2FC6009149A1 /* ZKJNewController.m in Sources */,
+				7B457CFF1E5C2FC6009149A1 /* ZKJFriendTrendsController.m in Sources */,
+				7B457D041E5C2FC6009149A1 /* UIView+ZKJExtension.m in Sources */,
+				7B457D021E5C2FC6009149A1 /* AppDelegate.m in Sources */,
+				7B457D051E5C2FC6009149A1 /* ZKJTabBarController.m in Sources */,
+				7B457D061E5C2FC6009149A1 /* ZKJTabBar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

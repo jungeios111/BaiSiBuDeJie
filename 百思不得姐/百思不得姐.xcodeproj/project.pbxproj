@@ -21,6 +21,9 @@
 		7B457D0D1E5C5BBE009149A1 /* ZKJNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B457D0C1E5C5BBE009149A1 /* ZKJNavigationController.m */; };
 		7B6938821E5ABFA0002BA43A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B6938811E5ABFA0002BA43A /* Assets.xcassets */; };
 		7B6D19221E5D31A700A143E9 /* ZKJFriendTrendsController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B6D19211E5D31A700A143E9 /* ZKJFriendTrendsController.xib */; };
+		7B6D19261E5D42D000A143E9 /* ZKJRecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B6D19241E5D42D000A143E9 /* ZKJRecommendViewController.m */; };
+		7B6D19271E5D42D000A143E9 /* ZKJRecommendViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B6D19251E5D42D000A143E9 /* ZKJRecommendViewController.xib */; };
+		7B6D19291E5D6CB100A143E9 /* Foundation+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B6D19281E5D6CB100A143E9 /* Foundation+Log.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +53,10 @@
 		7B6938811E5ABFA0002BA43A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7B6938861E5ABFA0002BA43A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7B6D19211E5D31A700A143E9 /* ZKJFriendTrendsController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZKJFriendTrendsController.xib; sourceTree = "<group>"; };
+		7B6D19231E5D42D000A143E9 /* ZKJRecommendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKJRecommendViewController.h; sourceTree = "<group>"; };
+		7B6D19241E5D42D000A143E9 /* ZKJRecommendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKJRecommendViewController.m; sourceTree = "<group>"; };
+		7B6D19251E5D42D000A143E9 /* ZKJRecommendViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZKJRecommendViewController.xib; sourceTree = "<group>"; };
+		7B6D19281E5D6CB100A143E9 /* Foundation+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+Log.m"; sourceTree = "<group>"; };
 		95E6D4727CD4FBEFE62B508E /* libPods-百思不得姐.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-百思不得姐.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCADB7CCF8048B964B422CFE /* Pods-百思不得姐.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-百思不得姐.release.xcconfig"; path = "Pods/Target Support Files/Pods-百思不得姐/Pods-百思不得姐.release.xcconfig"; sourceTree = "<group>"; };
 		E2ABB560C806EFAD6AEED79F /* Pods-百思不得姐.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-百思不得姐.debug.xcconfig"; path = "Pods/Target Support Files/Pods-百思不得姐/Pods-百思不得姐.debug.xcconfig"; sourceTree = "<group>"; };
@@ -136,6 +143,9 @@
 				7B457CDC1E5C2FC6009149A1 /* ZKJFriendTrendsController.h */,
 				7B457CDD1E5C2FC6009149A1 /* ZKJFriendTrendsController.m */,
 				7B6D19211E5D31A700A143E9 /* ZKJFriendTrendsController.xib */,
+				7B6D19231E5D42D000A143E9 /* ZKJRecommendViewController.h */,
+				7B6D19241E5D42D000A143E9 /* ZKJRecommendViewController.m */,
+				7B6D19251E5D42D000A143E9 /* ZKJRecommendViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -275,6 +285,7 @@
 		7B457CFB1E5C2FC6009149A1 /* 其他 */ = {
 			isa = PBXGroup;
 			children = (
+				7B6D19281E5D6CB100A143E9 /* Foundation+Log.m */,
 				7B457CFC1E5C2FC6009149A1 /* main.m */,
 				7B457CFD1E5C2FC6009149A1 /* ZkjBaiSi.pch */,
 			);
@@ -390,6 +401,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B6938821E5ABFA0002BA43A /* Assets.xcassets in Resources */,
+				7B6D19271E5D42D000A143E9 /* ZKJRecommendViewController.xib in Resources */,
 				7B6D19221E5D31A700A143E9 /* ZKJFriendTrendsController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -452,12 +464,14 @@
 				7B457D071E5C2FC6009149A1 /* main.m in Sources */,
 				7B457D031E5C2FC6009149A1 /* UIBarButtonItem+Extension.m in Sources */,
 				7B457D001E5C2FC6009149A1 /* ZKJMeViewController.m in Sources */,
+				7B6D19261E5D42D000A143E9 /* ZKJRecommendViewController.m in Sources */,
 				7B457CFE1E5C2FC6009149A1 /* ZKJEssenceController.m in Sources */,
 				7B457D011E5C2FC6009149A1 /* ZKJNewController.m in Sources */,
 				7B457CFF1E5C2FC6009149A1 /* ZKJFriendTrendsController.m in Sources */,
 				7B457D041E5C2FC6009149A1 /* UIView+ZKJExtension.m in Sources */,
 				7B457D021E5C2FC6009149A1 /* AppDelegate.m in Sources */,
 				7B457D051E5C2FC6009149A1 /* ZKJTabBarController.m in Sources */,
+				7B6D19291E5D6CB100A143E9 /* Foundation+Log.m in Sources */,
 				7B457D061E5C2FC6009149A1 /* ZKJTabBar.m in Sources */,
 				7B457D0D1E5C5BBE009149A1 /* ZKJNavigationController.m in Sources */,
 			);

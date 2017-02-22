@@ -7,6 +7,7 @@
 //
 
 #import "ZKJFriendTrendsController.h"
+#import "ZKJRecommendViewController.h"
 
 @interface ZKJFriendTrendsController ()
 
@@ -32,7 +33,9 @@
 
 - (void)btnClick
 {
-    ZKJLogFunC;
+//    ZKJLogFunC;
+    ZKJRecommendViewController *vc = [[ZKJRecommendViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 @end

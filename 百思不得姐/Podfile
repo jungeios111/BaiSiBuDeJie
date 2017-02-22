@@ -1,0 +1,8 @@
+platform :ios, '7.0'
+
+target '百思不得姐' do
+	pod 'Masonry'
+    pod 'SDWebImage'
+    pod 'AFNetworking'
+    pod 'SVProgressHUD'
+end 	

@@ -14,6 +14,13 @@
 
 @implementation ZKJFriendTrendsController
 
+/**
+ * 在xib或者storyboard文件中,实现label的title文字换行:按住option键敲回车
+ */
+
+
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     

@@ -20,9 +20,11 @@
 
 @implementation ZKJTabBarController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    
+/**
+ * 当第一次使用这个类的时候会调用一次
+ */
++ (void)initialize
+{
     // 正常状态
     NSMutableDictionary *norDic = [NSMutableDictionary dictionary];
     norDic[NSFontAttributeName] = [UIFont systemFontOfSize:12];
@@ -39,6 +41,10 @@
     UITabBarItem *tabBarItem = [UITabBarItem appearance];
     [tabBarItem setTitleTextAttributes:norDic forState:UIControlStateNormal];
     [tabBarItem setTitleTextAttributes:selDic forState:UIControlStateSelected];
+}
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
     
     //添加子控制器
     [self setUpChildVc:[[ZKJEssenceController alloc] init] andTitle:@"精华" andNorImage:@"tabBar_essence_icon" andSelectImage:@"tabBar_essence_click_icon"];
@@ -62,9 +68,9 @@
     vc.tabBarItem.title = title;
     vc.tabBarItem.image = [UIImage imageNamed:norImage];
     vc.tabBarItem.selectedImage = [UIImage imageNamed:selImage];
+    
     // 包装一个导航控制器, 添加导航控制器为tabbarcontroller的子控制器
     ZKJNavigationController *nav = [[ZKJNavigationController alloc] initWithRootViewController:vc];
-    [nav.navigationBar setBackgroundImage:[UIImage imageNamed:@"navigationbarBackgroundWhite"] forBarMetrics:UIBarMetricsDefault];
     [self addChildViewController:nav];
 }
 

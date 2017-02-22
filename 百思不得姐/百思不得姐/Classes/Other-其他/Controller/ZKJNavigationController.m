@@ -14,6 +14,17 @@
 
 @implementation ZKJNavigationController
 
+/**
+ * 当第一次使用这个类的时候会调用一次
+ */
++ (void)initialize
+{
+    // 当导航栏用在ZKJNavigationController中, appearance设置才会生效
+    // UINavigationBar *bar = [UINavigationBar appearanceWhenContainedIn:[self class], nil];
+    UINavigationBar *bar = [UINavigationBar appearance];
+    [bar setBackgroundImage:[UIImage imageNamed:@"navigationbarBackgroundWhite"] forBarMetrics:UIBarMetricsDefault];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     

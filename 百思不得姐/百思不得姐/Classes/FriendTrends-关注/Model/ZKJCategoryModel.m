@@ -10,4 +10,12 @@
 
 @implementation ZKJCategoryModel
 
+- (NSMutableArray *)userArray
+{
+    if (!_userArray) {
+        _userArray = [NSMutableArray array];
+    }
+    return _userArray;
+}
+
 @end

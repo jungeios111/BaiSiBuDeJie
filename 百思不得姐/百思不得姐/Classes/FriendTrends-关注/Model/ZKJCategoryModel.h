@@ -16,5 +16,7 @@
 @property(nonatomic,assign) NSInteger count;
 /** 名字 */
 @property(nonatomic,copy) NSString *name;
+/** 存放这个类别下右边用户的数据 */
+@property(nonatomic,strong) NSMutableArray *userArray;
 
 @end

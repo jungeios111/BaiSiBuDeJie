@@ -22,8 +22,6 @@
 @property(nonatomic,strong) NSArray *categoryArray;
 /** 右边的用户表格 */
 @property (strong, nonatomic) IBOutlet UITableView *userTableView;
-/** 右边的用户数据 */
-@property(nonatomic,strong) NSArray *userArray;
 
 @end
 
@@ -54,6 +52,7 @@ static NSString *userCellName = @"user";
         [self.categoryTableView reloadData];
         //默认显示第一行
         [self.categoryTableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] animated:NO scrollPosition:UITableViewScrollPositionTop];
+        [self tableView:self.categoryTableView didSelectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         [SVProgressHUD showErrorWithStatus:@"加载推荐信息失败!"];
@@ -82,7 +81,9 @@ static NSString *userCellName = @"user";
     if (tableView == self.categoryTableView) {
         return self.categoryArray.count;
     } else {
-        return self.userArray.count;
+        // 左边被选中的类别模型
+        ZKJCategoryModel *model = self.categoryArray[self.categoryTableView.indexPathForSelectedRow.row];
+        return model.userArray.count;
     }
 }
 
@@ -94,7 +95,8 @@ static NSString *userCellName = @"user";
         return cell;
     } else {
         ZKJRecommendUserCell *cell = [tableView dequeueReusableCellWithIdentifier:userCellName];
-        cell.userModel = self.userArray[indexPath.row];
+        ZKJCategoryModel *model = self.categoryArray[self.categoryTableView.indexPathForSelectedRow.row];
+        cell.userModel = model.userArray[indexPath.row];
         return cell;
     }
 }
@@ -102,24 +104,31 @@ static NSString *userCellName = @"user";
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (tableView == self.categoryTableView) {
-        [SVProgressHUD showWithStatus:@"正在加载,请稍后..."];
-        [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeBlack];
-        
         ZKJCategoryModel *model = self.categoryArray[indexPath.row];
-        NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
-        parameters[@"a"] = @"list";
-        parameters[@"c"] = @"subscribe";
-        parameters[@"category_id"] = @(model.id);
-        [[AFHTTPSessionManager manager] GET:@"http://api.budejie.com/api/api_open.php" parameters:parameters progress:^(NSProgress * _Nonnull downloadProgress) {
-            
-        } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-            [SVProgressHUD dismiss];
-            self.userArray = [ZKJUserModel mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
+        // 显示曾经的数据
+        if (model.userArray.count > 0) {
             [self.userTableView reloadData];
+        } else {
+            // 发送请求给服务器, 加载右侧的数据
+            [SVProgressHUD showWithStatus:@"正在加载,请稍后..."];
+            [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeBlack];
             
-        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-            [SVProgressHUD showWithStatus:@"加载失败!"];
-        }];
+            NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
+            parameters[@"a"] = @"list";
+            parameters[@"c"] = @"subscribe";
+            parameters[@"category_id"] = @(model.id);
+            [[AFHTTPSessionManager manager] GET:@"http://api.budejie.com/api/api_open.php" parameters:parameters progress:^(NSProgress * _Nonnull downloadProgress) {
+                
+            } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+                [SVProgressHUD dismiss];
+                NSArray *userArray = [ZKJUserModel mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
+                [model.userArray addObjectsFromArray:userArray];
+                [self.userTableView reloadData];
+                
+            } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+                [SVProgressHUD showWithStatus:@"加载失败!"];
+            }];
+        }
     }
 }
 

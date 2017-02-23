@@ -12,6 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ZKJRecommendViewController">
             <connections>
                 <outlet property="categoryTableView" destination="OU3-j4-0rL" id="lVs-t9-Y3s"/>
+                <outlet property="userTableView" destination="vgn-63-KyU" id="4GY-xE-5EK"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -31,12 +32,24 @@
                         <outlet property="delegate" destination="-1" id="b1H-Yf-En6"/>
                     </connections>
                 </tableView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vgn-63-KyU">
+                    <rect key="frame" x="70" y="0.0" width="305" height="667"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="fb4-k0-wIe"/>
+                        <outlet property="delegate" destination="-1" id="qKy-CS-a9I"/>
+                    </connections>
+                </tableView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="OU3-j4-0rL" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="LVu-3m-NOf"/>
+                <constraint firstItem="vgn-63-KyU" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Tb3-8t-cMx"/>
                 <constraint firstAttribute="bottom" secondItem="OU3-j4-0rL" secondAttribute="bottom" id="U9E-uu-rvF"/>
+                <constraint firstAttribute="trailing" secondItem="vgn-63-KyU" secondAttribute="trailing" id="YdT-4Q-Zf2"/>
+                <constraint firstItem="vgn-63-KyU" firstAttribute="leading" secondItem="OU3-j4-0rL" secondAttribute="trailing" id="azz-dS-mBk"/>
                 <constraint firstItem="OU3-j4-0rL" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="gUa-Vp-jzK"/>
+                <constraint firstAttribute="bottom" secondItem="vgn-63-KyU" secondAttribute="bottom" id="lZQ-ja-oFD"/>
             </constraints>
         </view>
     </objects>

@@ -11,6 +11,7 @@
 
 #import "UIView+ZKJExtension.h"
 #import "UIBarButtonItem+Extension.h"
+#import "UIImage+ZKJExtension.h"
 
 #ifdef DEBUG
 #define ZKJLog(...) NSLog(__VA_ARGS__)

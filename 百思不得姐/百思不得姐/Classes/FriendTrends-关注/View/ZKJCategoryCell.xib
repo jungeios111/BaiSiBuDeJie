@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="category" id="KGk-i7-Jjw" customClass="ZKJCategoryCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.29999999999999999" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iKM-1a-4fN">
+                        <rect key="frame" x="0.0" y="42.5" width="320" height="1"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="o8m-Cn-9di"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q7I-Fc-VRV">
+                        <rect key="frame" x="0.0" y="0.0" width="5" height="43.5"/>
+                        <color key="backgroundColor" red="1" green="0.33870341129999998" blue="0.92080642779999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="5" id="bDC-RM-QwO"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="iKM-1a-4fN" secondAttribute="bottom" id="YlQ-sc-5ug"/>
+                    <constraint firstAttribute="trailing" secondItem="iKM-1a-4fN" secondAttribute="trailing" id="cOg-IH-F91"/>
+                    <constraint firstItem="iKM-1a-4fN" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="fnf-E3-R0o"/>
+                    <constraint firstItem="Q7I-Fc-VRV" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="t7R-Tm-ACZ"/>
+                    <constraint firstAttribute="bottom" secondItem="Q7I-Fc-VRV" secondAttribute="bottom" id="zJ4-vQ-0KU"/>
+                    <constraint firstItem="Q7I-Fc-VRV" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="zu0-3g-vIm"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <connections>
+                <outlet property="selectView" destination="Q7I-Fc-VRV" id="Vm1-Ec-zTS"/>
+            </connections>
+            <point key="canvasLocation" x="-89" y="-49"/>
+        </tableViewCell>
+    </objects>
+</document>

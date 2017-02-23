@@ -8,9 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		47F4B9E2C822DAA8B3F635E9 /* libPods-百思不得姐.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 95E6D4727CD4FBEFE62B508E /* libPods-百思不得姐.a */; };
-		7B169D3B1E5E73EA00A17B5F /* ZKJCategoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B169D3A1E5E73EA00A17B5F /* ZKJCategoryModel.m */; };
-		7B169D3F1E5E762300A17B5F /* ZKJCategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B169D3D1E5E762300A17B5F /* ZKJCategoryCell.m */; };
-		7B169D401E5E762300A17B5F /* ZKJCategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B169D3E1E5E762300A17B5F /* ZKJCategoryCell.xib */; };
+		7B169D4B1E5EBD2D00A17B5F /* UIImage+ZKJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B169D4A1E5EBD2D00A17B5F /* UIImage+ZKJExtension.m */; };
+		7B169D511E5EC58300A17B5F /* ZKJCategoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B169D4E1E5EC58300A17B5F /* ZKJCategoryModel.m */; };
+		7B169D521E5EC58300A17B5F /* ZKJUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B169D501E5EC58300A17B5F /* ZKJUserModel.m */; };
+		7B169D5A1E5EC59B00A17B5F /* ZKJCategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B169D551E5EC59B00A17B5F /* ZKJCategoryCell.m */; };
+		7B169D5B1E5EC59B00A17B5F /* ZKJCategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B169D561E5EC59B00A17B5F /* ZKJCategoryCell.xib */; };
+		7B169D5C1E5EC59B00A17B5F /* ZKJRecommendUserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B169D581E5EC59B00A17B5F /* ZKJRecommendUserCell.m */; };
+		7B169D5D1E5EC59B00A17B5F /* ZKJRecommendUserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B169D591E5EC59B00A17B5F /* ZKJRecommendUserCell.xib */; };
 		7B457CFE1E5C2FC6009149A1 /* ZKJEssenceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B457CD71E5C2FC6009149A1 /* ZKJEssenceController.m */; };
 		7B457CFF1E5C2FC6009149A1 /* ZKJFriendTrendsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B457CDD1E5C2FC6009149A1 /* ZKJFriendTrendsController.m */; };
 		7B457D001E5C2FC6009149A1 /* ZKJMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B457CE31E5C2FC6009149A1 /* ZKJMeViewController.m */; };
@@ -30,11 +34,18 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		7B169D391E5E73EA00A17B5F /* ZKJCategoryModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKJCategoryModel.h; sourceTree = SOURCE_ROOT; };
-		7B169D3A1E5E73EA00A17B5F /* ZKJCategoryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKJCategoryModel.m; sourceTree = SOURCE_ROOT; };
-		7B169D3C1E5E762300A17B5F /* ZKJCategoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKJCategoryCell.h; sourceTree = SOURCE_ROOT; };
-		7B169D3D1E5E762300A17B5F /* ZKJCategoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKJCategoryCell.m; sourceTree = SOURCE_ROOT; };
-		7B169D3E1E5E762300A17B5F /* ZKJCategoryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZKJCategoryCell.xib; sourceTree = SOURCE_ROOT; };
+		7B169D491E5EBD2D00A17B5F /* UIImage+ZKJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ZKJExtension.h"; sourceTree = "<group>"; };
+		7B169D4A1E5EBD2D00A17B5F /* UIImage+ZKJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ZKJExtension.m"; sourceTree = "<group>"; };
+		7B169D4D1E5EC58300A17B5F /* ZKJCategoryModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKJCategoryModel.h; sourceTree = "<group>"; };
+		7B169D4E1E5EC58300A17B5F /* ZKJCategoryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKJCategoryModel.m; sourceTree = "<group>"; };
+		7B169D4F1E5EC58300A17B5F /* ZKJUserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKJUserModel.h; sourceTree = "<group>"; };
+		7B169D501E5EC58300A17B5F /* ZKJUserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKJUserModel.m; sourceTree = "<group>"; };
+		7B169D541E5EC59B00A17B5F /* ZKJCategoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKJCategoryCell.h; sourceTree = "<group>"; };
+		7B169D551E5EC59B00A17B5F /* ZKJCategoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKJCategoryCell.m; sourceTree = "<group>"; };
+		7B169D561E5EC59B00A17B5F /* ZKJCategoryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZKJCategoryCell.xib; sourceTree = "<group>"; };
+		7B169D571E5EC59B00A17B5F /* ZKJRecommendUserCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKJRecommendUserCell.h; sourceTree = "<group>"; };
+		7B169D581E5EC59B00A17B5F /* ZKJRecommendUserCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKJRecommendUserCell.m; sourceTree = "<group>"; };
+		7B169D591E5EC59B00A17B5F /* ZKJRecommendUserCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZKJRecommendUserCell.xib; sourceTree = "<group>"; };
 		7B457CD61E5C2FC6009149A1 /* ZKJEssenceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKJEssenceController.h; sourceTree = "<group>"; };
 		7B457CD71E5C2FC6009149A1 /* ZKJEssenceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKJEssenceController.m; sourceTree = "<group>"; };
 		7B457CDC1E5C2FC6009149A1 /* ZKJFriendTrendsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKJFriendTrendsController.h; sourceTree = "<group>"; };
@@ -90,6 +101,30 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		7B169D4C1E5EC58300A17B5F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7B169D4D1E5EC58300A17B5F /* ZKJCategoryModel.h */,
+				7B169D4E1E5EC58300A17B5F /* ZKJCategoryModel.m */,
+				7B169D4F1E5EC58300A17B5F /* ZKJUserModel.h */,
+				7B169D501E5EC58300A17B5F /* ZKJUserModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7B169D531E5EC59B00A17B5F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7B169D541E5EC59B00A17B5F /* ZKJCategoryCell.h */,
+				7B169D551E5EC59B00A17B5F /* ZKJCategoryCell.m */,
+				7B169D561E5EC59B00A17B5F /* ZKJCategoryCell.xib */,
+				7B169D571E5EC59B00A17B5F /* ZKJRecommendUserCell.h */,
+				7B169D581E5EC59B00A17B5F /* ZKJRecommendUserCell.m */,
+				7B169D591E5EC59B00A17B5F /* ZKJRecommendUserCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		7B457CD31E5C2FC6009149A1 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -138,9 +173,9 @@
 		7B457CDA1E5C2FC6009149A1 /* FriendTrends-关注 */ = {
 			isa = PBXGroup;
 			children = (
+				7B169D531E5EC59B00A17B5F /* View */,
+				7B169D4C1E5EC58300A17B5F /* Model */,
 				7B457CDB1E5C2FC6009149A1 /* Controller */,
-				7B457CDE1E5C2FC6009149A1 /* Model */,
-				7B457CDF1E5C2FC6009149A1 /* View */,
 			);
 			path = "FriendTrends-关注";
 			sourceTree = "<group>";
@@ -156,25 +191,6 @@
 				7B6D19251E5D42D000A143E9 /* ZKJRecommendViewController.xib */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		7B457CDE1E5C2FC6009149A1 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				7B169D391E5E73EA00A17B5F /* ZKJCategoryModel.h */,
-				7B169D3A1E5E73EA00A17B5F /* ZKJCategoryModel.m */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		7B457CDF1E5C2FC6009149A1 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				7B169D3C1E5E762300A17B5F /* ZKJCategoryCell.h */,
-				7B169D3D1E5E762300A17B5F /* ZKJCategoryCell.m */,
-				7B169D3E1E5E762300A17B5F /* ZKJCategoryCell.xib */,
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		7B457CE01E5C2FC6009149A1 /* Me-我 */ = {
@@ -264,6 +280,8 @@
 				7B457CF11E5C2FC6009149A1 /* UIBarButtonItem+Extension.m */,
 				7B457CF21E5C2FC6009149A1 /* UIView+ZKJExtension.h */,
 				7B457CF31E5C2FC6009149A1 /* UIView+ZKJExtension.m */,
+				7B169D491E5EBD2D00A17B5F /* UIImage+ZKJExtension.h */,
+				7B169D4A1E5EBD2D00A17B5F /* UIImage+ZKJExtension.m */,
 			);
 			path = "Category-类别";
 			sourceTree = "<group>";
@@ -414,7 +432,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B6938821E5ABFA0002BA43A /* Assets.xcassets in Resources */,
-				7B169D401E5E762300A17B5F /* ZKJCategoryCell.xib in Resources */,
+				7B169D5D1E5EC59B00A17B5F /* ZKJRecommendUserCell.xib in Resources */,
+				7B169D5B1E5EC59B00A17B5F /* ZKJCategoryCell.xib in Resources */,
 				7B6D19271E5D42D000A143E9 /* ZKJRecommendViewController.xib in Resources */,
 				7B6D19221E5D31A700A143E9 /* ZKJFriendTrendsController.xib in Resources */,
 			);
@@ -478,18 +497,21 @@
 				7B457D071E5C2FC6009149A1 /* main.m in Sources */,
 				7B457D031E5C2FC6009149A1 /* UIBarButtonItem+Extension.m in Sources */,
 				7B457D001E5C2FC6009149A1 /* ZKJMeViewController.m in Sources */,
+				7B169D5C1E5EC59B00A17B5F /* ZKJRecommendUserCell.m in Sources */,
 				7B6D19261E5D42D000A143E9 /* ZKJRecommendViewController.m in Sources */,
 				7B457CFE1E5C2FC6009149A1 /* ZKJEssenceController.m in Sources */,
 				7B457D011E5C2FC6009149A1 /* ZKJNewController.m in Sources */,
 				7B457CFF1E5C2FC6009149A1 /* ZKJFriendTrendsController.m in Sources */,
 				7B457D041E5C2FC6009149A1 /* UIView+ZKJExtension.m in Sources */,
+				7B169D521E5EC58300A17B5F /* ZKJUserModel.m in Sources */,
+				7B169D511E5EC58300A17B5F /* ZKJCategoryModel.m in Sources */,
 				7B457D021E5C2FC6009149A1 /* AppDelegate.m in Sources */,
-				7B169D3B1E5E73EA00A17B5F /* ZKJCategoryModel.m in Sources */,
 				7B457D051E5C2FC6009149A1 /* ZKJTabBarController.m in Sources */,
+				7B169D4B1E5EBD2D00A17B5F /* UIImage+ZKJExtension.m in Sources */,
 				7B6D19291E5D6CB100A143E9 /* Foundation+Log.m in Sources */,
 				7B457D061E5C2FC6009149A1 /* ZKJTabBar.m in Sources */,
-				7B169D3F1E5E762300A17B5F /* ZKJCategoryCell.m in Sources */,
 				7B457D0D1E5C5BBE009149A1 /* ZKJNavigationController.m in Sources */,
+				7B169D5A1E5EC59B00A17B5F /* ZKJCategoryCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

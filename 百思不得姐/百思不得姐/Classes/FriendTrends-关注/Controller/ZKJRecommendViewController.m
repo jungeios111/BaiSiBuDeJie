@@ -12,25 +12,31 @@
 #import <MJExtension.h>
 #import "ZKJCategoryCell.h"
 #import "ZKJCategoryModel.h"
+#import "ZKJRecommendUserCell.h"
+#import "ZKJUserModel.h"
 
 @interface ZKJRecommendViewController ()<UITableViewDelegate,UITableViewDataSource>
-/** 左边的分类tableview */
+/** 左边的分类表格 */
 @property (strong, nonatomic) IBOutlet UITableView *categoryTableView;
 /** 左边的分类数组 */
 @property(nonatomic,strong) NSArray *categoryArray;
+/** 右边的用户表格 */
+@property (strong, nonatomic) IBOutlet UITableView *userTableView;
+/** 右边的用户数据 */
+@property(nonatomic,strong) NSArray *userArray;
 
 @end
 
 @implementation ZKJRecommendViewController
 
 static NSString *categoryCellName = @"category";
+static NSString *userCellName = @"user";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationItem.title = @"推荐关注";
-    self.view.backgroundColor = ZKJGlobalBGColor;
     
-    [self.categoryTableView registerNib:[UINib nibWithNibName:NSStringFromClass([ZKJCategoryCell class]) bundle:nil] forCellReuseIdentifier:categoryCellName];
+    // 初始化控件
+    [self setUpTableView];
     
     [SVProgressHUD showWithStatus:@"正在加载,请稍后..."];
     [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeBlack];
@@ -44,7 +50,6 @@ static NSString *categoryCellName = @"category";
         [SVProgressHUD dismiss];
         //字典数组转模型数组
         self.categoryArray = [ZKJCategoryModel mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
-//        ZKJLog(@"categoryArray:\n%@", self.categoryArray);
         //刷新表格
         [self.categoryTableView reloadData];
         //默认显示第一行
@@ -55,6 +60,18 @@ static NSString *categoryCellName = @"category";
     }];
 }
 
+- (void)setUpTableView
+{
+    self.navigationItem.title = @"推荐关注";
+    self.view.backgroundColor = ZKJGlobalBGColor;
+    [self.categoryTableView registerNib:[UINib nibWithNibName:NSStringFromClass([ZKJCategoryCell class]) bundle:nil] forCellReuseIdentifier:categoryCellName];
+    [self.userTableView registerNib:[UINib nibWithNibName:NSStringFromClass([ZKJRecommendUserCell class]) bundle:nil] forCellReuseIdentifier:userCellName];
+    self.automaticallyAdjustsScrollViewInsets = NO;
+    self.categoryTableView.contentInset = UIEdgeInsetsMake(64, 0, 0, 0);
+    self.userTableView.contentInset = self.categoryTableView.contentInset;
+    self.userTableView.rowHeight = 70;
+}
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     return 1;
@@ -62,14 +79,49 @@ static NSString *categoryCellName = @"category";
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return self.categoryArray.count;
+    if (tableView == self.categoryTableView) {
+        return self.categoryArray.count;
+    } else {
+        return self.userArray.count;
+    }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    ZKJCategoryCell *cell = [tableView dequeueReusableCellWithIdentifier:categoryCellName];
-    cell.categoryModel = self.categoryArray[indexPath.row];
-    return cell;
+    if (tableView == self.categoryTableView) {
+        ZKJCategoryCell *cell = [tableView dequeueReusableCellWithIdentifier:categoryCellName];
+        cell.categoryModel = self.categoryArray[indexPath.row];
+        return cell;
+    } else {
+        ZKJRecommendUserCell *cell = [tableView dequeueReusableCellWithIdentifier:userCellName];
+        cell.userModel = self.userArray[indexPath.row];
+        return cell;
+    }
 }
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (tableView == self.categoryTableView) {
+        [SVProgressHUD showWithStatus:@"正在加载,请稍后..."];
+        [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeBlack];
+        
+        ZKJCategoryModel *model = self.categoryArray[indexPath.row];
+        NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
+        parameters[@"a"] = @"list";
+        parameters[@"c"] = @"subscribe";
+        parameters[@"category_id"] = @(model.id);
+        [[AFHTTPSessionManager manager] GET:@"http://api.budejie.com/api/api_open.php" parameters:parameters progress:^(NSProgress * _Nonnull downloadProgress) {
+            
+        } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+            [SVProgressHUD dismiss];
+            self.userArray = [ZKJUserModel mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
+            [self.userTableView reloadData];
+            
+        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+            [SVProgressHUD showWithStatus:@"加载失败!"];
+        }];
+    }
+}
+
 
 @end

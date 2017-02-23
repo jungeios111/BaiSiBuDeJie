@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		47F4B9E2C822DAA8B3F635E9 /* libPods-百思不得姐.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 95E6D4727CD4FBEFE62B508E /* libPods-百思不得姐.a */; };
+		7B169D3B1E5E73EA00A17B5F /* ZKJCategoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B169D3A1E5E73EA00A17B5F /* ZKJCategoryModel.m */; };
+		7B169D3F1E5E762300A17B5F /* ZKJCategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B169D3D1E5E762300A17B5F /* ZKJCategoryCell.m */; };
+		7B169D401E5E762300A17B5F /* ZKJCategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B169D3E1E5E762300A17B5F /* ZKJCategoryCell.xib */; };
 		7B457CFE1E5C2FC6009149A1 /* ZKJEssenceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B457CD71E5C2FC6009149A1 /* ZKJEssenceController.m */; };
 		7B457CFF1E5C2FC6009149A1 /* ZKJFriendTrendsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B457CDD1E5C2FC6009149A1 /* ZKJFriendTrendsController.m */; };
 		7B457D001E5C2FC6009149A1 /* ZKJMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B457CE31E5C2FC6009149A1 /* ZKJMeViewController.m */; };
@@ -27,6 +30,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7B169D391E5E73EA00A17B5F /* ZKJCategoryModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKJCategoryModel.h; sourceTree = SOURCE_ROOT; };
+		7B169D3A1E5E73EA00A17B5F /* ZKJCategoryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKJCategoryModel.m; sourceTree = SOURCE_ROOT; };
+		7B169D3C1E5E762300A17B5F /* ZKJCategoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKJCategoryCell.h; sourceTree = SOURCE_ROOT; };
+		7B169D3D1E5E762300A17B5F /* ZKJCategoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKJCategoryCell.m; sourceTree = SOURCE_ROOT; };
+		7B169D3E1E5E762300A17B5F /* ZKJCategoryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZKJCategoryCell.xib; sourceTree = SOURCE_ROOT; };
 		7B457CD61E5C2FC6009149A1 /* ZKJEssenceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKJEssenceController.h; sourceTree = "<group>"; };
 		7B457CD71E5C2FC6009149A1 /* ZKJEssenceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKJEssenceController.m; sourceTree = "<group>"; };
 		7B457CDC1E5C2FC6009149A1 /* ZKJFriendTrendsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKJFriendTrendsController.h; sourceTree = "<group>"; };
@@ -153,6 +161,8 @@
 		7B457CDE1E5C2FC6009149A1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				7B169D391E5E73EA00A17B5F /* ZKJCategoryModel.h */,
+				7B169D3A1E5E73EA00A17B5F /* ZKJCategoryModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -160,6 +170,9 @@
 		7B457CDF1E5C2FC6009149A1 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				7B169D3C1E5E762300A17B5F /* ZKJCategoryCell.h */,
+				7B169D3D1E5E762300A17B5F /* ZKJCategoryCell.m */,
+				7B169D3E1E5E762300A17B5F /* ZKJCategoryCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -401,6 +414,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B6938821E5ABFA0002BA43A /* Assets.xcassets in Resources */,
+				7B169D401E5E762300A17B5F /* ZKJCategoryCell.xib in Resources */,
 				7B6D19271E5D42D000A143E9 /* ZKJRecommendViewController.xib in Resources */,
 				7B6D19221E5D31A700A143E9 /* ZKJFriendTrendsController.xib in Resources */,
 			);
@@ -470,9 +484,11 @@
 				7B457CFF1E5C2FC6009149A1 /* ZKJFriendTrendsController.m in Sources */,
 				7B457D041E5C2FC6009149A1 /* UIView+ZKJExtension.m in Sources */,
 				7B457D021E5C2FC6009149A1 /* AppDelegate.m in Sources */,
+				7B169D3B1E5E73EA00A17B5F /* ZKJCategoryModel.m in Sources */,
 				7B457D051E5C2FC6009149A1 /* ZKJTabBarController.m in Sources */,
 				7B6D19291E5D6CB100A143E9 /* Foundation+Log.m in Sources */,
 				7B457D061E5C2FC6009149A1 /* ZKJTabBar.m in Sources */,
+				7B169D3F1E5E762300A17B5F /* ZKJCategoryCell.m in Sources */,
 				7B457D0D1E5C5BBE009149A1 /* ZKJNavigationController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

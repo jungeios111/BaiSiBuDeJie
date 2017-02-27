@@ -33,9 +33,29 @@ static NSString *userCellName = @"user";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // 初始化控件
+    // 控件的初始化
     [self setUpTableView];
     
+    // 加载左侧的类别数据
+    [self loadCategoryData];
+}
+
+/** 控件的初始化 */
+- (void)setUpTableView
+{
+    self.navigationItem.title = @"推荐关注";
+    self.view.backgroundColor = ZKJGlobalBGColor;
+    [self.categoryTableView registerNib:[UINib nibWithNibName:NSStringFromClass([ZKJCategoryCell class]) bundle:nil] forCellReuseIdentifier:categoryCellName];
+    [self.userTableView registerNib:[UINib nibWithNibName:NSStringFromClass([ZKJRecommendUserCell class]) bundle:nil] forCellReuseIdentifier:userCellName];
+    self.automaticallyAdjustsScrollViewInsets = NO;
+    self.categoryTableView.contentInset = UIEdgeInsetsMake(64, 0, 0, 0);
+    self.userTableView.contentInset = self.categoryTableView.contentInset;
+    self.userTableView.rowHeight = 70;
+}
+
+/** 加载左侧的类别数据 */
+- (void)loadCategoryData
+{
     [SVProgressHUD showWithStatus:@"正在加载,请稍后..."];
     [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeBlack];
     
@@ -59,28 +79,11 @@ static NSString *userCellName = @"user";
     }];
 }
 
-- (void)setUpTableView
-{
-    self.navigationItem.title = @"推荐关注";
-    self.view.backgroundColor = ZKJGlobalBGColor;
-    [self.categoryTableView registerNib:[UINib nibWithNibName:NSStringFromClass([ZKJCategoryCell class]) bundle:nil] forCellReuseIdentifier:categoryCellName];
-    [self.userTableView registerNib:[UINib nibWithNibName:NSStringFromClass([ZKJRecommendUserCell class]) bundle:nil] forCellReuseIdentifier:userCellName];
-    self.automaticallyAdjustsScrollViewInsets = NO;
-    self.categoryTableView.contentInset = UIEdgeInsetsMake(64, 0, 0, 0);
-    self.userTableView.contentInset = self.categoryTableView.contentInset;
-    self.userTableView.rowHeight = 70;
-}
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-    return 1;
-}
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    if (tableView == self.categoryTableView) {
+    if (tableView == self.categoryTableView) {      // 左边的类别数据
         return self.categoryArray.count;
-    } else {
+    } else {                                        // 右边的用户数据
         // 左边被选中的类别模型
         ZKJCategoryModel *model = self.categoryArray[self.categoryTableView.indexPathForSelectedRow.row];
         return model.userArray.count;

@@ -18,5 +18,9 @@
 @property(nonatomic,copy) NSString *name;
 /** 存放这个类别下右边用户的数据 */
 @property(nonatomic,strong) NSMutableArray *userArray;
+/** 总条数 */
+@property(nonatomic,assign) NSInteger total;
+/** 当前页码 */
+@property(nonatomic,assign) NSInteger currentPage;
 
 @end

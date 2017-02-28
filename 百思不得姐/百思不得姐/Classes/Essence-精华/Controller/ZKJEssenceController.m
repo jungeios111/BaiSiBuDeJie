@@ -7,6 +7,7 @@
 //
 
 #import "ZKJEssenceController.h"
+#import "ZKJRecommendTagsVC.h"
 
 @interface ZKJEssenceController ()
 
@@ -21,14 +22,13 @@
     self.view.backgroundColor = ZKJGlobalBGColor;
     self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"MainTitle"]];
     self.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithImage:@"MainTagSubIcon" andHighLightImage:@"MainTagSubIconClick" andTarget:self andAction:@selector(btnClick)];
-    
-    
-    
 }
 
 - (void)btnClick
 {
     ZKJLogFunC;
+    ZKJRecommendTagsVC *vc = [[ZKJRecommendTagsVC alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 @end

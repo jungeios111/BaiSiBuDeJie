@@ -28,7 +28,14 @@
 {
     _userModel = userModel;
     self.nikeNameLabel.text = userModel.screen_name;
-    self.followCountLabel.text = [NSString stringWithFormat:@"%@人关注", userModel.fans_count];
+    
+    NSInteger fansCount = [userModel.fans_count integerValue];
+    if (fansCount < 10000) {
+        self.followCountLabel.text = [NSString stringWithFormat:@"%@人关注", userModel.fans_count];
+    } else {
+        self.followCountLabel.text = [NSString stringWithFormat:@"%.1f万人关注", [userModel.fans_count integerValue] / 10000.0];
+    }
+    
     [self.headImageView sd_setImageWithURL:[NSURL URLWithString:userModel.header] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
 //    self.headImageView.image = [UIImage imageWithClipImage:self.headImageView.image];
 }

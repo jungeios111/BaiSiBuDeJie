@@ -31,6 +31,10 @@
 		7B6D19261E5D42D000A143E9 /* ZKJRecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B6D19241E5D42D000A143E9 /* ZKJRecommendViewController.m */; };
 		7B6D19271E5D42D000A143E9 /* ZKJRecommendViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B6D19251E5D42D000A143E9 /* ZKJRecommendViewController.xib */; };
 		7B6D19291E5D6CB100A143E9 /* Foundation+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B6D19281E5D6CB100A143E9 /* Foundation+Log.m */; };
+		7B710DD91E6567A400430C6C /* ZKJRecommendTagsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B710DD81E6567A400430C6C /* ZKJRecommendTagsVC.m */; };
+		7B710DDC1E656D3C00430C6C /* ZKJRecommendTag.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B710DDB1E656D3C00430C6C /* ZKJRecommendTag.m */; };
+		7B710DE01E656DE000430C6C /* ZKJRecommendTagCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B710DDE1E656DE000430C6C /* ZKJRecommendTagCell.m */; };
+		7B710DE11E656DE000430C6C /* ZKJRecommendTagCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B710DDF1E656DE000430C6C /* ZKJRecommendTagCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +80,13 @@
 		7B6D19241E5D42D000A143E9 /* ZKJRecommendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKJRecommendViewController.m; sourceTree = "<group>"; };
 		7B6D19251E5D42D000A143E9 /* ZKJRecommendViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZKJRecommendViewController.xib; sourceTree = "<group>"; };
 		7B6D19281E5D6CB100A143E9 /* Foundation+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+Log.m"; sourceTree = "<group>"; };
+		7B710DD71E6567A400430C6C /* ZKJRecommendTagsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKJRecommendTagsVC.h; sourceTree = "<group>"; };
+		7B710DD81E6567A400430C6C /* ZKJRecommendTagsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKJRecommendTagsVC.m; sourceTree = "<group>"; };
+		7B710DDA1E656D3C00430C6C /* ZKJRecommendTag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKJRecommendTag.h; sourceTree = "<group>"; };
+		7B710DDB1E656D3C00430C6C /* ZKJRecommendTag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKJRecommendTag.m; sourceTree = "<group>"; };
+		7B710DDD1E656DE000430C6C /* ZKJRecommendTagCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKJRecommendTagCell.h; sourceTree = "<group>"; };
+		7B710DDE1E656DE000430C6C /* ZKJRecommendTagCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKJRecommendTagCell.m; sourceTree = "<group>"; };
+		7B710DDF1E656DE000430C6C /* ZKJRecommendTagCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZKJRecommendTagCell.xib; sourceTree = "<group>"; };
 		95E6D4727CD4FBEFE62B508E /* libPods-百思不得姐.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-百思不得姐.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCADB7CCF8048B964B422CFE /* Pods-百思不得姐.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-百思不得姐.release.xcconfig"; path = "Pods/Target Support Files/Pods-百思不得姐/Pods-百思不得姐.release.xcconfig"; sourceTree = "<group>"; };
 		E2ABB560C806EFAD6AEED79F /* Pods-百思不得姐.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-百思不得姐.debug.xcconfig"; path = "Pods/Target Support Files/Pods-百思不得姐/Pods-百思不得姐.debug.xcconfig"; sourceTree = "<group>"; };
@@ -128,6 +139,9 @@
 		7B169D5E1E5EC87600A17B5F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				7B710DDD1E656DE000430C6C /* ZKJRecommendTagCell.h */,
+				7B710DDE1E656DE000430C6C /* ZKJRecommendTagCell.m */,
+				7B710DDF1E656DE000430C6C /* ZKJRecommendTagCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -135,6 +149,8 @@
 		7B169D5F1E5EC87600A17B5F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				7B710DDA1E656D3C00430C6C /* ZKJRecommendTag.h */,
+				7B710DDB1E656D3C00430C6C /* ZKJRecommendTag.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -201,6 +217,8 @@
 			children = (
 				7B457CD61E5C2FC6009149A1 /* ZKJEssenceController.h */,
 				7B457CD71E5C2FC6009149A1 /* ZKJEssenceController.m */,
+				7B710DD71E6567A400430C6C /* ZKJRecommendTagsVC.h */,
+				7B710DD81E6567A400430C6C /* ZKJRecommendTagsVC.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -434,6 +452,7 @@
 				7B6938821E5ABFA0002BA43A /* Assets.xcassets in Resources */,
 				7B169D5D1E5EC59B00A17B5F /* ZKJRecommendUserCell.xib in Resources */,
 				7B169D5B1E5EC59B00A17B5F /* ZKJCategoryCell.xib in Resources */,
+				7B710DE11E656DE000430C6C /* ZKJRecommendTagCell.xib in Resources */,
 				7B6D19271E5D42D000A143E9 /* ZKJRecommendViewController.xib in Resources */,
 				7B6D19221E5D31A700A143E9 /* ZKJFriendTrendsController.xib in Resources */,
 			);
@@ -501,8 +520,11 @@
 				7B6D19261E5D42D000A143E9 /* ZKJRecommendViewController.m in Sources */,
 				7B457CFE1E5C2FC6009149A1 /* ZKJEssenceController.m in Sources */,
 				7B457D011E5C2FC6009149A1 /* ZKJNewController.m in Sources */,
+				7B710DE01E656DE000430C6C /* ZKJRecommendTagCell.m in Sources */,
 				7B457CFF1E5C2FC6009149A1 /* ZKJFriendTrendsController.m in Sources */,
 				7B457D041E5C2FC6009149A1 /* UIView+ZKJExtension.m in Sources */,
+				7B710DDC1E656D3C00430C6C /* ZKJRecommendTag.m in Sources */,
+				7B710DD91E6567A400430C6C /* ZKJRecommendTagsVC.m in Sources */,
 				7B169D521E5EC58300A17B5F /* ZKJUserModel.m in Sources */,
 				7B169D511E5EC58300A17B5F /* ZKJCategoryModel.m in Sources */,
 				7B457D021E5C2FC6009149A1 /* AppDelegate.m in Sources */,

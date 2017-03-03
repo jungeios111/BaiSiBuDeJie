@@ -19,14 +19,14 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2nZ-PY-npM">
-                        <rect key="frame" x="10" y="49" width="50" height="50"/>
+                        <rect key="frame" x="10" y="48" width="50" height="50"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="50" id="78s-xn-MAm"/>
                             <constraint firstAttribute="width" constant="50" id="aHi-sQ-x57"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pfx-Jq-IUx">
-                        <rect key="frame" x="70" y="48" width="240" height="20"/>
+                        <rect key="frame" x="70" y="48" width="180" height="20"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="20" id="MEz-Qx-2dv"/>
                         </constraints>
@@ -35,23 +35,39 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B2r-Uy-wTc">
-                        <rect key="frame" x="70" y="78" width="150" height="20"/>
+                        <rect key="frame" x="70" y="78" width="180" height="20"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="20" id="FBw-fD-uUe"/>
-                            <constraint firstAttribute="width" constant="150" id="NRJ-TU-ZR4"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K5z-gd-mwP">
+                        <rect key="frame" x="260" y="58" width="50" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="50" id="T9V-oI-9oF"/>
+                            <constraint firstAttribute="height" constant="30" id="U9c-sI-qFe"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <state key="normal" title="+ 订阅" backgroundImage="FollowBtnBg">
+                            <color key="titleColor" red="0.9907562137" green="0.20897335419999999" blue="0.23799594160000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </state>
+                        <state key="highlighted" backgroundImage="FollowBtnClickBg">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                    </button>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="K5z-gd-mwP" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="8LP-S4-U0r"/>
+                    <constraint firstItem="K5z-gd-mwP" firstAttribute="leading" secondItem="B2r-Uy-wTc" secondAttribute="trailing" constant="10" id="G4T-qm-JJ2"/>
                     <constraint firstItem="Pfx-Jq-IUx" firstAttribute="top" secondItem="2nZ-PY-npM" secondAttribute="top" id="LbX-yb-wDn"/>
                     <constraint firstItem="2nZ-PY-npM" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="aBu-ER-WBP"/>
                     <constraint firstItem="Pfx-Jq-IUx" firstAttribute="leading" secondItem="2nZ-PY-npM" secondAttribute="trailing" constant="10" id="aYw-73-ni6"/>
-                    <constraint firstAttribute="trailing" secondItem="Pfx-Jq-IUx" secondAttribute="trailing" constant="10" id="acS-hJ-0n3"/>
+                    <constraint firstAttribute="trailing" secondItem="K5z-gd-mwP" secondAttribute="trailing" constant="10" id="fBA-a0-NPZ"/>
                     <constraint firstItem="2nZ-PY-npM" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="fmO-9h-clr"/>
                     <constraint firstItem="B2r-Uy-wTc" firstAttribute="bottom" secondItem="2nZ-PY-npM" secondAttribute="bottom" id="jfP-Un-RqF"/>
+                    <constraint firstItem="K5z-gd-mwP" firstAttribute="leading" secondItem="Pfx-Jq-IUx" secondAttribute="trailing" constant="10" id="vPH-rz-8ky"/>
                     <constraint firstItem="B2r-Uy-wTc" firstAttribute="leading" secondItem="Pfx-Jq-IUx" secondAttribute="leading" id="zFs-1q-gqL"/>
                 </constraints>
             </tableViewCellContentView>
@@ -63,4 +79,8 @@
             <point key="canvasLocation" x="-106" y="-28.5"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="FollowBtnBg" width="51" height="25"/>
+        <image name="FollowBtnClickBg" width="51" height="25"/>
+    </resources>
 </document>

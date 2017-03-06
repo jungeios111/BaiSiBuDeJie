@@ -20,14 +20,14 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="header_cry_icon" translatesAutoresizingMaskIntoConstraints="NO" id="GZt-zf-XBs">
-                    <rect key="frame" x="163" y="219" width="48" height="48"/>
+                    <rect key="frame" x="163.5" y="218.5" width="48" height="48"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="48" id="84j-vf-sL1"/>
                         <constraint firstAttribute="height" constant="48" id="jbw-8R-Qit"/>
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yc6-u0-hU5">
-                    <rect key="frame" x="87" y="307" width="200" height="54"/>
+                    <rect key="frame" x="87.5" y="306.5" width="200" height="54"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="200" id="pDF-IX-TXP"/>
                     </constraints>
@@ -39,7 +39,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nBf-sQ-umc">
-                    <rect key="frame" x="87" y="401" width="200" height="35"/>
+                    <rect key="frame" x="87.5" y="400.5" width="200" height="35"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="35" id="q20-Cu-D3D"/>
                         <constraint firstAttribute="width" constant="200" id="sw5-jl-tJl"/>
@@ -50,6 +50,9 @@
                     <state key="highlighted" backgroundImage="friendsTrend_login_click">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="loginClick:" destination="-1" eventType="touchUpInside" id="dG1-Oz-OmO"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -61,7 +64,7 @@
                 <constraint firstItem="Yc6-u0-hU5" firstAttribute="top" secondItem="GZt-zf-XBs" secondAttribute="bottom" constant="40" id="mL2-xt-LD0"/>
                 <constraint firstItem="Yc6-u0-hU5" firstAttribute="centerY" secondItem="gmO-6T-znc" secondAttribute="centerY" id="xUe-pq-7yS"/>
             </constraints>
-            <point key="canvasLocation" x="-188" y="-311"/>
+            <point key="canvasLocation" x="-94" y="-352"/>
         </view>
     </objects>
     <resources>

@@ -8,6 +8,7 @@
 
 #import "ZKJFriendTrendsController.h"
 #import "ZKJRecommendViewController.h"
+#import "ZKJLoginRegisterVC.h"
 
 @interface ZKJFriendTrendsController ()
 
@@ -36,6 +37,11 @@
 //    ZKJLogFunC;
     ZKJRecommendViewController *vc = [[ZKJRecommendViewController alloc] init];
     [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (IBAction)loginClick:(id)sender {
+    ZKJLoginRegisterVC *vc = [[ZKJLoginRegisterVC alloc] init];
+    [self presentViewController:vc animated:YES completion:nil];
 }
 
 @end

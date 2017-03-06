@@ -15,6 +15,8 @@
 		7B169D5B1E5EC59B00A17B5F /* ZKJCategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B169D561E5EC59B00A17B5F /* ZKJCategoryCell.xib */; };
 		7B169D5C1E5EC59B00A17B5F /* ZKJRecommendUserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B169D581E5EC59B00A17B5F /* ZKJRecommendUserCell.m */; };
 		7B169D5D1E5EC59B00A17B5F /* ZKJRecommendUserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B169D591E5EC59B00A17B5F /* ZKJRecommendUserCell.xib */; };
+		7B1C5C671E6D5F8F001545F9 /* ZKJLoginRegisterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B1C5C651E6D5F8F001545F9 /* ZKJLoginRegisterVC.m */; };
+		7B1C5C681E6D5F8F001545F9 /* ZKJLoginRegisterVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B1C5C661E6D5F8F001545F9 /* ZKJLoginRegisterVC.xib */; };
 		7B457CFE1E5C2FC6009149A1 /* ZKJEssenceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B457CD71E5C2FC6009149A1 /* ZKJEssenceController.m */; };
 		7B457CFF1E5C2FC6009149A1 /* ZKJFriendTrendsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B457CDD1E5C2FC6009149A1 /* ZKJFriendTrendsController.m */; };
 		7B457D001E5C2FC6009149A1 /* ZKJMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B457CE31E5C2FC6009149A1 /* ZKJMeViewController.m */; };
@@ -50,6 +52,9 @@
 		7B169D571E5EC59B00A17B5F /* ZKJRecommendUserCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKJRecommendUserCell.h; sourceTree = "<group>"; };
 		7B169D581E5EC59B00A17B5F /* ZKJRecommendUserCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKJRecommendUserCell.m; sourceTree = "<group>"; };
 		7B169D591E5EC59B00A17B5F /* ZKJRecommendUserCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZKJRecommendUserCell.xib; sourceTree = "<group>"; };
+		7B1C5C641E6D5F8F001545F9 /* ZKJLoginRegisterVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKJLoginRegisterVC.h; sourceTree = "<group>"; };
+		7B1C5C651E6D5F8F001545F9 /* ZKJLoginRegisterVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKJLoginRegisterVC.m; sourceTree = "<group>"; };
+		7B1C5C661E6D5F8F001545F9 /* ZKJLoginRegisterVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZKJLoginRegisterVC.xib; sourceTree = "<group>"; };
 		7B457CD61E5C2FC6009149A1 /* ZKJEssenceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKJEssenceController.h; sourceTree = "<group>"; };
 		7B457CD71E5C2FC6009149A1 /* ZKJEssenceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKJEssenceController.m; sourceTree = "<group>"; };
 		7B457CDC1E5C2FC6009149A1 /* ZKJFriendTrendsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKJFriendTrendsController.h; sourceTree = "<group>"; };
@@ -242,6 +247,9 @@
 				7B6D19231E5D42D000A143E9 /* ZKJRecommendViewController.h */,
 				7B6D19241E5D42D000A143E9 /* ZKJRecommendViewController.m */,
 				7B6D19251E5D42D000A143E9 /* ZKJRecommendViewController.xib */,
+				7B1C5C641E6D5F8F001545F9 /* ZKJLoginRegisterVC.h */,
+				7B1C5C651E6D5F8F001545F9 /* ZKJLoginRegisterVC.m */,
+				7B1C5C661E6D5F8F001545F9 /* ZKJLoginRegisterVC.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -453,6 +461,7 @@
 				7B169D5D1E5EC59B00A17B5F /* ZKJRecommendUserCell.xib in Resources */,
 				7B169D5B1E5EC59B00A17B5F /* ZKJCategoryCell.xib in Resources */,
 				7B710DE11E656DE000430C6C /* ZKJRecommendTagCell.xib in Resources */,
+				7B1C5C681E6D5F8F001545F9 /* ZKJLoginRegisterVC.xib in Resources */,
 				7B6D19271E5D42D000A143E9 /* ZKJRecommendViewController.xib in Resources */,
 				7B6D19221E5D31A700A143E9 /* ZKJFriendTrendsController.xib in Resources */,
 			);
@@ -522,6 +531,7 @@
 				7B457D011E5C2FC6009149A1 /* ZKJNewController.m in Sources */,
 				7B710DE01E656DE000430C6C /* ZKJRecommendTagCell.m in Sources */,
 				7B457CFF1E5C2FC6009149A1 /* ZKJFriendTrendsController.m in Sources */,
+				7B1C5C671E6D5F8F001545F9 /* ZKJLoginRegisterVC.m in Sources */,
 				7B457D041E5C2FC6009149A1 /* UIView+ZKJExtension.m in Sources */,
 				7B710DDC1E656D3C00430C6C /* ZKJRecommendTag.m in Sources */,
 				7B710DD91E6567A400430C6C /* ZKJRecommendTagsVC.m in Sources */,

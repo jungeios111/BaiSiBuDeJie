@@ -37,6 +37,8 @@
 		7B710DDC1E656D3C00430C6C /* ZKJRecommendTag.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B710DDB1E656D3C00430C6C /* ZKJRecommendTag.m */; };
 		7B710DE01E656DE000430C6C /* ZKJRecommendTagCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B710DDE1E656DE000430C6C /* ZKJRecommendTagCell.m */; };
 		7B710DE11E656DE000430C6C /* ZKJRecommendTagCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B710DDF1E656DE000430C6C /* ZKJRecommendTagCell.xib */; };
+		7B9300EE1E6E534F009939BE /* ZKJVerticalButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B9300ED1E6E534F009939BE /* ZKJVerticalButton.m */; };
+		7B9300F41E6EAE61009939BE /* ZKJTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B9300F31E6EAE61009939BE /* ZKJTextField.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -92,6 +94,10 @@
 		7B710DDD1E656DE000430C6C /* ZKJRecommendTagCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKJRecommendTagCell.h; sourceTree = "<group>"; };
 		7B710DDE1E656DE000430C6C /* ZKJRecommendTagCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKJRecommendTagCell.m; sourceTree = "<group>"; };
 		7B710DDF1E656DE000430C6C /* ZKJRecommendTagCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZKJRecommendTagCell.xib; sourceTree = "<group>"; };
+		7B9300EC1E6E534F009939BE /* ZKJVerticalButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKJVerticalButton.h; sourceTree = "<group>"; };
+		7B9300ED1E6E534F009939BE /* ZKJVerticalButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKJVerticalButton.m; sourceTree = "<group>"; };
+		7B9300F21E6EAE61009939BE /* ZKJTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKJTextField.h; sourceTree = "<group>"; };
+		7B9300F31E6EAE61009939BE /* ZKJTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKJTextField.m; sourceTree = "<group>"; };
 		95E6D4727CD4FBEFE62B508E /* libPods-百思不得姐.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-百思不得姐.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCADB7CCF8048B964B422CFE /* Pods-百思不得姐.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-百思不得姐.release.xcconfig"; path = "Pods/Target Support Files/Pods-百思不得姐/Pods-百思不得姐.release.xcconfig"; sourceTree = "<group>"; };
 		E2ABB560C806EFAD6AEED79F /* Pods-百思不得姐.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-百思不得姐.debug.xcconfig"; path = "Pods/Target Support Files/Pods-百思不得姐/Pods-百思不得姐.debug.xcconfig"; sourceTree = "<group>"; };
@@ -137,6 +143,10 @@
 				7B169D571E5EC59B00A17B5F /* ZKJRecommendUserCell.h */,
 				7B169D581E5EC59B00A17B5F /* ZKJRecommendUserCell.m */,
 				7B169D591E5EC59B00A17B5F /* ZKJRecommendUserCell.xib */,
+				7B9300EC1E6E534F009939BE /* ZKJVerticalButton.h */,
+				7B9300ED1E6E534F009939BE /* ZKJVerticalButton.m */,
+				7B9300F21E6EAE61009939BE /* ZKJTextField.h */,
+				7B9300F31E6EAE61009939BE /* ZKJTextField.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -522,6 +532,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B9300EE1E6E534F009939BE /* ZKJVerticalButton.m in Sources */,
+				7B9300F41E6EAE61009939BE /* ZKJTextField.m in Sources */,
 				7B457D071E5C2FC6009149A1 /* main.m in Sources */,
 				7B457D031E5C2FC6009149A1 /* UIBarButtonItem+Extension.m in Sources */,
 				7B457D001E5C2FC6009149A1 /* ZKJMeViewController.m in Sources */,

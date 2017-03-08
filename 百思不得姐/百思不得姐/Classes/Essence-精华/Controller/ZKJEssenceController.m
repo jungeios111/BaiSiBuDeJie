@@ -49,7 +49,7 @@
     self.indicateView = indicateView;
     
     // 内部的子标签
-    NSArray *titles = @[@"全部全部", @"pp视频", @"声音", @"图片", @"222段子"];
+    NSArray *titles = @[@"全部", @"视频", @"声音", @"图片", @"内涵段子"];
     CGFloat width = topView.width / titles.count;
     CGFloat height = topView.height;
     for (int i = 0; i < titles.count; i++) {
@@ -58,7 +58,9 @@
         btn.y = 0;
         btn.width = width;
         btn.height = height;
+//        [btn layoutIfNeeded];
         [btn setTitle:titles[i] forState:UIControlStateNormal];
+        [btn.titleLabel setTextAlignment:NSTextAlignmentCenter];
         [btn setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
         [btn.titleLabel setFont:[UIFont systemFontOfSize:14]];
         [btn addTarget:self action:@selector(titleBtnClick:) forControlEvents:UIControlEventTouchUpInside];
@@ -86,10 +88,9 @@
     self.selBtn = btn;
     
     // 动画
-    [btn.titleLabel sizeToFit];
     [UIView animateWithDuration:0.25 animations:^{
-        self.indicateView.centerX = btn.centerX;
         self.indicateView.width = btn.titleLabel.width;
+        self.indicateView.centerX = btn.centerX;
     }];
 }
 

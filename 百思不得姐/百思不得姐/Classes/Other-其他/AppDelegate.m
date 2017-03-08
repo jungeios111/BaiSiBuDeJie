@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "ZKJTabBarController.h"
+#import "ZKJPushGuideView.h"
 
 @interface AppDelegate ()
 
@@ -22,6 +23,8 @@
     self.window.frame = [UIScreen mainScreen].bounds;
     self.window.rootViewController = [[ZKJTabBarController alloc] init];
     [self.window makeKeyAndVisible];
+    
+    [ZKJPushGuideView show];
     
     return YES;
 }

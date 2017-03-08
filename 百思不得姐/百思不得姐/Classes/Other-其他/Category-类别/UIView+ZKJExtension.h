@@ -20,6 +20,10 @@
 @property(nonatomic,assign) CGFloat height;
 /** size */
 @property(nonatomic,assign) CGSize size;
+/** centerX */
+@property(nonatomic,assign) CGFloat centerX;
+/** centerY */
+@property(nonatomic,assign) CGFloat centerY;
 
 //- (CGFloat)x;
 //- (void)setX:(CGFloat)x;

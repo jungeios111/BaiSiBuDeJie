@@ -10,6 +10,7 @@
 
 @interface ZKJLoginRegisterVC ()
 @property (strong, nonatomic) IBOutlet UITextField *phoneTF;
+@property (strong, nonatomic) IBOutlet NSLayoutConstraint *loginLeftToViewMargin;
 
 @end
 
@@ -37,11 +38,25 @@
     
 }
 
-- (IBAction)closeClick:(id)sender {
+- (IBAction)closeClick:(id)sender
+{
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-- (IBAction)registAccountClick:(id)sender {
+- (IBAction)registAccountClick:(UIButton *)button
+{
+    [self.view endEditing:YES];
+    if (self.loginLeftToViewMargin.constant == 0) {
+        self.loginLeftToViewMargin.constant = - self.view.width;
+        button.selected = YES;
+    } else {
+        self.loginLeftToViewMargin.constant = 0;
+        button.selected = NO;
+    }
+    
+    [UIView animateWithDuration:0.25 animations:^{
+        [self.view layoutIfNeeded];
+    }];
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event

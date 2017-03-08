@@ -22,23 +22,23 @@ static NSString * const ZkjPlaceholderColorKeyPath = @"_placeholderLabel.textCol
 //                                                                                   NSFontAttributeName : self.font}];
 //}
 
-+ (void)initialize
-{
-    [super initialize];
-    [self getIvars];
-}
-
-+ (void)getIvars
-{
-    unsigned int count = 0;
-    Ivar *ivars = class_copyIvarList([UITextField class], &count);
-    for (int i = 0; i < count; i++) {
-        Ivar ivar = ivars[i];
-        ZKJLog(@"%s  ---  %s", ivar_getName(ivar), ivar_getTypeEncoding(ivar));
-    }
-    
-    free(ivars);
-}
+//+ (void)initialize
+//{
+//    [super initialize];
+//    [self getIvars];
+//}
+//
+//+ (void)getIvars
+//{
+//    unsigned int count = 0;
+//    Ivar *ivars = class_copyIvarList([UITextField class], &count);
+//    for (int i = 0; i < count; i++) {
+//        Ivar ivar = ivars[i];
+//        ZKJLog(@"%s  ---  %s", ivar_getName(ivar), ivar_getTypeEncoding(ivar));
+//    }
+//    
+//    free(ivars);
+//}
 
 - (void)setUp
 {
@@ -48,6 +48,7 @@ static NSString * const ZkjPlaceholderColorKeyPath = @"_placeholderLabel.textCol
     // 2
 //    [self setValue:[UIColor whiteColor] forKeyPath:@"_placeholderLabel.textColor"];
     
+    // 设置光标颜色
     self.tintColor = self.textColor;
     [self resignFirstResponder];
 }

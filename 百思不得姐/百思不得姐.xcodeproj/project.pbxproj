@@ -39,6 +39,11 @@
 		7B710DDC1E656D3C00430C6C /* ZKJRecommendTag.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B710DDB1E656D3C00430C6C /* ZKJRecommendTag.m */; };
 		7B710DE01E656DE000430C6C /* ZKJRecommendTagCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B710DDE1E656DE000430C6C /* ZKJRecommendTagCell.m */; };
 		7B710DE11E656DE000430C6C /* ZKJRecommendTagCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B710DDF1E656DE000430C6C /* ZKJRecommendTagCell.xib */; };
+		7B92AB321E70F920000BEB30 /* ZKJAllViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B92AB311E70F920000BEB30 /* ZKJAllViewController.m */; };
+		7B92AB351E70F934000BEB30 /* ZKJVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B92AB341E70F934000BEB30 /* ZKJVideoViewController.m */; };
+		7B92AB381E70F951000BEB30 /* ZKJVoiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B92AB371E70F951000BEB30 /* ZKJVoiceViewController.m */; };
+		7B92AB3B1E70F96D000BEB30 /* ZKJPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B92AB3A1E70F96D000BEB30 /* ZKJPictureViewController.m */; };
+		7B92AB3E1E70F97C000BEB30 /* ZKJWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B92AB3D1E70F97C000BEB30 /* ZKJWordViewController.m */; };
 		7B9300EE1E6E534F009939BE /* ZKJVerticalButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B9300ED1E6E534F009939BE /* ZKJVerticalButton.m */; };
 		7B9300F41E6EAE61009939BE /* ZKJTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B9300F31E6EAE61009939BE /* ZKJTextField.m */; };
 /* End PBXBuildFile section */
@@ -99,6 +104,16 @@
 		7B710DDD1E656DE000430C6C /* ZKJRecommendTagCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKJRecommendTagCell.h; sourceTree = "<group>"; };
 		7B710DDE1E656DE000430C6C /* ZKJRecommendTagCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKJRecommendTagCell.m; sourceTree = "<group>"; };
 		7B710DDF1E656DE000430C6C /* ZKJRecommendTagCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZKJRecommendTagCell.xib; sourceTree = "<group>"; };
+		7B92AB301E70F920000BEB30 /* ZKJAllViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKJAllViewController.h; sourceTree = "<group>"; };
+		7B92AB311E70F920000BEB30 /* ZKJAllViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKJAllViewController.m; sourceTree = "<group>"; };
+		7B92AB331E70F934000BEB30 /* ZKJVideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKJVideoViewController.h; sourceTree = "<group>"; };
+		7B92AB341E70F934000BEB30 /* ZKJVideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKJVideoViewController.m; sourceTree = "<group>"; };
+		7B92AB361E70F951000BEB30 /* ZKJVoiceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKJVoiceViewController.h; sourceTree = "<group>"; };
+		7B92AB371E70F951000BEB30 /* ZKJVoiceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKJVoiceViewController.m; sourceTree = "<group>"; };
+		7B92AB391E70F96D000BEB30 /* ZKJPictureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKJPictureViewController.h; sourceTree = "<group>"; };
+		7B92AB3A1E70F96D000BEB30 /* ZKJPictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKJPictureViewController.m; sourceTree = "<group>"; };
+		7B92AB3C1E70F97C000BEB30 /* ZKJWordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKJWordViewController.h; sourceTree = "<group>"; };
+		7B92AB3D1E70F97C000BEB30 /* ZKJWordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKJWordViewController.m; sourceTree = "<group>"; };
 		7B9300EC1E6E534F009939BE /* ZKJVerticalButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKJVerticalButton.h; sourceTree = "<group>"; };
 		7B9300ED1E6E534F009939BE /* ZKJVerticalButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKJVerticalButton.m; sourceTree = "<group>"; };
 		7B9300F21E6EAE61009939BE /* ZKJTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKJTextField.h; sourceTree = "<group>"; };
@@ -239,6 +254,16 @@
 				7B457CD71E5C2FC6009149A1 /* ZKJEssenceController.m */,
 				7B710DD71E6567A400430C6C /* ZKJRecommendTagsVC.h */,
 				7B710DD81E6567A400430C6C /* ZKJRecommendTagsVC.m */,
+				7B92AB301E70F920000BEB30 /* ZKJAllViewController.h */,
+				7B92AB311E70F920000BEB30 /* ZKJAllViewController.m */,
+				7B92AB331E70F934000BEB30 /* ZKJVideoViewController.h */,
+				7B92AB341E70F934000BEB30 /* ZKJVideoViewController.m */,
+				7B92AB361E70F951000BEB30 /* ZKJVoiceViewController.h */,
+				7B92AB371E70F951000BEB30 /* ZKJVoiceViewController.m */,
+				7B92AB391E70F96D000BEB30 /* ZKJPictureViewController.h */,
+				7B92AB3A1E70F96D000BEB30 /* ZKJPictureViewController.m */,
+				7B92AB3C1E70F97C000BEB30 /* ZKJWordViewController.h */,
+				7B92AB3D1E70F97C000BEB30 /* ZKJWordViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -544,13 +569,18 @@
 				7B9300EE1E6E534F009939BE /* ZKJVerticalButton.m in Sources */,
 				7B9300F41E6EAE61009939BE /* ZKJTextField.m in Sources */,
 				7B457D071E5C2FC6009149A1 /* main.m in Sources */,
+				7B92AB381E70F951000BEB30 /* ZKJVoiceViewController.m in Sources */,
 				7B457D031E5C2FC6009149A1 /* UIBarButtonItem+Extension.m in Sources */,
 				7B457D001E5C2FC6009149A1 /* ZKJMeViewController.m in Sources */,
 				7B169D5C1E5EC59B00A17B5F /* ZKJRecommendUserCell.m in Sources */,
+				7B92AB321E70F920000BEB30 /* ZKJAllViewController.m in Sources */,
+				7B92AB3B1E70F96D000BEB30 /* ZKJPictureViewController.m in Sources */,
 				7B6D19261E5D42D000A143E9 /* ZKJRecommendViewController.m in Sources */,
+				7B92AB351E70F934000BEB30 /* ZKJVideoViewController.m in Sources */,
 				7B6671FC1E6FA5D600F4A704 /* ZKJPushGuideView.m in Sources */,
 				7B457CFE1E5C2FC6009149A1 /* ZKJEssenceController.m in Sources */,
 				7B457D011E5C2FC6009149A1 /* ZKJNewController.m in Sources */,
+				7B92AB3E1E70F97C000BEB30 /* ZKJWordViewController.m in Sources */,
 				7B710DE01E656DE000430C6C /* ZKJRecommendTagCell.m in Sources */,
 				7B457CFF1E5C2FC6009149A1 /* ZKJFriendTrendsController.m in Sources */,
 				7B1C5C671E6D5F8F001545F9 /* ZKJLoginRegisterVC.m in Sources */,

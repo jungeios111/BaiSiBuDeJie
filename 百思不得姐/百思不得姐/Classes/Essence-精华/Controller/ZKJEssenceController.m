@@ -70,8 +70,8 @@
 - (void)setTopTitlesView
 {
     // 标签栏整体
-    UIView *topView = [[UIView alloc] initWithFrame:CGRectMake(0, 64, self.view.width, 35)];
-    topView.backgroundColor = [[UIColor whiteColor] colorWithAlphaComponent:0.5];
+    UIView *topView = [[UIView alloc] initWithFrame:CGRectMake(0, ZKJTitilesViewY, self.view.width, ZKJTitilesViewH)];
+    topView.backgroundColor = [[UIColor whiteColor] colorWithAlphaComponent:0.7];
     [self.view addSubview:topView];
     self.titleView = topView;
     
@@ -153,7 +153,7 @@
 }
 
 #pragma mark - UIScrollViewDelegate
-// 滚动动画停止时执行,代码改变时出发,也就是setContentOffset改变时
+// 滚动动画停止时执行,代码改变时出发,也就是setContentOffset改变时，不是人为拖拽scrollView导致滚动完毕，会调用scrollViewDidEndScrollingAnimation这个方法
 - (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView
 {
     ZKJLogFunC;
@@ -161,17 +161,10 @@
     NSInteger index = scrollView.contentOffset.x / scrollView.width;
     
     // 取出子控制器
-    UITableViewController *vc = self.childViewControllers[index];
+    UIViewController *vc = self.childViewControllers[index];
     vc.view.x = scrollView.contentOffset.x;
     vc.view.y = 0;                              // 设置控制器view的y值为0(默认是20)
     vc.view.height = scrollView.height;         // 设置控制器view的height值为整个屏幕的高度(默认是比屏幕高度少个20)
-    
-    //设置内边距
-    CGFloat top = CGRectGetMaxY(self.titleView.frame);
-    CGFloat bottom = self.tabBarController.tabBar.height;
-    vc.tableView.contentInset = UIEdgeInsetsMake(top, 0, bottom, 0);
-    // 设置滚动条的内边距
-    vc.tableView.scrollIndicatorInsets = vc.tableView.contentInset;
     [scrollView addSubview:vc.view];
 }
 

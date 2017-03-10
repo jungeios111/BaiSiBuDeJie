@@ -46,6 +46,8 @@
 		7B92AB3E1E70F97C000BEB30 /* ZKJWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B92AB3D1E70F97C000BEB30 /* ZKJWordViewController.m */; };
 		7B9300EE1E6E534F009939BE /* ZKJVerticalButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B9300ED1E6E534F009939BE /* ZKJVerticalButton.m */; };
 		7B9300F41E6EAE61009939BE /* ZKJTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B9300F31E6EAE61009939BE /* ZKJTextField.m */; };
+		7BD1E8D01E72341500327D1D /* ZKJTopic.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BD1E8CF1E72341500327D1D /* ZKJTopic.m */; };
+		7BD1E8D31E724EFB00327D1D /* ZKJConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BD1E8D21E724EFB00327D1D /* ZKJConst.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -118,6 +120,10 @@
 		7B9300ED1E6E534F009939BE /* ZKJVerticalButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKJVerticalButton.m; sourceTree = "<group>"; };
 		7B9300F21E6EAE61009939BE /* ZKJTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKJTextField.h; sourceTree = "<group>"; };
 		7B9300F31E6EAE61009939BE /* ZKJTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKJTextField.m; sourceTree = "<group>"; };
+		7BD1E8CE1E72341500327D1D /* ZKJTopic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKJTopic.h; sourceTree = "<group>"; };
+		7BD1E8CF1E72341500327D1D /* ZKJTopic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKJTopic.m; sourceTree = "<group>"; };
+		7BD1E8D11E724EFB00327D1D /* ZKJConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKJConst.h; sourceTree = "<group>"; };
+		7BD1E8D21E724EFB00327D1D /* ZKJConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKJConst.m; sourceTree = "<group>"; };
 		95E6D4727CD4FBEFE62B508E /* libPods-百思不得姐.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-百思不得姐.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCADB7CCF8048B964B422CFE /* Pods-百思不得姐.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-百思不得姐.release.xcconfig"; path = "Pods/Target Support Files/Pods-百思不得姐/Pods-百思不得姐.release.xcconfig"; sourceTree = "<group>"; };
 		E2ABB560C806EFAD6AEED79F /* Pods-百思不得姐.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-百思不得姐.debug.xcconfig"; path = "Pods/Target Support Files/Pods-百思不得姐/Pods-百思不得姐.debug.xcconfig"; sourceTree = "<group>"; };
@@ -186,6 +192,8 @@
 			children = (
 				7B710DDA1E656D3C00430C6C /* ZKJRecommendTag.h */,
 				7B710DDB1E656D3C00430C6C /* ZKJRecommendTag.m */,
+				7BD1E8CE1E72341500327D1D /* ZKJTopic.h */,
+				7BD1E8CF1E72341500327D1D /* ZKJTopic.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -388,6 +396,8 @@
 				7B6D19281E5D6CB100A143E9 /* Foundation+Log.m */,
 				7B457CFC1E5C2FC6009149A1 /* main.m */,
 				7B457CFD1E5C2FC6009149A1 /* ZkjBaiSi.pch */,
+				7BD1E8D11E724EFB00327D1D /* ZKJConst.h */,
+				7BD1E8D21E724EFB00327D1D /* ZKJConst.m */,
 			);
 			path = "其他";
 			sourceTree = "<group>";
@@ -587,11 +597,13 @@
 				7B457D041E5C2FC6009149A1 /* UIView+ZKJExtension.m in Sources */,
 				7B710DDC1E656D3C00430C6C /* ZKJRecommendTag.m in Sources */,
 				7B710DD91E6567A400430C6C /* ZKJRecommendTagsVC.m in Sources */,
+				7BD1E8D01E72341500327D1D /* ZKJTopic.m in Sources */,
 				7B169D521E5EC58300A17B5F /* ZKJUserModel.m in Sources */,
 				7B169D511E5EC58300A17B5F /* ZKJCategoryModel.m in Sources */,
 				7B457D021E5C2FC6009149A1 /* AppDelegate.m in Sources */,
 				7B457D051E5C2FC6009149A1 /* ZKJTabBarController.m in Sources */,
 				7B169D4B1E5EBD2D00A17B5F /* UIImage+ZKJExtension.m in Sources */,
+				7BD1E8D31E724EFB00327D1D /* ZKJConst.m in Sources */,
 				7B6D19291E5D6CB100A143E9 /* Foundation+Log.m in Sources */,
 				7B457D061E5C2FC6009149A1 /* ZKJTabBar.m in Sources */,
 				7B457D0D1E5C5BBE009149A1 /* ZKJNavigationController.m in Sources */,

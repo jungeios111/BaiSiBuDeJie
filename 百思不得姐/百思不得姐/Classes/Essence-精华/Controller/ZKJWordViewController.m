@@ -12,6 +12,7 @@
 #import <MJExtension.h>
 #import <MJRefresh.h>
 #import "ZKJTopic.h"
+#import "ZKJTopicCell.h"
 
 @interface ZKJWordViewController ()
 
@@ -36,7 +37,7 @@
     return _topicArr;
 }
 
-static NSString *cellName = @"cell";
+static NSString *cellName = @"topic";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -59,7 +60,7 @@ static NSString *cellName = @"cell";
     self.tableView.contentInset = UIEdgeInsetsMake(top, 0, bottom, 0);
     // 设置滚动条的内边距
     self.tableView.scrollIndicatorInsets = self.tableView.contentInset;
-    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:cellName];
+    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([ZKJTopicCell class]) bundle:nil] forCellReuseIdentifier:cellName];
 }
 
 /** 添加刷新控件 */
@@ -146,6 +147,11 @@ static NSString *cellName = @"cell";
     }];
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 200;
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     self.tableView.mj_footer.hidden = (self.topicArr.count == 0);
     return self.topicArr.count;
@@ -153,16 +159,8 @@ static NSString *cellName = @"cell";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellName forIndexPath:indexPath];
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellName];
-    }
-    
-    ZKJTopic *topic = self.topicArr[indexPath.row];
-    cell.textLabel.text = topic.name;
-    cell.detailTextLabel.text = topic.text;
-    ZKJLog(@"%@", topic.text);
-    [cell.imageView sd_setImageWithURL:[NSURL URLWithString:topic.profile_image] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
+    ZKJTopicCell *cell = [tableView dequeueReusableCellWithIdentifier:cellName forIndexPath:indexPath];
+    cell.topic = self.topicArr[indexPath.row];
     return cell;
 }
 

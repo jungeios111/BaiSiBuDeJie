@@ -49,18 +49,23 @@
 - (void)setChildViewController
 {
     ZKJAllViewController *all = [[ZKJAllViewController alloc] init];
+    all.title = @"全部";
     [self addChildViewController:all];
     
     ZKJVideoViewController *video = [[ZKJVideoViewController alloc] init];
+    video.title = @"视频";
     [self addChildViewController:video];
     
     ZKJVoiceViewController *voice = [[ZKJVoiceViewController alloc] init];
+    voice.title = @"声音";
     [self addChildViewController:voice];
     
     ZKJPictureViewController *picture = [[ZKJPictureViewController alloc] init];
+    picture.title = @"图片";
     [self addChildViewController:picture];
     
     ZKJWordViewController *word = [[ZKJWordViewController alloc] init];
+    word.title = @"内涵段子";
     [self addChildViewController:word];
 }
 
@@ -84,10 +89,9 @@
     self.indicateView = indicateView;
     
     // 内部的子标签
-    NSArray *titles = @[@"全部", @"视频", @"声音", @"图片", @"内涵段子"];
-    CGFloat width = topView.width / titles.count;
+    CGFloat width = topView.width / self.childViewControllers.count;
     CGFloat height = topView.height;
-    for (int i = 0; i < titles.count; i++) {
+    for (int i = 0; i < self.childViewControllers.count; i++) {
         UIButton *btn = [[UIButton alloc] init];
         btn.x = i * width;
         btn.y = 0;
@@ -95,7 +99,7 @@
         btn.height = height;
         btn.tag = i;
 //        [btn layoutIfNeeded];
-        [btn setTitle:titles[i] forState:UIControlStateNormal];
+        [btn setTitle:[self.childViewControllers[i] title] forState:UIControlStateNormal];
         [btn.titleLabel setTextAlignment:NSTextAlignmentCenter];
         [btn setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
         [btn.titleLabel setFont:[UIFont systemFontOfSize:14]];

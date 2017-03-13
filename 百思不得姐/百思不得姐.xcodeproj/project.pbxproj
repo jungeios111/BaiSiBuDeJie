@@ -50,6 +50,7 @@
 		7BD1E8D31E724EFB00327D1D /* ZKJConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BD1E8D21E724EFB00327D1D /* ZKJConst.m */; };
 		7BD1E8D71E72819600327D1D /* ZKJTopicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BD1E8D51E72819600327D1D /* ZKJTopicCell.m */; };
 		7BD1E8D81E72819600327D1D /* ZKJTopicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BD1E8D61E72819600327D1D /* ZKJTopicCell.xib */; };
+		7BDD40B61E76424E00DD5A9D /* NSDate+ZKJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BDD40B51E76424E00DD5A9D /* NSDate+ZKJExtension.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -129,6 +130,8 @@
 		7BD1E8D41E72819600327D1D /* ZKJTopicCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKJTopicCell.h; sourceTree = "<group>"; };
 		7BD1E8D51E72819600327D1D /* ZKJTopicCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKJTopicCell.m; sourceTree = "<group>"; };
 		7BD1E8D61E72819600327D1D /* ZKJTopicCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZKJTopicCell.xib; sourceTree = "<group>"; };
+		7BDD40B41E76424E00DD5A9D /* NSDate+ZKJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+ZKJExtension.h"; sourceTree = "<group>"; };
+		7BDD40B51E76424E00DD5A9D /* NSDate+ZKJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+ZKJExtension.m"; sourceTree = "<group>"; };
 		95E6D4727CD4FBEFE62B508E /* libPods-百思不得姐.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-百思不得姐.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCADB7CCF8048B964B422CFE /* Pods-百思不得姐.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-百思不得姐.release.xcconfig"; path = "Pods/Target Support Files/Pods-百思不得姐/Pods-百思不得姐.release.xcconfig"; sourceTree = "<group>"; };
 		E2ABB560C806EFAD6AEED79F /* Pods-百思不得姐.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-百思不得姐.debug.xcconfig"; path = "Pods/Target Support Files/Pods-百思不得姐/Pods-百思不得姐.debug.xcconfig"; sourceTree = "<group>"; };
@@ -371,6 +374,8 @@
 				7B457CF31E5C2FC6009149A1 /* UIView+ZKJExtension.m */,
 				7B169D491E5EBD2D00A17B5F /* UIImage+ZKJExtension.h */,
 				7B169D4A1E5EBD2D00A17B5F /* UIImage+ZKJExtension.m */,
+				7BDD40B41E76424E00DD5A9D /* NSDate+ZKJExtension.h */,
+				7BDD40B51E76424E00DD5A9D /* NSDate+ZKJExtension.m */,
 			);
 			path = "Category-类别";
 			sourceTree = "<group>";
@@ -603,6 +608,7 @@
 				7B710DE01E656DE000430C6C /* ZKJRecommendTagCell.m in Sources */,
 				7B457CFF1E5C2FC6009149A1 /* ZKJFriendTrendsController.m in Sources */,
 				7B1C5C671E6D5F8F001545F9 /* ZKJLoginRegisterVC.m in Sources */,
+				7BDD40B61E76424E00DD5A9D /* NSDate+ZKJExtension.m in Sources */,
 				7B457D041E5C2FC6009149A1 /* UIView+ZKJExtension.m in Sources */,
 				7B710DDC1E656D3C00430C6C /* ZKJRecommendTag.m in Sources */,
 				7B710DD91E6567A400430C6C /* ZKJRecommendTagsVC.m in Sources */,

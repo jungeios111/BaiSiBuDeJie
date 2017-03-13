@@ -149,8 +149,16 @@
                             <constraint firstAttribute="bottom" secondItem="oKe-bo-N6d" secondAttribute="bottom" id="tRY-HS-HcH"/>
                         </constraints>
                     </view>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Profile_AddV_authen" translatesAutoresizingMaskIntoConstraints="NO" id="eMr-Qh-NHk" userLabel="加V">
+                        <rect key="frame" x="36" y="36" width="14" height="14"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="14" id="NR7-Cf-o34"/>
+                            <constraint firstAttribute="width" constant="14" id="jl2-e5-sKP"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="eMr-Qh-NHk" firstAttribute="trailing" secondItem="fzm-55-AnX" secondAttribute="trailing" constant="5" id="1fT-5Z-mea"/>
                     <constraint firstItem="Qn2-ze-iYp" firstAttribute="bottom" secondItem="fzm-55-AnX" secondAttribute="bottom" id="5yk-fK-7Uw"/>
                     <constraint firstItem="QTi-VR-UGa" firstAttribute="top" secondItem="fzm-55-AnX" secondAttribute="top" id="8em-ll-G8b"/>
                     <constraint firstItem="QTi-VR-UGa" firstAttribute="leading" secondItem="fzm-55-AnX" secondAttribute="trailing" constant="10" id="ByN-z0-gca"/>
@@ -162,6 +170,7 @@
                     <constraint firstItem="ag6-bd-TJo" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="e7x-cO-LdP"/>
                     <constraint firstAttribute="trailing" secondItem="HjY-uR-rMy" secondAttribute="trailing" constant="10" id="eV2-i3-AXJ"/>
                     <constraint firstItem="Qn2-ze-iYp" firstAttribute="leading" secondItem="QTi-VR-UGa" secondAttribute="leading" id="l6P-tZ-prs"/>
+                    <constraint firstItem="eMr-Qh-NHk" firstAttribute="bottom" secondItem="fzm-55-AnX" secondAttribute="bottom" constant="5" id="s0D-p1-6w3"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
@@ -172,12 +181,14 @@
                 <outlet property="headImageView" destination="fzm-55-AnX" id="y9B-X5-hkG"/>
                 <outlet property="nameLabel" destination="QTi-VR-UGa" id="mX8-BN-T7u"/>
                 <outlet property="shareBtn" destination="wSD-xZ-rc7" id="Fvo-PH-GUb"/>
+                <outlet property="sinaImgView" destination="eMr-Qh-NHk" id="eXa-4b-jVa"/>
                 <outlet property="timeLabel" destination="Qn2-ze-iYp" id="k50-TX-sAG"/>
             </connections>
             <point key="canvasLocation" x="-97" y="-61"/>
         </tableViewCell>
     </objects>
     <resources>
+        <image name="Profile_AddV_authen" width="14" height="14"/>
         <image name="cell-button-line" width="1" height="29"/>
         <image name="cell-content-line" width="299" height="1"/>
         <image name="cellFollowClickIcon" width="19" height="20"/>

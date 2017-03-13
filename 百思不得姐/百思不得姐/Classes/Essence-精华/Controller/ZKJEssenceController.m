@@ -8,11 +8,7 @@
 
 #import "ZKJEssenceController.h"
 #import "ZKJRecommendTagsVC.h"
-#import "ZKJAllViewController.h"
-#import "ZKJVideoViewController.h"
-#import "ZKJVoiceViewController.h"
-#import "ZKJPictureViewController.h"
-#import "ZKJWordViewController.h"
+#import "ZKJTopicViewController.h"
 
 @interface ZKJEssenceController ()<UIScrollViewDelegate>
 
@@ -48,24 +44,29 @@
 /** 添加子控制器 */
 - (void)setChildViewController
 {
-    ZKJAllViewController *all = [[ZKJAllViewController alloc] init];
+    ZKJTopicViewController *all = [[ZKJTopicViewController alloc] init];
     all.title = @"全部";
+    all.type = ZKJTopicTypeAll;
     [self addChildViewController:all];
     
-    ZKJVideoViewController *video = [[ZKJVideoViewController alloc] init];
+    ZKJTopicViewController *video = [[ZKJTopicViewController alloc] init];
     video.title = @"视频";
+    video.type = ZKJTopicTypeVideo;
     [self addChildViewController:video];
     
-    ZKJVoiceViewController *voice = [[ZKJVoiceViewController alloc] init];
+    ZKJTopicViewController *voice = [[ZKJTopicViewController alloc] init];
     voice.title = @"声音";
+    voice.type = ZKJTopicTypeVoice;
     [self addChildViewController:voice];
     
-    ZKJPictureViewController *picture = [[ZKJPictureViewController alloc] init];
+    ZKJTopicViewController *picture = [[ZKJTopicViewController alloc] init];
     picture.title = @"图片";
+    picture.type = ZKJTopicTypePicture;
     [self addChildViewController:picture];
     
-    ZKJWordViewController *word = [[ZKJWordViewController alloc] init];
+    ZKJTopicViewController *word = [[ZKJTopicViewController alloc] init];
     word.title = @"内涵段子";
+    word.type = ZKJTopicTypeWord;
     [self addChildViewController:word];
 }
 

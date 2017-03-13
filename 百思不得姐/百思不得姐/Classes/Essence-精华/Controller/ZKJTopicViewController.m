@@ -1,12 +1,12 @@
 //
-//  ZKJWordViewController.m
+//  ZKJTopicViewController.m
 //  百思不得姐
 //
-//  Created by ZKJ on 2017/3/9.
+//  Created by JM on 16/3/16.
 //  Copyright © 2017年 ZKJ. All rights reserved.
 //
 
-#import "ZKJWordViewController.h"
+#import "ZKJTopicViewController.h"
 #import <AFNetworking.h>
 #import <UIImageView+WebCache.h>
 #import <MJExtension.h>
@@ -14,7 +14,7 @@
 #import "ZKJTopic.h"
 #import "ZKJTopicCell.h"
 
-@interface ZKJWordViewController ()
+@interface ZKJTopicViewController ()
 
 /** 帖子数据 */
 @property(nonatomic,strong) NSMutableArray *topicArr;
@@ -27,7 +27,7 @@
 
 @end
 
-@implementation ZKJWordViewController
+@implementation ZKJTopicViewController
 
 - (NSMutableArray *)topicArr
 {
@@ -82,7 +82,7 @@ static NSString *cellName = @"topic";
     NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
     parameters[@"a"] = @"list";
     parameters[@"c"] = @"data";
-    parameters[@"type"] = @"29";
+    parameters[@"type"] = @(self.type);
     self.parameters = parameters;
     
     [[AFHTTPSessionManager manager] GET:@"http://api.budejie.com/api/api_open.php" parameters:parameters progress:^(NSProgress * _Nonnull downloadProgress) {
@@ -115,7 +115,7 @@ static NSString *cellName = @"topic";
     NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
     parameters[@"a"] = @"list";
     parameters[@"c"] = @"data";
-    parameters[@"type"] = @"29";
+    parameters[@"type"] = @(self.type);
     parameters[@"maxtime"] = self.maxtime;
     NSInteger page = self.page + 1;
     parameters[@"page"] = @(page);

@@ -61,6 +61,8 @@ static NSString *cellName = @"topic";
     // 设置滚动条的内边距
     self.tableView.scrollIndicatorInsets = self.tableView.contentInset;
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([ZKJTopicCell class]) bundle:nil] forCellReuseIdentifier:cellName];
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    self.tableView.backgroundColor = [UIColor clearColor];
 }
 
 /** 添加刷新控件 */

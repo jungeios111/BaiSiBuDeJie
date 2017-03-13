@@ -18,32 +18,40 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="199"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fzm-55-AnX" userLabel="头像">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fzm-55-AnX" userLabel="头像">
                         <rect key="frame" x="10" y="10" width="35" height="35"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="35" id="1yD-Mh-ioX"/>
+                            <constraint firstAttribute="width" constant="35" id="bh2-Vy-Mdl"/>
+                        </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QTi-VR-UGa" userLabel="昵称">
-                        <rect key="frame" x="55" y="10" width="199" height="20"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QTi-VR-UGa" userLabel="昵称">
+                        <rect key="frame" x="55" y="10" width="200" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="200" id="6Ul-Yq-LvM"/>
+                            <constraint firstAttribute="height" constant="20" id="oa9-Y8-3Z6"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qn2-ze-iYp" userLabel="时间">
-                        <rect key="frame" x="55" y="28" width="186" height="17"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qn2-ze-iYp" userLabel="时间">
+                        <rect key="frame" x="55" y="29" width="33" height="16"/>
                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HjY-uR-rMy">
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HjY-uR-rMy">
                         <rect key="frame" x="291" y="10" width="19" height="20"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="Db0-6S-23N"/>
+                            <constraint firstAttribute="width" constant="19" id="M0b-hG-ab0"/>
+                        </constraints>
                         <state key="normal" image="cellFollowDisableIcon"/>
                         <state key="selected" image="cellFollowClickIcon"/>
                     </button>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ag6-bd-TJo" userLabel="底部view">
-                        <rect key="frame" x="0.0" y="156" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="155" width="320" height="44"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="crf-tv-Atb" userLabel="顶">
                                 <rect key="frame" x="0.0" y="0.0" width="80" height="44"/>
@@ -92,13 +100,13 @@
                                     <constraint firstAttribute="width" constant="1" id="Yqf-us-hWn"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cell-button-line" translatesAutoresizingMaskIntoConstraints="NO" id="i7F-aN-hpW">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cell-button-line" translatesAutoresizingMaskIntoConstraints="NO" id="i7F-aN-hpW" userLabel="分割线">
                                 <rect key="frame" x="160" y="0.0" width="1" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="1" id="gr7-Qn-ewC"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cell-button-line" translatesAutoresizingMaskIntoConstraints="NO" id="oKe-bo-N6d">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cell-button-line" translatesAutoresizingMaskIntoConstraints="NO" id="oKe-bo-N6d" userLabel="分割线">
                                 <rect key="frame" x="240" y="0.0" width="1" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="1" id="t2b-cW-fE0"/>
@@ -143,9 +151,17 @@
                     </view>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="Qn2-ze-iYp" firstAttribute="bottom" secondItem="fzm-55-AnX" secondAttribute="bottom" id="5yk-fK-7Uw"/>
+                    <constraint firstItem="QTi-VR-UGa" firstAttribute="top" secondItem="fzm-55-AnX" secondAttribute="top" id="8em-ll-G8b"/>
+                    <constraint firstItem="QTi-VR-UGa" firstAttribute="leading" secondItem="fzm-55-AnX" secondAttribute="trailing" constant="10" id="ByN-z0-gca"/>
                     <constraint firstAttribute="trailing" secondItem="ag6-bd-TJo" secondAttribute="trailing" id="ImD-Tf-L6W"/>
+                    <constraint firstItem="fzm-55-AnX" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="N1r-ZN-Pva"/>
                     <constraint firstAttribute="bottom" secondItem="ag6-bd-TJo" secondAttribute="bottom" id="R5h-nd-1UU"/>
+                    <constraint firstItem="HjY-uR-rMy" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="T6c-sf-59u"/>
+                    <constraint firstItem="fzm-55-AnX" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="TOd-Xw-5yQ"/>
                     <constraint firstItem="ag6-bd-TJo" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="e7x-cO-LdP"/>
+                    <constraint firstAttribute="trailing" secondItem="HjY-uR-rMy" secondAttribute="trailing" constant="10" id="eV2-i3-AXJ"/>
+                    <constraint firstItem="Qn2-ze-iYp" firstAttribute="leading" secondItem="QTi-VR-UGa" secondAttribute="leading" id="l6P-tZ-prs"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>

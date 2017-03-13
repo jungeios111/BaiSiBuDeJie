@@ -36,13 +36,25 @@
 - (void)setTopic:(ZKJTopic *)topic
 {
     _topic = topic;
-    [self.imageView sd_setImageWithURL:[NSURL URLWithString:topic.profile_image] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
+    [self.headImageView sd_setImageWithURL:[NSURL URLWithString:topic.profile_image] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
     self.nameLabel.text = topic.name;
     self.timeLabel.text = topic.create_time;
-    [self.dingBtn setTitle:[NSString stringWithFormat:@"%zd", topic.ding] forState:UIControlStateNormal];
-    [self.caiBtn setTitle:[NSString stringWithFormat:@"%zd", topic.cai] forState:UIControlStateNormal];
-    [self.shareBtn setTitle:[NSString stringWithFormat:@"%zd", topic.repost] forState:UIControlStateNormal];
-    [self.commentBtn setTitle:[NSString stringWithFormat:@"%zd", topic.comment] forState:UIControlStateNormal];
+    
+    // 设置按钮文字
+    [self setButton:self.dingBtn withCount:topic.ding withDefaultTitle:@"顶"];
+    [self setButton:self.caiBtn withCount:topic.cai withDefaultTitle:@"踩"];
+    [self setButton:self.shareBtn withCount:topic.repost withDefaultTitle:@"转发"];
+    [self setButton:self.commentBtn withCount:topic.comment withDefaultTitle:@"评论"];
+}
+
+- (void)setButton:(UIButton *)button withCount:(NSInteger)count withDefaultTitle:(NSString *)defaultTitle
+{
+    if (count > 10000) {
+        defaultTitle = [NSString stringWithFormat:@"%.1f万", count / 10000.0];
+    } else if (count > 0) {
+        defaultTitle = [NSString stringWithFormat:@"%zd", count];
+    }
+    [button setTitle:defaultTitle forState:UIControlStateNormal];
 }
 
 - (void)setFrame:(CGRect)frame
@@ -57,7 +69,10 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    // Initialization code
+    UIImageView *imgView = [[UIImageView alloc] init];
+    imgView.image = [UIImage imageNamed:@"mainCellBackground"];
+    self.backgroundView = imgView;
+    self.selectionStyle = UITableViewCellSelectionStyleNone;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

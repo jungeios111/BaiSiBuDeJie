@@ -7,6 +7,7 @@
 //
 
 #import "ZKJCategoryModel.h"
+#import <MJExtension.h>
 
 @implementation ZKJCategoryModel
 
@@ -16,6 +17,11 @@
         _userArray = [NSMutableArray array];
     }
     return _userArray;
+}
+
++ (NSDictionary *)mj_replacedKeyFromPropertyName
+{
+    return @{@"ID" : @"id"};
 }
 
 @end

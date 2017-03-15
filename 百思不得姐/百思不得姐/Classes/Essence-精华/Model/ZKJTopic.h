@@ -28,11 +28,25 @@
 @property (nonatomic, assign) NSInteger comment;
 /** 是否为新浪加V用户 */
 @property(nonatomic, assign, getter=isSina_v) BOOL sina_v;
+/** 帖子的类型 */
+@property(nonatomic,assign) ZKJTopicType type;
+/** 小图的URL */
+@property(nonatomic,copy) NSString *small_image;
+/** 中图的URL */
+@property(nonatomic,copy) NSString *middle_image;
+/** 大图的URL */
+@property(nonatomic,copy) NSString *big_image;
+/** 图片的宽 */
+@property(nonatomic,assign) CGFloat width;
+/** 图片的高 */
+@property(nonatomic,assign) CGFloat height;
 
 /***** 额外的辅助属性 *****/
 /** cell的高度 */
 @property(nonatomic, assign, readonly) CGFloat cellHeight;
-
-
+/** 图片帖子的frame */
+@property(nonatomic, assign, readonly) CGRect picFrame;
+/** 判断是否是大图 */
+@property(nonatomic, assign, getter=isBigPicture) BOOL bigPicture;
 
 @end

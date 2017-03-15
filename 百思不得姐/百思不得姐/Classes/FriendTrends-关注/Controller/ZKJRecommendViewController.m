@@ -90,7 +90,7 @@ static NSString *userCellName = @"user";
     NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
     parameters[@"a"] = @"list";
     parameters[@"c"] = @"subscribe";
-    parameters[@"category_id"] = @(model.id);
+    parameters[@"category_id"] = @(model.ID);
     parameters[@"page"] = @(model.currentPage);
     self.parameters = parameters;
     
@@ -145,7 +145,7 @@ static NSString *userCellName = @"user";
     NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
     parameters[@"a"] = @"list";
     parameters[@"c"] = @"subscribe";
-    parameters[@"category_id"] = @(model.id);
+    parameters[@"category_id"] = @(model.ID);
     parameters[@"page"] = @(++model.currentPage);
     self.parameters = parameters;
     ZKJLog(@"%@", parameters);

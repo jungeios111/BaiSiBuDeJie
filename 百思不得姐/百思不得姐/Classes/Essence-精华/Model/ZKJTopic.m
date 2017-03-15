@@ -7,6 +7,7 @@
 //
 
 #import "ZKJTopic.h"
+#import <MJExtension.h>
 
 //@interface ZKJTopic ()
 //{
@@ -17,6 +18,7 @@
 @implementation ZKJTopic
 {
     CGFloat _cellHeight;
+    CGFloat picFrame;
 }
 
 /**
@@ -36,6 +38,13 @@
  非今年
     2014-05-08 18:45:30
  */
+
++ (NSDictionary *)mj_replacedKeyFromPropertyName
+{
+    return @{@"small_image" : @"image0",
+             @"middle_image" : @"image1",
+             @"big_image" : @"image2"};
+}
 
 - (NSString *)create_time
 {
@@ -83,7 +92,34 @@
         // 计算文字的高度
         CGFloat textH = [self.text boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:14]} context:nil].size.height;
         
-        _cellHeight = ZKJTopicCellTextY + textH + ZKJTopicCellMargin + ZKJTopicCellBottomBarH + ZKJTopicCellMargin;
+        // 计算cell的高度
+        // 文字部分的高度
+        _cellHeight = ZKJTopicCellTextY + textH + ZKJTopicCellMargin;
+        
+        // 根据段子的类型来计算cell的高度
+        if (self.type == ZKJTopicTypePicture) {
+            
+            // 计算图片的frame
+            CGFloat pictureW = maxSize.width;
+            CGFloat pictureH = pictureW * self.height / self.width;
+            CGFloat pictureX = ZKJTopicCellMargin;
+            CGFloat pictureY = ZKJTopicCellTextY + textH + ZKJTopicCellMargin;
+            _picFrame = CGRectMake(pictureX, pictureY, pictureW, pictureH);
+            
+            // 判断是否是大图
+            if (pictureH > ZKJTopicCellPictureMaxH) {
+                pictureH = ZKJTopicCellPictureBreakH;
+                self.bigPicture = YES;
+            }
+            
+            // 图片部分的高度
+            _cellHeight += pictureH + ZKJTopicCellMargin;
+        } else if (self.type == ZKJTopicTypeVoice) {
+            
+        }
+        
+        _cellHeight += ZKJTopicCellBottomBarH + ZKJTopicCellMargin;
+        
         ZKJLogFunC;
     }
     return _cellHeight;

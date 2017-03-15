@@ -8,14 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-typedef enum : NSUInteger {
-    ZKJTopicTypeAll = 1,
-    ZKJTopicTypePicture = 10,
-    ZKJTopicTypeWord = 29,
-    ZKJTopicTypeVoice = 31,
-    ZKJTopicTypeVideo = 41,
-} ZKJTopicType;
-
 @interface ZKJTopicViewController : UITableViewController
 
 /** 帖子类型 */

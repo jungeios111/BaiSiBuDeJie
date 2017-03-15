@@ -9,29 +9,32 @@
 #import "ZKJTopicCell.h"
 #import "ZKJTopic.h"
 #import <UIImageView+WebCache.h>
+#import "ZKJTopicPictureView.h"
 
 @interface ZKJTopicCell ()
 
 /** 头像 */
-@property (strong, nonatomic) IBOutlet UIImageView *headImageView;
+@property (weak, nonatomic) IBOutlet UIImageView *headImageView;
 /** 姓名 */
-@property (strong, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 /** 时间 */
-@property (strong, nonatomic) IBOutlet UILabel *timeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *timeLabel;
 /** 关注 */
-@property (strong, nonatomic) IBOutlet UIButton *attentionBtn;
+@property (weak, nonatomic) IBOutlet UIButton *attentionBtn;
 /** 顶 */
-@property (strong, nonatomic) IBOutlet UIButton *dingBtn;
+@property (weak, nonatomic) IBOutlet UIButton *dingBtn;
 /** 踩 */
-@property (strong, nonatomic) IBOutlet UIButton *caiBtn;
+@property (weak, nonatomic) IBOutlet UIButton *caiBtn;
 /** 分享 */
-@property (strong, nonatomic) IBOutlet UIButton *shareBtn;
+@property (weak, nonatomic) IBOutlet UIButton *shareBtn;
 /** 评论 */
-@property (strong, nonatomic) IBOutlet UIButton *commentBtn;
+@property (weak, nonatomic) IBOutlet UIButton *commentBtn;
 /** 新浪加V */
-@property (strong, nonatomic) IBOutlet UIImageView *sinaImgView;
+@property (weak, nonatomic) IBOutlet UIImageView *sinaImgView;
 /** 帖子的文字内容 */
-@property (strong, nonatomic) IBOutlet UILabel *text_Label;
+@property (weak, nonatomic) IBOutlet UILabel *text_Label;
+/** 图片帖子中间显示的内容 */
+@property(nonatomic,weak) ZKJTopicPictureView *pictureView;
 
 @end
 
@@ -54,6 +57,16 @@
  非今年
     2014-05-08 18:45:30
  */
+
+- (ZKJTopicPictureView *)pictureView
+{
+    if (!_pictureView) {
+        ZKJTopicPictureView *pictureView = [ZKJTopicPictureView pictureView];
+        [self.contentView addSubview:pictureView];
+        _pictureView = pictureView;
+    }
+    return _pictureView;
+}
 
 - (void)setTopic:(ZKJTopic *)topic
 {
@@ -79,6 +92,12 @@
     
     // 帖子的文字内容
     self.text_Label.text = topic.text;
+    
+    // 根据模型类型(帖子类型)添加对应的内容到cell的中间
+    if (topic.type == ZKJTopicTypePicture) {
+        self.pictureView.topic = topic;
+        self.pictureView.frame = topic.picFrame;
+    }
 }
 
 - (void)setButton:(UIButton *)button withCount:(NSInteger)count withDefaultTitle:(NSString *)defaultTitle

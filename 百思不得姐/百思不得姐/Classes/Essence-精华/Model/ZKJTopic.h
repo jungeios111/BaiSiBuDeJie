@@ -6,7 +6,7 @@
 //  Copyright © 2017年 ZKJ. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface ZKJTopic : NSObject
 
@@ -28,5 +28,11 @@
 @property (nonatomic, assign) NSInteger comment;
 /** 是否为新浪加V用户 */
 @property(nonatomic, assign, getter=isSina_v) BOOL sina_v;
+
+/***** 额外的辅助属性 *****/
+/** cell的高度 */
+@property(nonatomic, assign, readonly) CGFloat cellHeight;
+
+
 
 @end

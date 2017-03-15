@@ -8,7 +8,16 @@
 
 #import "ZKJTopic.h"
 
+//@interface ZKJTopic ()
+//{
+//    CGFloat _cellHeight;
+//}
+//@end
+
 @implementation ZKJTopic
+{
+    CGFloat _cellHeight;
+}
 
 /**
  今年
@@ -63,6 +72,21 @@
         return _create_time;
     }
     return nil;
+}
+
+- (CGFloat)cellHeight
+{
+    if (!_cellHeight) {
+        // 文字的最大尺寸
+        CGSize maxSize = CGSizeMake(ZKJScreenWidth - 4 * ZKJTopicCellMargin, MAXFLOAT);
+        
+        // 计算文字的高度
+        CGFloat textH = [self.text boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:14]} context:nil].size.height;
+        
+        _cellHeight = ZKJTopicCellTextY + textH + ZKJTopicCellMargin + ZKJTopicCellBottomBarH + ZKJTopicCellMargin;
+        ZKJLogFunC;
+    }
+    return _cellHeight;
 }
 
 @end

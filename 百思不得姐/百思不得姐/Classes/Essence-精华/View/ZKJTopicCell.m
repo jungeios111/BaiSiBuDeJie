@@ -30,6 +30,8 @@
 @property (strong, nonatomic) IBOutlet UIButton *commentBtn;
 /** 新浪加V */
 @property (strong, nonatomic) IBOutlet UIImageView *sinaImgView;
+/** 帖子的文字内容 */
+@property (strong, nonatomic) IBOutlet UILabel *text_Label;
 
 @end
 
@@ -56,9 +58,17 @@
 - (void)setTopic:(ZKJTopic *)topic
 {
     _topic = topic;
+    
+    // 新浪加V
     self.sinaImgView.hidden = !topic.isSina_v;
+    
+    // 设置头像
     [self.headImageView sd_setImageWithURL:[NSURL URLWithString:topic.profile_image] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
+    
+    // 设置名字
     self.nameLabel.text = topic.name;
+    
+    // 设置帖子的创建时间
     self.timeLabel.text = topic.create_time;
     
     // 设置按钮文字
@@ -66,6 +76,9 @@
     [self setButton:self.caiBtn withCount:topic.cai withDefaultTitle:@"踩"];
     [self setButton:self.shareBtn withCount:topic.repost withDefaultTitle:@"转发"];
     [self setButton:self.commentBtn withCount:topic.comment withDefaultTitle:@"评论"];
+    
+    // 帖子的文字内容
+    self.text_Label.text = topic.text;
 }
 
 - (void)setButton:(UIButton *)button withCount:(NSInteger)count withDefaultTitle:(NSString *)defaultTitle
@@ -80,11 +93,10 @@
 
 - (void)setFrame:(CGRect)frame
 {
-    static CGFloat margin = 10;
-    frame.origin.x = margin;
-    frame.origin.y += margin;
-    frame.size.width -= 2 * margin;
-    frame.size.height -= margin;
+    frame.origin.x = ZKJTopicCellMargin;
+    frame.origin.y += ZKJTopicCellMargin;
+    frame.size.width -= 2 * ZKJTopicCellMargin;
+    frame.size.height -= ZKJTopicCellMargin;
     [super setFrame:frame];
 }
 
@@ -96,6 +108,7 @@
     self.selectionStyle = UITableViewCellSelectionStyleNone;
 }
 
+/*
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
 
@@ -131,5 +144,6 @@
     //    NSDateComponents *cmps = [calendar components:NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay fromDate:nowDate];
     //    ZKJLog(@"%zd %zd %zd", cmps.year, cmps.month, cmps.day);
 }
+ */
 
 @end

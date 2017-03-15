@@ -151,7 +151,8 @@ static NSString *cellName = @"topic";
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 200;
+    ZKJTopic *topic = self.topicArr[indexPath.row];
+    return topic.cellHeight;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {

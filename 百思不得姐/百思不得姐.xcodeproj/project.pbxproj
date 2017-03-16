@@ -255,9 +255,9 @@
 		7B457CD41E5C2FC6009149A1 /* Essence-精华 */ = {
 			isa = PBXGroup;
 			children = (
-				7B169D5E1E5EC87600A17B5F /* View */,
 				7B169D5F1E5EC87600A17B5F /* Model */,
 				7B457CD51E5C2FC6009149A1 /* Controller */,
+				7B169D5E1E5EC87600A17B5F /* View */,
 			);
 			path = "Essence-精华";
 			sourceTree = "<group>";

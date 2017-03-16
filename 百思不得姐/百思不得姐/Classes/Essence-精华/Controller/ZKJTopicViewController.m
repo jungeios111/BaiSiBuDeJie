@@ -37,7 +37,7 @@
     return _topicArr;
 }
 
-static NSString *cellName = @"topic";
+static NSString * const cellName = @"topic";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -47,8 +47,6 @@ static NSString *cellName = @"topic";
     
     // 添加刷新控件
     [self setupRefresh];
-    
-    
 }
 
 // 初始化tableView
@@ -60,9 +58,9 @@ static NSString *cellName = @"topic";
     self.tableView.contentInset = UIEdgeInsetsMake(top, 0, bottom, 0);
     // 设置滚动条的内边距
     self.tableView.scrollIndicatorInsets = self.tableView.contentInset;
-    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([ZKJTopicCell class]) bundle:nil] forCellReuseIdentifier:cellName];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.backgroundColor = [UIColor clearColor];
+    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([ZKJTopicCell class]) bundle:nil] forCellReuseIdentifier:cellName];
 }
 
 /** 添加刷新控件 */
@@ -162,7 +160,13 @@ static NSString *cellName = @"topic";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    ZKJTopicCell *cell = [tableView dequeueReusableCellWithIdentifier:cellName forIndexPath:indexPath];
+//    ZKJTopic *topic = self.topicArr[indexPath.row];
+//    if (topic.type == ZKJTopicTypePicture) {
+//        ZKJLog(@"%@", [topic.big_image pathExtension].lowercaseString);
+//        ZKJLog(@"%zd", topic.isBigPicture);
+//        ZKJLog(@"%f", topic.height);
+//    }
+    ZKJTopicCell *cell = [tableView dequeueReusableCellWithIdentifier:cellName];
     cell.topic = self.topicArr[indexPath.row];
     return cell;
 }

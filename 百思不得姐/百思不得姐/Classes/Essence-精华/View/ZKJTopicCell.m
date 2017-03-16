@@ -95,8 +95,11 @@
     
     // 根据模型类型(帖子类型)添加对应的内容到cell的中间
     if (topic.type == ZKJTopicTypePicture) {
+        self.pictureView.hidden = NO;
         self.pictureView.topic = topic;
         self.pictureView.frame = topic.picFrame;
+    } else if (topic.type == ZKJTopicTypeWord) {
+        self.pictureView.hidden = YES;
     }
 }
 

@@ -47,13 +47,7 @@ static NSString * const cellName = @"topic";
     
     // 添加刷新控件
     [self setupRefresh];
-    
-    
-    
-    
-    
-    
-    
+    ZKJLog(@"dev测试代码");
 }
 
 // 初始化tableView

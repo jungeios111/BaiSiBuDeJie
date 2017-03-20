@@ -15,8 +15,15 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="230"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageBackground" translatesAutoresizingMaskIntoConstraints="NO" id="QnC-74-oYm" userLabel="占位图">
+                    <rect key="frame" x="0.0" y="20" width="375" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="Mmf-OS-GNX"/>
+                    </constraints>
+                </imageView>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kzP-45-fLC">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="230"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="common-gif" translatesAutoresizingMaskIntoConstraints="NO" id="DmB-Xc-E1W">
                     <rect key="frame" x="0.0" y="0.0" width="31" height="31"/>
@@ -25,38 +32,53 @@
                         <constraint firstAttribute="height" constant="31" id="sV0-YD-WCC"/>
                     </constraints>
                 </imageView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h5e-6Z-ycf">
+                <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h5e-6Z-ycf">
                     <rect key="frame" x="0.0" y="187" width="375" height="43"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="43" id="bmH-vi-BNc"/>
                     </constraints>
                     <state key="normal" title="点击查看原图" image="see-big-picture" backgroundImage="see-big-picture-background"/>
                 </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1WH-YH-koq" userLabel="进度条" customClass="ZKJProgressView">
+                    <rect key="frame" x="137.5" y="65.5" width="100" height="100"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="4iW-vI-cx0"/>
+                        <constraint firstAttribute="height" constant="100" id="FIE-4t-5mG"/>
+                    </constraints>
+                </view>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="h5e-6Z-ycf" secondAttribute="bottom" id="1hl-FJ-Hih"/>
                 <constraint firstItem="h5e-6Z-ycf" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="3g4-17-u6P"/>
                 <constraint firstItem="kzP-45-fLC" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="4Lx-CR-yK5"/>
+                <constraint firstAttribute="trailing" secondItem="QnC-74-oYm" secondAttribute="trailing" id="5Gk-Sc-wKe"/>
                 <constraint firstItem="kzP-45-fLC" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="EfX-Lf-rcw"/>
                 <constraint firstItem="DmB-Xc-E1W" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="EnU-dk-hZW"/>
                 <constraint firstAttribute="trailing" secondItem="h5e-6Z-ycf" secondAttribute="trailing" id="Sfx-5g-tXM"/>
+                <constraint firstItem="QnC-74-oYm" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="UoR-G1-6La"/>
+                <constraint firstItem="QnC-74-oYm" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" id="Vkc-WV-t7n"/>
                 <constraint firstItem="DmB-Xc-E1W" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="ebQ-qQ-Xwr"/>
+                <constraint firstItem="1WH-YH-koq" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="mbX-qu-l5p"/>
                 <constraint firstAttribute="bottom" secondItem="kzP-45-fLC" secondAttribute="bottom" id="oaM-aa-HaN"/>
                 <constraint firstAttribute="trailing" secondItem="kzP-45-fLC" secondAttribute="trailing" id="pZZ-9U-IGA"/>
+                <constraint firstItem="1WH-YH-koq" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="y1R-Ow-xXA"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="bs_imageView" destination="kzP-45-fLC" id="6oT-fU-dHt"/>
                 <outlet property="gifImageView" destination="DmB-Xc-E1W" id="GOE-OD-2QG"/>
+                <outlet property="progressView" destination="1WH-YH-koq" id="Q3J-yo-PT3"/>
                 <outlet property="seeBigImageBtn" destination="h5e-6Z-ycf" id="Z2L-xl-9EO"/>
             </connections>
-            <point key="canvasLocation" x="-16" y="-113"/>
+            <point key="canvasLocation" x="-16.5" y="-113"/>
         </view>
     </objects>
     <resources>
         <image name="common-gif" width="31" height="31"/>
+        <image name="imageBackground" width="75" height="15"/>
         <image name="see-big-picture" width="19" height="19"/>
         <image name="see-big-picture-background" width="285" height="43"/>
     </resources>

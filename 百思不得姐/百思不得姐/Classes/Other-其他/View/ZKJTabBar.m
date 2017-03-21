@@ -7,6 +7,7 @@
 //
 
 #import "ZKJTabBar.h"
+#import "ZKJPublishVC.h"
 
 @interface ZKJTabBar ()
 
@@ -23,10 +24,17 @@
         UIButton *publishBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         [publishBtn setBackgroundImage:[UIImage imageNamed:@"tabBar_publish_icon"] forState:UIControlStateNormal];
         [publishBtn setBackgroundImage:[UIImage imageNamed:@"tabBar_publish_click_icon"] forState:UIControlStateSelected];
+        [publishBtn addTarget:self action:@selector(publishBtnClick) forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:publishBtn];
         self.publishBtn = publishBtn;
     }
     return self;
+}
+
+- (void)publishBtnClick
+{
+    ZKJPublishVC *vc = [[ZKJPublishVC alloc] init];
+    [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:vc animated:NO completion:nil];
 }
 
 - (void)layoutSubviews

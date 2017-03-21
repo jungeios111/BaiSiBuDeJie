@@ -28,6 +28,8 @@
 		7B457D061E5C2FC6009149A1 /* ZKJTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B457CFA1E5C2FC6009149A1 /* ZKJTabBar.m */; };
 		7B457D071E5C2FC6009149A1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B457CFC1E5C2FC6009149A1 /* main.m */; };
 		7B457D0D1E5C5BBE009149A1 /* ZKJNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B457D0C1E5C5BBE009149A1 /* ZKJNavigationController.m */; };
+		7B4E5AB61E8120F80061515A /* ZKJPublishVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B4E5AB41E8120F80061515A /* ZKJPublishVC.m */; };
+		7B4E5AB71E8120F80061515A /* ZKJPublishVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B4E5AB51E8120F80061515A /* ZKJPublishVC.xib */; };
 		7B6194701E7F64E000B19E90 /* ZKJShowPictureVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B61946E1E7F64E000B19E90 /* ZKJShowPictureVC.m */; };
 		7B6194711E7F64E000B19E90 /* ZKJShowPictureVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B61946F1E7F64E000B19E90 /* ZKJShowPictureVC.xib */; };
 		7B6194741E7FC8B600B19E90 /* ZKJProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B6194731E7FC8B600B19E90 /* ZKJProgressView.m */; };
@@ -92,6 +94,9 @@
 		7B457CFD1E5C2FC6009149A1 /* ZkjBaiSi.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZkjBaiSi.pch; sourceTree = "<group>"; };
 		7B457D0B1E5C5BBE009149A1 /* ZKJNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKJNavigationController.h; sourceTree = "<group>"; };
 		7B457D0C1E5C5BBE009149A1 /* ZKJNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKJNavigationController.m; sourceTree = "<group>"; };
+		7B4E5AB31E8120F80061515A /* ZKJPublishVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKJPublishVC.h; sourceTree = "<group>"; };
+		7B4E5AB41E8120F80061515A /* ZKJPublishVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKJPublishVC.m; sourceTree = "<group>"; };
+		7B4E5AB51E8120F80061515A /* ZKJPublishVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZKJPublishVC.xib; sourceTree = "<group>"; };
 		7B61946D1E7F64E000B19E90 /* ZKJShowPictureVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKJShowPictureVC.h; sourceTree = "<group>"; };
 		7B61946E1E7F64E000B19E90 /* ZKJShowPictureVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKJShowPictureVC.m; sourceTree = "<group>"; };
 		7B61946F1E7F64E000B19E90 /* ZKJShowPictureVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZKJShowPictureVC.xib; sourceTree = "<group>"; };
@@ -388,6 +393,9 @@
 				7B457CF61E5C2FC6009149A1 /* ZKJTabBarController.m */,
 				7B457D0B1E5C5BBE009149A1 /* ZKJNavigationController.h */,
 				7B457D0C1E5C5BBE009149A1 /* ZKJNavigationController.m */,
+				7B4E5AB31E8120F80061515A /* ZKJPublishVC.h */,
+				7B4E5AB41E8120F80061515A /* ZKJPublishVC.m */,
+				7B4E5AB51E8120F80061515A /* ZKJPublishVC.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -524,6 +532,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B4E5AB71E8120F80061515A /* ZKJPublishVC.xib in Resources */,
 				7BD1E8D81E72819600327D1D /* ZKJTopicCell.xib in Resources */,
 				7B898B451E7919C5003D5F61 /* ZKJTopicPictureView.xib in Resources */,
 				7B6938821E5ABFA0002BA43A /* Assets.xcassets in Resources */,
@@ -599,6 +608,7 @@
 				7B457D071E5C2FC6009149A1 /* main.m in Sources */,
 				7B457D031E5C2FC6009149A1 /* UIBarButtonItem+Extension.m in Sources */,
 				7B457D001E5C2FC6009149A1 /* ZKJMeViewController.m in Sources */,
+				7B4E5AB61E8120F80061515A /* ZKJPublishVC.m in Sources */,
 				7B169D5C1E5EC59B00A17B5F /* ZKJRecommendUserCell.m in Sources */,
 				7B6D19261E5D42D000A143E9 /* ZKJRecommendViewController.m in Sources */,
 				7B6671FC1E6FA5D600F4A704 /* ZKJPushGuideView.m in Sources */,

@@ -48,7 +48,11 @@
 @property(nonatomic, assign, readonly) CGRect picFrame;
 /** 判断是否是大图 */
 @property(nonatomic, assign, getter=isBigPicture) BOOL bigPicture;
-/** 图片的下载进度 */
-@property(nonatomic, assign) CGFloat progressValue;
+/** 当前图片的下载进度 */
+@property(nonatomic, assign) CGFloat pictureProgress;
+///** 当前图片的下载大小 */
+//@property(nonatomic, assign) NSInteger receivedSize;
+///** 图片的总大小 */
+//@property(nonatomic, assign) NSInteger expectedSize;
 
 @end

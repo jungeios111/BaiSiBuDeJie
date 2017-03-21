@@ -36,10 +36,10 @@
                     </connections>
                 </button>
                 <button opaque="NO" alpha="0.90000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MT2-HY-87N">
-                    <rect key="frame" x="305" y="622" width="50" height="25"/>
+                    <rect key="frame" x="305" y="617" width="50" height="30"/>
                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="25" id="4vo-MO-udj"/>
+                        <constraint firstAttribute="height" constant="30" id="4vo-MO-udj"/>
                         <constraint firstAttribute="width" constant="50" id="Zuj-8T-2SW"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -49,11 +49,11 @@
                     </connections>
                 </button>
                 <button opaque="NO" alpha="0.90000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uJJ-ri-YEH">
-                    <rect key="frame" x="235" y="622" width="50" height="25"/>
+                    <rect key="frame" x="235" y="617" width="50" height="30"/>
                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="50" id="Fnv-LG-rWv"/>
-                        <constraint firstAttribute="height" constant="25" id="sCY-bG-fjF"/>
+                        <constraint firstAttribute="height" constant="30" id="sCY-bG-fjF"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <state key="normal" title="转发"/>

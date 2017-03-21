@@ -121,7 +121,7 @@
         
         _cellHeight += ZKJTopicCellBottomBarH + ZKJTopicCellMargin;
         
-        ZKJLogFunC;
+//        ZKJLogFunC;
     }
     return _cellHeight;
 }

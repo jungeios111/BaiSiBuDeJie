@@ -38,6 +38,10 @@
     [self.scrollView addSubview:imageView];
     self.imageView = imageView;
     
+    // 给scrollView添加点击手势，图片过小时点击scrollView可以dismiss
+    UITapGestureRecognizer *tap1 = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(backClick)];
+    [self.scrollView addGestureRecognizer:tap1];
+    
     // 图片尺寸
     CGFloat imageW = ZKJScreenWidth;
     CGFloat imageH = imageW * self.topic.height / self.topic.width;
@@ -51,7 +55,7 @@
     }
     
     // 立马显示最新的进度值(防止因为网速慢, 导致显示的是其他图片的下载进度)
-    [self.progressView setProgress:self.topic.progressValue animated:NO];
+    [self.progressView setProgress:self.topic.pictureProgress animated:NO];
     
     // 下载图片
     [imageView sd_setImageWithURL:[NSURL URLWithString:self.topic.big_image] placeholderImage:nil options:0 progress:^(NSInteger receivedSize, NSInteger expectedSize) {
@@ -69,6 +73,10 @@
 
 - (IBAction)saveClick
 {
+    if (self.imageView.image == nil) {
+        [SVProgressHUD showErrorWithStatus:@"图片没有下载完毕"];
+        return;
+    }
     UIImageWriteToSavedPhotosAlbum(self.imageView.image, self, @selector(image:didFinishSavingWithError:contextInfo:), nil);
 }
 
@@ -81,6 +89,11 @@
         ZKJLog(@"保存成功");
         [SVProgressHUD showSuccessWithStatus:@"保存成功"];
     }
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+    [self backClick];
 }
 
 - (IBAction)shareClick

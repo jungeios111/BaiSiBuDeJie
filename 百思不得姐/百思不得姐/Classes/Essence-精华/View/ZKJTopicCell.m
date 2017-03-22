@@ -129,6 +129,12 @@
     self.selectionStyle = UITableViewCellSelectionStyleNone;
 }
 
+//- (void)layoutSubviews
+//{
+//    [super layoutSubviews];
+//    self.text_Label.preferredMaxLayoutWidth = self.text_Label.bounds.size.width;
+//}
+
 /*
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];

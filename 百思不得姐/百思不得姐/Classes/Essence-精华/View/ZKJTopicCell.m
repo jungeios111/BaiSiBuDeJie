@@ -10,6 +10,8 @@
 #import "ZKJTopic.h"
 #import <UIImageView+WebCache.h>
 #import "ZKJTopicPictureView.h"
+#import "ZKJTopicVoiceView.h"
+#import "ZKJTopicVideoView.h"
 
 @interface ZKJTopicCell ()
 
@@ -34,7 +36,11 @@
 /** 帖子的文字内容 */
 @property (weak, nonatomic) IBOutlet UILabel *text_Label;
 /** 图片帖子中间显示的内容 */
-@property(nonatomic,weak) ZKJTopicPictureView *pictureView;
+@property (nonatomic, weak) ZKJTopicPictureView *pictureView;
+/** 声音帖子中间显示的内容 */
+@property (nonatomic, weak) ZKJTopicVoiceView *voiceView;
+/** 视频帖子中间显示的内容 */
+@property (nonatomic, weak) ZKJTopicVideoView *videoView;
 
 @end
 
@@ -68,6 +74,26 @@
     return _pictureView;
 }
 
+- (ZKJTopicVoiceView *)voiceView
+{
+    if (!_voiceView) {
+        ZKJTopicVoiceView *voiceView = [ZKJTopicVoiceView voiceView];
+        [self.contentView addSubview:voiceView];
+        self.voiceView = voiceView;
+    }
+    return _voiceView;
+}
+
+- (ZKJTopicVideoView *)videoView
+{
+    if (!_videoView) {
+        ZKJTopicVideoView *videoView = [ZKJTopicVideoView videoView];
+        [self.contentView addSubview:videoView];
+        self.videoView = videoView;
+    }
+    return _videoView;
+}
+
 - (void)setTopic:(ZKJTopic *)topic
 {
     _topic = topic;
@@ -97,8 +123,28 @@
     if (topic.type == ZKJTopicTypePicture) {
         self.pictureView.topic = topic;
         self.pictureView.frame = topic.picFrame;
-    } else if (topic.type == ZKJTopicTypeWord) {
         
+        self.pictureView.hidden = NO;
+        self.voiceView.hidden = YES;
+        self.videoView.hidden = YES;
+    } else if (topic.type == ZKJTopicTypeVoice) {
+        self.voiceView.topic = topic;
+        self.voiceView.frame = topic.voiceFrame;
+        
+        self.voiceView.hidden = NO;
+        self.pictureView.hidden = YES;
+        self.videoView.hidden = YES;
+    } else if (topic.type == ZKJTopicTypeVideo) {
+        self.videoView.topic = topic;
+        self.videoView.frame = topic.videoFrame;
+        
+        self.videoView.hidden = NO;
+        self.voiceView.hidden = YES;
+        self.pictureView.hidden = YES;
+    } else if (topic.type == ZKJTopicTypeWord) {
+        self.pictureView.hidden = YES;
+        self.voiceView.hidden = YES;
+        self.videoView.hidden = YES;
     }
 }
 

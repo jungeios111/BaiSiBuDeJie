@@ -18,7 +18,6 @@
 @implementation ZKJTopic
 {
     CGFloat _cellHeight;
-    CGRect _picFrame;
 }
 
 /**
@@ -116,7 +115,19 @@
             // 图片部分的高度
             _cellHeight += pictureH + ZKJTopicCellMargin;
         } else if (self.type == ZKJTopicTypeVoice) {
-            
+            CGFloat voiceX = ZKJTopicCellMargin;
+            CGFloat voiceY = ZKJTopicCellTextY + textH + ZKJTopicCellMargin;
+            CGFloat voiceW = maxSize.width;
+            CGFloat voiceH = voiceW * self.height / self.width;
+            _voiceFrame = CGRectMake(voiceX, voiceY, voiceW, voiceH);
+            _cellHeight += voiceH + ZKJTopicCellMargin;
+        } else if (self.type == ZKJTopicTypeVideo) {
+            CGFloat videoX = ZKJTopicCellMargin;
+            CGFloat videoY = ZKJTopicCellTextY + textH + ZKJTopicCellMargin;
+            CGFloat videoW = maxSize.width;
+            CGFloat videoH = videoW * self.height / self.width;
+            _videoFrame = CGRectMake(videoX, videoY, videoW, videoH);
+            _cellHeight += videoH + ZKJTopicCellMargin;
         }
         
         _cellHeight += ZKJTopicCellBottomBarH + ZKJTopicCellMargin;

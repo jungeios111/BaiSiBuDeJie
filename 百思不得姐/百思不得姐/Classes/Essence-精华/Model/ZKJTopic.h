@@ -40,6 +40,10 @@
 @property(nonatomic,assign) CGFloat width;
 /** 图片的高 */
 @property(nonatomic,assign) CGFloat height;
+/** 音频时长 */
+@property (nonatomic, assign) NSInteger voicetime;
+/** 播放次数 */
+@property (nonatomic, assign) NSInteger playcount;
 
 /***** 额外的辅助属性 *****/
 /** cell的高度 */
@@ -54,5 +58,10 @@
 //@property(nonatomic, assign) NSInteger receivedSize;
 ///** 图片的总大小 */
 //@property(nonatomic, assign) NSInteger expectedSize;
+
+/** 声音控件的frame */
+@property (nonatomic, assign, readonly) CGRect voiceFrame;
+/** 视频帖子的frame */
+@property (nonatomic, assign, readonly) CGRect videoFrame;
 
 @end

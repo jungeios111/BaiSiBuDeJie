@@ -54,6 +54,10 @@
 		7BD1E8D81E72819600327D1D /* ZKJTopicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BD1E8D61E72819600327D1D /* ZKJTopicCell.xib */; };
 		7BDD40B61E76424E00DD5A9D /* NSDate+ZKJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BDD40B51E76424E00DD5A9D /* NSDate+ZKJExtension.m */; };
 		844FAA761E76EC5400C19994 /* ZKJTopicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 844FAA751E76EC5400C19994 /* ZKJTopicViewController.m */; };
+		844FAA791E863DE500C19994 /* ZKJTopicVoiceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 844FAA781E863DE500C19994 /* ZKJTopicVoiceView.m */; };
+		844FAA7B1E863E1F00C19994 /* ZKJTopicVoiceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 844FAA7A1E863E1F00C19994 /* ZKJTopicVoiceView.xib */; };
+		844FAA7E1E866D7600C19994 /* ZKJTopicVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 844FAA7D1E866D7600C19994 /* ZKJTopicVideoView.m */; };
+		844FAA801E866D8D00C19994 /* ZKJTopicVideoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 844FAA7F1E866D8D00C19994 /* ZKJTopicVideoView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -138,6 +142,12 @@
 		7BDD40B51E76424E00DD5A9D /* NSDate+ZKJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+ZKJExtension.m"; sourceTree = "<group>"; };
 		844FAA741E76EC5400C19994 /* ZKJTopicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKJTopicViewController.h; sourceTree = "<group>"; };
 		844FAA751E76EC5400C19994 /* ZKJTopicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKJTopicViewController.m; sourceTree = "<group>"; };
+		844FAA771E863DE500C19994 /* ZKJTopicVoiceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKJTopicVoiceView.h; sourceTree = "<group>"; };
+		844FAA781E863DE500C19994 /* ZKJTopicVoiceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKJTopicVoiceView.m; sourceTree = "<group>"; };
+		844FAA7A1E863E1F00C19994 /* ZKJTopicVoiceView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZKJTopicVoiceView.xib; sourceTree = "<group>"; };
+		844FAA7C1E866D7600C19994 /* ZKJTopicVideoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKJTopicVideoView.h; sourceTree = "<group>"; };
+		844FAA7D1E866D7600C19994 /* ZKJTopicVideoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKJTopicVideoView.m; sourceTree = "<group>"; };
+		844FAA7F1E866D8D00C19994 /* ZKJTopicVideoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZKJTopicVideoView.xib; sourceTree = "<group>"; };
 		95E6D4727CD4FBEFE62B508E /* libPods-百思不得姐.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-百思不得姐.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCADB7CCF8048B964B422CFE /* Pods-百思不得姐.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-百思不得姐.release.xcconfig"; path = "Pods/Target Support Files/Pods-百思不得姐/Pods-百思不得姐.release.xcconfig"; sourceTree = "<group>"; };
 		E2ABB560C806EFAD6AEED79F /* Pods-百思不得姐.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-百思不得姐.debug.xcconfig"; path = "Pods/Target Support Files/Pods-百思不得姐/Pods-百思不得姐.debug.xcconfig"; sourceTree = "<group>"; };
@@ -205,6 +215,12 @@
 				7B898B441E7919C5003D5F61 /* ZKJTopicPictureView.xib */,
 				7B6194721E7FC8B600B19E90 /* ZKJProgressView.h */,
 				7B6194731E7FC8B600B19E90 /* ZKJProgressView.m */,
+				844FAA771E863DE500C19994 /* ZKJTopicVoiceView.h */,
+				844FAA781E863DE500C19994 /* ZKJTopicVoiceView.m */,
+				844FAA7A1E863E1F00C19994 /* ZKJTopicVoiceView.xib */,
+				844FAA7C1E866D7600C19994 /* ZKJTopicVideoView.h */,
+				844FAA7D1E866D7600C19994 /* ZKJTopicVideoView.m */,
+				844FAA7F1E866D8D00C19994 /* ZKJTopicVideoView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -538,6 +554,8 @@
 				7B6938821E5ABFA0002BA43A /* Assets.xcassets in Resources */,
 				7B6194711E7F64E000B19E90 /* ZKJShowPictureVC.xib in Resources */,
 				7B169D5D1E5EC59B00A17B5F /* ZKJRecommendUserCell.xib in Resources */,
+				844FAA801E866D8D00C19994 /* ZKJTopicVideoView.xib in Resources */,
+				844FAA7B1E863E1F00C19994 /* ZKJTopicVoiceView.xib in Resources */,
 				7B169D5B1E5EC59B00A17B5F /* ZKJCategoryCell.xib in Resources */,
 				7B710DE11E656DE000430C6C /* ZKJRecommendTagCell.xib in Resources */,
 				7B1C5C681E6D5F8F001545F9 /* ZKJLoginRegisterVC.xib in Resources */,
@@ -612,6 +630,7 @@
 				7B169D5C1E5EC59B00A17B5F /* ZKJRecommendUserCell.m in Sources */,
 				7B6D19261E5D42D000A143E9 /* ZKJRecommendViewController.m in Sources */,
 				7B6671FC1E6FA5D600F4A704 /* ZKJPushGuideView.m in Sources */,
+				844FAA7E1E866D7600C19994 /* ZKJTopicVideoView.m in Sources */,
 				7B457CFE1E5C2FC6009149A1 /* ZKJEssenceController.m in Sources */,
 				7B457D011E5C2FC6009149A1 /* ZKJNewController.m in Sources */,
 				7B710DE01E656DE000430C6C /* ZKJRecommendTagCell.m in Sources */,
@@ -629,6 +648,7 @@
 				7B457D021E5C2FC6009149A1 /* AppDelegate.m in Sources */,
 				7B6194741E7FC8B600B19E90 /* ZKJProgressView.m in Sources */,
 				7B457D051E5C2FC6009149A1 /* ZKJTabBarController.m in Sources */,
+				844FAA791E863DE500C19994 /* ZKJTopicVoiceView.m in Sources */,
 				7B169D4B1E5EBD2D00A17B5F /* UIImage+ZKJExtension.m in Sources */,
 				7BD1E8D31E724EFB00327D1D /* ZKJConst.m in Sources */,
 				7B6D19291E5D6CB100A143E9 /* Foundation+Log.m in Sources */,

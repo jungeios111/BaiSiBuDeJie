@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ZKJTopicVoiceView">
+            <rect key="frame" x="0.0" y="0.0" width="371" height="262"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageBackground" translatesAutoresizingMaskIntoConstraints="NO" id="hbk-m0-ANS" userLabel="占位图">
+                    <rect key="frame" x="0.0" y="20" width="371" height="25"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="25" id="XmW-Mx-pFm"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OQS-sp-84j" userLabel="图片">
+                    <rect key="frame" x="0.0" y="0.0" width="371" height="262"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kfY-mx-uAV" userLabel="播放次数">
+                    <rect key="frame" x="333.5" y="0.0" width="37.5" height="18"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="0.5" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Toh-5Q-G5x" userLabel="播放时长">
+                    <rect key="frame" x="333.5" y="244" width="37.5" height="18"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="0.5" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dyi-x2-OVT" userLabel="播放暂停">
+                    <rect key="frame" x="154" y="100" width="63" height="63"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="63" id="iQN-my-9tu"/>
+                        <constraint firstAttribute="height" constant="63" id="zAB-RE-Kag"/>
+                    </constraints>
+                    <state key="normal" image="playButtonPlay" backgroundImage="playButton"/>
+                    <state key="selected" image="playButtonPause" backgroundImage="playButtonClick"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="OQS-sp-84j" secondAttribute="trailing" id="3nq-8X-zZV"/>
+                <constraint firstAttribute="trailing" secondItem="hbk-m0-ANS" secondAttribute="trailing" id="8j7-dz-8X9"/>
+                <constraint firstAttribute="bottom" secondItem="OQS-sp-84j" secondAttribute="bottom" id="HzJ-ky-cgK"/>
+                <constraint firstItem="dyi-x2-OVT" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="IhP-i7-qca"/>
+                <constraint firstItem="hbk-m0-ANS" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="J31-Zx-2wb"/>
+                <constraint firstItem="kfY-mx-uAV" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Llv-yv-mHy"/>
+                <constraint firstItem="hbk-m0-ANS" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" id="MRX-79-ybz"/>
+                <constraint firstAttribute="trailing" secondItem="kfY-mx-uAV" secondAttribute="trailing" id="aOg-0W-d5b"/>
+                <constraint firstItem="OQS-sp-84j" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="bJn-Nk-wOx"/>
+                <constraint firstAttribute="bottom" secondItem="Toh-5Q-G5x" secondAttribute="bottom" id="hvl-2d-YMD"/>
+                <constraint firstItem="dyi-x2-OVT" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="sAU-oj-nYr"/>
+                <constraint firstAttribute="trailing" secondItem="Toh-5Q-G5x" secondAttribute="trailing" id="ttu-Mr-9Jq"/>
+                <constraint firstItem="OQS-sp-84j" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="wfC-Di-QrQ"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="bs_imageView" destination="OQS-sp-84j" id="heo-7C-Axi"/>
+                <outlet property="countLabel" destination="kfY-mx-uAV" id="3FP-G0-2NN"/>
+                <outlet property="playButton" destination="dyi-x2-OVT" id="VDL-z9-y7z"/>
+                <outlet property="timeLabel" destination="Toh-5Q-G5x" id="ElY-N9-2LH"/>
+            </connections>
+            <point key="canvasLocation" x="31.5" y="-149"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="imageBackground" width="75" height="15"/>
+        <image name="playButton" width="63" height="63"/>
+        <image name="playButtonClick" width="63" height="63"/>
+        <image name="playButtonPause" width="26" height="26"/>
+        <image name="playButtonPlay" width="30" height="30"/>
+    </resources>
+</document>

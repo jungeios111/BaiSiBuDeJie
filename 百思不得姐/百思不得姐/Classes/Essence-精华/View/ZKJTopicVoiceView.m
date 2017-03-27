@@ -9,6 +9,7 @@
 #import "ZKJTopicVoiceView.h"
 #import <UIImageView+WebCache.h>
 #import "ZKJTopic.h"
+#import "ZKJShowPictureVC.h"
 
 @interface ZKJTopicVoiceView ()
 
@@ -25,6 +26,18 @@
 {
     [super awakeFromNib];
     self.autoresizingMask = UIViewAutoresizingNone;
+    
+    // 给图片添加监听器
+    self.bs_imageView.userInteractionEnabled = YES;
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(showPicture)];
+    [self.bs_imageView addGestureRecognizer:tap];
+}
+
+- (void)showPicture
+{
+    ZKJShowPictureVC *vc = [[ZKJShowPictureVC alloc] init];
+    vc.topic = self.topic;
+    [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:vc animated:YES completion:nil];
 }
 
 + (instancetype)voiceView

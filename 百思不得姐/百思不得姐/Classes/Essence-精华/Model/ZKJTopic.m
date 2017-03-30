@@ -8,6 +8,8 @@
 
 #import "ZKJTopic.h"
 #import <MJExtension.h>
+#import "ZKJComment.h"
+#import "ZKJUser.h"
 
 //@interface ZKJTopic ()
 //{
@@ -42,7 +44,15 @@
 {
     return @{@"small_image" : @"image0",
              @"middle_image" : @"image1",
-             @"big_image" : @"image2"};
+             @"big_image" : @"image2",
+             @"ID" : @"id"
+             };
+}
+
++ (NSDictionary *)mj_objectClassInArray
+{
+    // return @{@"top_cmt" : [ZKJComment class]};
+    return @{@"top_cmt" : @"ZKJComment"};
 }
 
 - (NSString *)create_time
@@ -128,6 +138,15 @@
             CGFloat videoH = videoW * self.height / self.width;
             _videoFrame = CGRectMake(videoX, videoY, videoW, videoH);
             _cellHeight += videoH + ZKJTopicCellMargin;
+        }
+        
+        // 如果有最热评论
+        ZKJComment *comment = [self.top_cmt firstObject];
+        if (comment) {
+            NSString *cmtStr = [NSString stringWithFormat:@"%@ : %@", comment.user.username, comment.content];
+            CGFloat commentH = [cmtStr boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:13]} context:nil].size.height;
+            _cellHeight += ZKJTopicCellTopCmtTitleH + commentH + ZKJTopicCellMargin;
+            ZKJLog(@"cmtStr:%@", cmtStr);
         }
         
         _cellHeight += ZKJTopicCellBottomBarH + ZKJTopicCellMargin;

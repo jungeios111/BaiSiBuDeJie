@@ -13,6 +13,7 @@
 #import <MJRefresh.h>
 #import "ZKJTopic.h"
 #import "ZKJTopicCell.h"
+#import "ZKJCommentVC.h"
 
 @interface ZKJTopicViewController ()
 
@@ -169,6 +170,14 @@ static NSString * const cellName = @"topic";
     ZKJTopicCell *cell = [tableView dequeueReusableCellWithIdentifier:cellName];
     cell.topic = self.topicArr[indexPath.row];
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    ZKJCommentVC *vc = [[ZKJCommentVC alloc] init];
+    vc.topic = self.topicArr[indexPath.row];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 @end

@@ -12,6 +12,8 @@
 #import "ZKJTopicPictureView.h"
 #import "ZKJTopicVoiceView.h"
 #import "ZKJTopicVideoView.h"
+#import "ZKJComment.h"
+#import "ZKJUser.h"
 
 @interface ZKJTopicCell ()
 
@@ -41,6 +43,10 @@
 @property (nonatomic, weak) ZKJTopicVoiceView *voiceView;
 /** 视频帖子中间显示的内容 */
 @property (nonatomic, weak) ZKJTopicVideoView *videoView;
+/** 最热评论的整体view */
+@property (weak, nonatomic) IBOutlet UIView *topCmtView;
+/** 最热评论的内容label */
+@property (weak, nonatomic) IBOutlet UILabel *commentLabel;
 
 @end
 
@@ -63,6 +69,11 @@
  非今年
     2014-05-08 18:45:30
  */
+
++ (instancetype)cell
+{
+    return [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self) owner:nil options:nil] lastObject];
+}
 
 - (ZKJTopicPictureView *)pictureView
 {
@@ -146,6 +157,14 @@
         self.voiceView.hidden = YES;
         self.videoView.hidden = YES;
     }
+    
+    ZKJComment *comment = [topic.top_cmt firstObject];
+    if (comment) {
+        self.topCmtView.hidden = NO;
+        self.commentLabel.text = [NSString stringWithFormat:@"%@ : %@", comment.user.username, comment.content];
+    } else {
+        self.topCmtView.hidden = YES;
+    }
 }
 
 - (void)setButton:(UIButton *)button withCount:(NSInteger)count withDefaultTitle:(NSString *)defaultTitle
@@ -163,7 +182,8 @@
     frame.origin.x = ZKJTopicCellMargin;
     frame.origin.y += ZKJTopicCellMargin;
     frame.size.width -= 2 * ZKJTopicCellMargin;
-    frame.size.height -= ZKJTopicCellMargin;
+//    frame.size.height -= ZKJTopicCellMargin;
+    frame.size.height = self.topic.cellHeight - ZKJTopicCellMargin;
     [super setFrame:frame];
 }
 

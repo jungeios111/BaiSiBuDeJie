@@ -10,6 +10,8 @@
 
 @interface ZKJTopic : NSObject
 
+/** 帖子id */
+@property (nonatomic, copy) NSString *ID;
 /** 名称 */
 @property (nonatomic, copy) NSString *name;
 /** 头像 */
@@ -46,6 +48,8 @@
 @property (nonatomic, assign) NSInteger videotime;
 /** 播放次数 */
 @property (nonatomic, assign) NSInteger playcount;
+/** 最热评论(期望这个数组中存放的是ZKJComment模型) */
+@property (nonatomic, strong) NSArray *top_cmt;
 
 /***** 额外的辅助属性 *****/
 /** cell的高度 */

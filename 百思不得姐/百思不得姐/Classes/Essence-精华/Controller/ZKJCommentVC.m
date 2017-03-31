@@ -14,6 +14,7 @@
 #import "ZKJComment.h"
 #import "ZKJUser.h"
 #import <MJExtension.h>
+#import "ZKJCommentHeadView.h"
 
 @interface ZKJCommentVC ()<UITableViewDelegate,UITableViewDataSource,UITextFieldDelegate>
 
@@ -24,6 +25,8 @@
 @property (nonatomic, strong) NSArray *hotComments;
 /** 最新评论 */
 @property (nonatomic, strong) NSMutableArray *latestComments;
+/** 保存帖子的top_cmt */
+@property (nonatomic, strong) NSArray *save_top_cmt;
 
 @end
 
@@ -49,6 +52,13 @@
 // 设置顶部的view
 - (void)setUpHeaderView
 {
+    // 清空top_cmt
+    if (self.topic.top_cmt.count) {
+        self.save_top_cmt = self.topic.top_cmt;
+        self.topic.top_cmt = nil;
+        [self.topic setValue:@0 forKeyPath:@"cellHeight"];
+    }
+    
     UIView *headerView = [[UIView alloc] init];
     
     ZKJTopicCell *cell = [ZKJTopicCell cell];
@@ -124,13 +134,85 @@
     return 0;
 }
 
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+// 1:titleForHeaderInSection
+//- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+//{
+//    NSInteger hotCount = self.hotComments.count;
+//    if (section == 0) {
+//        return hotCount ? @"最热评论" : @"最新评论";
+//    }
+//    return @"最新评论";
+//}
+
+// 2:viewForHeaderInSection
+//- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+//{
+//    UIView *headView = [[UIView alloc] init];
+//    headView.backgroundColor = ZKJGlobalBGColor;
+//    
+//    UILabel *label = [[UILabel alloc] init];
+//    label.textColor = ZKJRGBColor(67, 67, 67);
+//    label.x = ZKJTopicCellMargin;
+//    label.width = 200;
+//    label.textAlignment = NSTextAlignmentLeft;
+//    label.autoresizingMask = UIViewAutoresizingFlexibleHeight;
+//    [headView addSubview:label];
+//    
+//    NSInteger count = self.hotComments.count;
+//    if (section == 0) {
+//        label.text = count ? @"最热评论" : @"最新评论";
+//    } else {
+//        label.text = @"最新评论";
+//    }
+//    
+//    return headView;
+//}
+
+// 3
+//- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+//{
+//    static NSString *headID = @"head";
+//    UITableViewHeaderFooterView *head = [tableView dequeueReusableHeaderFooterViewWithIdentifier:headID];
+//    if (head == nil) {
+//        head = [[UITableViewHeaderFooterView alloc] initWithReuseIdentifier:headID];
+//        head.contentView.backgroundColor = ZKJGlobalBGColor;
+//        
+//        UILabel *label = [[UILabel alloc] init];
+//        label.textColor = ZKJRGBColor(67, 67, 67);
+//        label.textAlignment = NSTextAlignmentLeft;
+//        label.frame = CGRectMake(ZKJTopicCellMargin, 0, 200, 30);
+//        label.tag = 1;
+//        [head.contentView addSubview:label];
+//    }
+//    
+//    UILabel *label = (UILabel *)[head viewWithTag:1];
+//    
+//    NSInteger count = self.hotComments.count;
+//    if (section == 0) {
+//        label.text = count ? @"最热评论" : @"最新评论";
+//    } else {
+//        label.text = @"最新评论";
+//    }
+//    
+//    return head;
+//}
+
+// 4
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
-    NSInteger hotCount = self.hotComments.count;
+    ZKJCommentHeadView *head = [ZKJCommentHeadView headViewWithTableView:tableView];
+    NSInteger count = self.hotComments.count;
     if (section == 0) {
-        return hotCount ? @"最热评论" : @"最新评论";
+        head.title = count ? @"最热评论" : @"最新评论";
+    } else {
+        head.title = @"最新评论";
     }
-    return @"最新评论";
+    return head;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    return 30;
 }
 
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
@@ -188,6 +270,12 @@
 - (void)dealloc
 {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
+    
+    // 恢复帖子的top_cmt
+    if (self.save_top_cmt.count) {
+        self.topic.top_cmt = self.save_top_cmt;
+        [self.topic setValue:@0 forKeyPath:@"cellHeight"];
+    }
 }
 
 @end

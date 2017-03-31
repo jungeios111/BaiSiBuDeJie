@@ -52,6 +52,7 @@
 		7B898B451E7919C5003D5F61 /* ZKJTopicPictureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B898B441E7919C5003D5F61 /* ZKJTopicPictureView.xib */; };
 		7B9300EE1E6E534F009939BE /* ZKJVerticalButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B9300ED1E6E534F009939BE /* ZKJVerticalButton.m */; };
 		7B9300F41E6EAE61009939BE /* ZKJTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B9300F31E6EAE61009939BE /* ZKJTextField.m */; };
+		7B97D6D91E8DFC0300DCAE87 /* ZKJCommentHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B97D6D81E8DFC0300DCAE87 /* ZKJCommentHeadView.m */; };
 		7BD1E8D01E72341500327D1D /* ZKJTopic.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BD1E8CF1E72341500327D1D /* ZKJTopic.m */; };
 		7BD1E8D31E724EFB00327D1D /* ZKJConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BD1E8D21E724EFB00327D1D /* ZKJConst.m */; };
 		7BD1E8D71E72819600327D1D /* ZKJTopicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BD1E8D51E72819600327D1D /* ZKJTopicCell.m */; };
@@ -142,6 +143,8 @@
 		7B9300ED1E6E534F009939BE /* ZKJVerticalButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKJVerticalButton.m; sourceTree = "<group>"; };
 		7B9300F21E6EAE61009939BE /* ZKJTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKJTextField.h; sourceTree = "<group>"; };
 		7B9300F31E6EAE61009939BE /* ZKJTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKJTextField.m; sourceTree = "<group>"; };
+		7B97D6D71E8DFC0300DCAE87 /* ZKJCommentHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKJCommentHeadView.h; sourceTree = "<group>"; };
+		7B97D6D81E8DFC0300DCAE87 /* ZKJCommentHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKJCommentHeadView.m; sourceTree = "<group>"; };
 		7BD1E8CE1E72341500327D1D /* ZKJTopic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKJTopic.h; sourceTree = "<group>"; };
 		7BD1E8CF1E72341500327D1D /* ZKJTopic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKJTopic.m; sourceTree = "<group>"; };
 		7BD1E8D11E724EFB00327D1D /* ZKJConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKJConst.h; sourceTree = "<group>"; };
@@ -232,6 +235,8 @@
 				844FAA7C1E866D7600C19994 /* ZKJTopicVideoView.h */,
 				844FAA7D1E866D7600C19994 /* ZKJTopicVideoView.m */,
 				844FAA7F1E866D8D00C19994 /* ZKJTopicVideoView.xib */,
+				7B97D6D71E8DFC0300DCAE87 /* ZKJCommentHeadView.h */,
+				7B97D6D81E8DFC0300DCAE87 /* ZKJCommentHeadView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -661,6 +666,7 @@
 				7B457D041E5C2FC6009149A1 /* UIView+ZKJExtension.m in Sources */,
 				7B710DDC1E656D3C00430C6C /* ZKJRecommendTag.m in Sources */,
 				844FAA761E76EC5400C19994 /* ZKJTopicViewController.m in Sources */,
+				7B97D6D91E8DFC0300DCAE87 /* ZKJCommentHeadView.m in Sources */,
 				7B6194701E7F64E000B19E90 /* ZKJShowPictureVC.m in Sources */,
 				7B710DD91E6567A400430C6C /* ZKJRecommendTagsVC.m in Sources */,
 				7BD1E8D01E72341500327D1D /* ZKJTopic.m in Sources */,

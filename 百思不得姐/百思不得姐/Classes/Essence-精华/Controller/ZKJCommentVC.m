@@ -15,6 +15,9 @@
 #import "ZKJUser.h"
 #import <MJExtension.h>
 #import "ZKJCommentHeadView.h"
+#import "ZKJCommentCell.h"
+
+static NSString * const cellName = @"comment";
 
 @interface ZKJCommentVC ()<UITableViewDelegate,UITableViewDataSource,UITextFieldDelegate>
 
@@ -26,11 +29,25 @@
 /** 最新评论 */
 @property (nonatomic, strong) NSMutableArray *latestComments;
 /** 保存帖子的top_cmt */
-@property (nonatomic, strong) NSArray *save_top_cmt;
+@property (nonatomic, strong) ZKJComment *save_top_cmt;
+/** 当前页数 */
+@property (nonatomic, assign) NSInteger page;
+/** 总条数 */
+@property (nonatomic, assign) NSInteger total;
+/** 请求管理者 */
+@property (nonatomic, strong) AFHTTPSessionManager *manager;
 
 @end
 
 @implementation ZKJCommentVC
+
+- (AFHTTPSessionManager *)manager
+{
+    if (!_manager) {
+        _manager = [AFHTTPSessionManager manager];
+    }
+    return _manager;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -40,6 +57,25 @@
     [self setUpHeaderView];
     
     [self setUpRefresh];
+    
+    [self setUpTableView];
+}
+
+// 初始化tableView
+- (void)setUpTableView
+{
+    /**
+     * 计算cell的高度：iOS8之后苹果自己会计算cell的高度，三步
+     * 1. 设置内容label的height大于等于22；label的bottom和父view的bottom间距为10；
+     * 2. 设置cell的估计高度estimatedRowHeight为44；
+     * 3. 设置rowHeight为UITableViewAutomaticDimension
+     */
+    
+    self.tableView.backgroundColor = ZKJGlobalBGColor;
+    self.tableView.estimatedRowHeight = 60;
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
+    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([ZKJCommentCell class]) bundle:nil] forCellReuseIdentifier:cellName];
+    self.tableView.contentInset = UIEdgeInsetsMake(0, 0, ZKJTopicCellMargin, 0);
 }
 
 // 初始化刷新控件
@@ -47,13 +83,16 @@
 {
     self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewComments)];
     [self.tableView.mj_header beginRefreshing];
+    
+    self.tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreComments)];
+    self.tableView.mj_footer.hidden = YES;
 }
 
 // 设置顶部的view
 - (void)setUpHeaderView
 {
     // 清空top_cmt
-    if (self.topic.top_cmt.count) {
+    if (self.topic.top_cmt) {
         self.save_top_cmt = self.topic.top_cmt;
         self.topic.top_cmt = nil;
         [self.topic setValue:@0 forKeyPath:@"cellHeight"];
@@ -76,19 +115,20 @@
     self.title = @"评论";
     self.navigationItem.rightBarButtonItem = [UIBarButtonItem itemWithImage:@"comment_nav_item_share_icon" andHighLightImage:@"comment_nav_item_share_icon_click" andTarget:self andAction:@selector(shareClick)];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardFrameChange:) name:UIKeyboardWillChangeFrameNotification object:nil];
-    self.tableView.backgroundColor = ZKJGlobalBGColor;
 }
 
 #pragma mark - 下拉刷新
 - (void)loadNewComments
 {
+    // 结束之前的所有请求
+    [self.manager.tasks makeObjectsPerformSelector:@selector(cancel)];
     NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
     parameters[@"a"] = @"dataList";
     parameters[@"c"] = @"comment";
     parameters[@"data_id"] = self.topic.ID;
     parameters[@"hot"] = @"1";
     
-    [[AFHTTPSessionManager manager] GET:@"http://api.budejie.com/api/api_open.php" parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    [self.manager GET:@"http://api.budejie.com/api/api_open.php" parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         ZKJLog(@"responseObject:%@", responseObject);
         
         // 最热评论
@@ -96,11 +136,52 @@
         
         // 最新评论
         self.latestComments = [ZKJComment mj_objectArrayWithKeyValuesArray:responseObject[@"data"]];
-        
+        self.total = [responseObject[@"total"] integerValue];
+        self.page = 1;
         [self.tableView reloadData];
         [self.tableView.mj_header endRefreshing];
+        
+        // 控制footer的状态
+        if (self.latestComments.count >= self.total) {
+            self.tableView.mj_footer.hidden = YES;
+        }
+        
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         [self.tableView.mj_header endRefreshing];
+    }];
+}
+
+#pragma mark - 上拉加载更多
+- (void)loadMoreComments
+{
+    // 结束之前的所有请求
+    [self.manager.tasks makeObjectsPerformSelector:@selector(cancel)];
+    NSInteger page = self.page + 1;
+    NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
+    parameters[@"a"] = @"dataList";
+    parameters[@"c"] = @"comment";
+    parameters[@"data_id"] = self.topic.ID;
+    parameters[@"page"] = @(page);
+    ZKJComment *comment = [self.latestComments lastObject];
+    parameters[@"lastcid"] = comment.ID;
+    
+    [self.manager GET:@"http://api.budejie.com/api/api_open.php" parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        ZKJLog(@"responseObject:%@", responseObject);
+        
+        if (self.latestComments.count < self.total && ([responseObject count] != 0)) {
+            // 最新评论
+            NSArray *lastestComments = [ZKJComment mj_objectArrayWithKeyValuesArray:responseObject[@"data"]];
+            [self.latestComments addObjectsFromArray:lastestComments];
+            self.page = page;
+            [self.tableView reloadData];
+            [self.tableView.mj_footer endRefreshing];
+        } else {
+            self.tableView.mj_footer.hidden = YES;
+//            [self.tableView.mj_footer endRefreshingWithNoMoreData];
+        }
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        [self.tableView.mj_footer endRefreshing];
     }];
 }
 
@@ -241,6 +322,7 @@
 {
     NSInteger hotCount = self.hotComments.count;
     NSInteger latestCount = self.latestComments.count;
+    tableView.mj_footer.hidden = (latestCount == 0);
     if (section == 0) {
         return hotCount ? hotCount : latestCount;
     }
@@ -249,14 +331,8 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *cellName = @"cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellName];
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellName];
-    }
-    
-    ZKJComment *comment = [self commentInIndexPath:indexPath];
-    cell.textLabel.text = comment.content;
+    ZKJCommentCell *cell = [tableView dequeueReusableCellWithIdentifier:cellName];
+    cell.comment = [self commentInIndexPath:indexPath];
     return cell;
 }
 
@@ -272,10 +348,14 @@
     [[NSNotificationCenter defaultCenter] removeObserver:self];
     
     // 恢复帖子的top_cmt
-    if (self.save_top_cmt.count) {
+    if (self.save_top_cmt) {
         self.topic.top_cmt = self.save_top_cmt;
         [self.topic setValue:@0 forKeyPath:@"cellHeight"];
     }
+    
+    // 取消所有任务
+//    [self.manager.tasks makeObjectsPerformSelector:@selector(cancel)];
+    [self.manager invalidateSessionCancelingTasks:YES];
 }
 
 @end

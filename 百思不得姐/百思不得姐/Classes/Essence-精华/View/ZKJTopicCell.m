@@ -158,10 +158,9 @@
         self.videoView.hidden = YES;
     }
     
-    ZKJComment *comment = [topic.top_cmt firstObject];
-    if (comment) {
+    if (topic.top_cmt) {
         self.topCmtView.hidden = NO;
-        self.commentLabel.text = [NSString stringWithFormat:@"%@ : %@", comment.user.username, comment.content];
+        self.commentLabel.text = [NSString stringWithFormat:@"%@ : %@", topic.top_cmt.user.username, topic.top_cmt.content];
     } else {
         self.topCmtView.hidden = YES;
     }

@@ -45,15 +45,16 @@
     return @{@"small_image" : @"image0",
              @"middle_image" : @"image1",
              @"big_image" : @"image2",
-             @"ID" : @"id"
+             @"ID" : @"id",
+             @"top_cmt" : @"top_cmt[0]"
              };
 }
 
-+ (NSDictionary *)mj_objectClassInArray
-{
-    // return @{@"top_cmt" : [ZKJComment class]};
-    return @{@"top_cmt" : @"ZKJComment"};
-}
+//+ (NSDictionary *)mj_objectClassInArray
+//{
+//    // return @{@"top_cmt" : [ZKJComment class]};
+//    return @{@"top_cmt" : @"ZKJComment"};
+//}
 
 - (NSString *)create_time
 {
@@ -141,9 +142,8 @@
         }
         
         // 如果有最热评论
-        ZKJComment *comment = [self.top_cmt firstObject];
-        if (comment) {
-            NSString *cmtStr = [NSString stringWithFormat:@"%@ : %@", comment.user.username, comment.content];
+        if (self.top_cmt) {
+            NSString *cmtStr = [NSString stringWithFormat:@"%@ : %@", self.top_cmt.user.username, self.top_cmt.content];
             CGFloat commentH = [cmtStr boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:13]} context:nil].size.height;
             _cellHeight += ZKJTopicCellTopCmtTitleH + commentH + ZKJTopicCellMargin;
             ZKJLog(@"cmtStr:%@", cmtStr);

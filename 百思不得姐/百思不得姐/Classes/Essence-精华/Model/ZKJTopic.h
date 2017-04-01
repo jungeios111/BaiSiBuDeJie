@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
+@class ZKJComment;
 @interface ZKJTopic : NSObject
 
 /** 帖子id */
@@ -48,8 +49,8 @@
 @property (nonatomic, assign) NSInteger videotime;
 /** 播放次数 */
 @property (nonatomic, assign) NSInteger playcount;
-/** 最热评论(期望这个数组中存放的是ZKJComment模型) */
-@property (nonatomic, strong) NSArray *top_cmt;
+/** 最热评论(ZKJComment模型) */
+@property (nonatomic, strong) ZKJComment *top_cmt;
 
 /***** 额外的辅助属性 *****/
 /** cell的高度 */

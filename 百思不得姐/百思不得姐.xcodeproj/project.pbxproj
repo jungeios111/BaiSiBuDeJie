@@ -53,6 +53,8 @@
 		7B9300EE1E6E534F009939BE /* ZKJVerticalButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B9300ED1E6E534F009939BE /* ZKJVerticalButton.m */; };
 		7B9300F41E6EAE61009939BE /* ZKJTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B9300F31E6EAE61009939BE /* ZKJTextField.m */; };
 		7B97D6D91E8DFC0300DCAE87 /* ZKJCommentHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B97D6D81E8DFC0300DCAE87 /* ZKJCommentHeadView.m */; };
+		7B97D6DC1E8E3A5900DCAE87 /* ZKJCommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B97D6DB1E8E3A5900DCAE87 /* ZKJCommentCell.m */; };
+		7B97D6DE1E8E3A7300DCAE87 /* ZKJCommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B97D6DD1E8E3A7300DCAE87 /* ZKJCommentCell.xib */; };
 		7BD1E8D01E72341500327D1D /* ZKJTopic.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BD1E8CF1E72341500327D1D /* ZKJTopic.m */; };
 		7BD1E8D31E724EFB00327D1D /* ZKJConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BD1E8D21E724EFB00327D1D /* ZKJConst.m */; };
 		7BD1E8D71E72819600327D1D /* ZKJTopicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BD1E8D51E72819600327D1D /* ZKJTopicCell.m */; };
@@ -145,6 +147,9 @@
 		7B9300F31E6EAE61009939BE /* ZKJTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKJTextField.m; sourceTree = "<group>"; };
 		7B97D6D71E8DFC0300DCAE87 /* ZKJCommentHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKJCommentHeadView.h; sourceTree = "<group>"; };
 		7B97D6D81E8DFC0300DCAE87 /* ZKJCommentHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKJCommentHeadView.m; sourceTree = "<group>"; };
+		7B97D6DA1E8E3A5900DCAE87 /* ZKJCommentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKJCommentCell.h; sourceTree = "<group>"; };
+		7B97D6DB1E8E3A5900DCAE87 /* ZKJCommentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKJCommentCell.m; sourceTree = "<group>"; };
+		7B97D6DD1E8E3A7300DCAE87 /* ZKJCommentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZKJCommentCell.xib; sourceTree = "<group>"; };
 		7BD1E8CE1E72341500327D1D /* ZKJTopic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKJTopic.h; sourceTree = "<group>"; };
 		7BD1E8CF1E72341500327D1D /* ZKJTopic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKJTopic.m; sourceTree = "<group>"; };
 		7BD1E8D11E724EFB00327D1D /* ZKJConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKJConst.h; sourceTree = "<group>"; };
@@ -237,6 +242,9 @@
 				844FAA7F1E866D8D00C19994 /* ZKJTopicVideoView.xib */,
 				7B97D6D71E8DFC0300DCAE87 /* ZKJCommentHeadView.h */,
 				7B97D6D81E8DFC0300DCAE87 /* ZKJCommentHeadView.m */,
+				7B97D6DA1E8E3A5900DCAE87 /* ZKJCommentCell.h */,
+				7B97D6DB1E8E3A5900DCAE87 /* ZKJCommentCell.m */,
+				7B97D6DD1E8E3A7300DCAE87 /* ZKJCommentCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -576,6 +584,7 @@
 				7BD1E8D81E72819600327D1D /* ZKJTopicCell.xib in Resources */,
 				7B898B451E7919C5003D5F61 /* ZKJTopicPictureView.xib in Resources */,
 				7B6938821E5ABFA0002BA43A /* Assets.xcassets in Resources */,
+				7B97D6DE1E8E3A7300DCAE87 /* ZKJCommentCell.xib in Resources */,
 				7B6194711E7F64E000B19E90 /* ZKJShowPictureVC.xib in Resources */,
 				7B169D5D1E5EC59B00A17B5F /* ZKJRecommendUserCell.xib in Resources */,
 				844FAA801E866D8D00C19994 /* ZKJTopicVideoView.xib in Resources */,
@@ -658,6 +667,7 @@
 				844FAA7E1E866D7600C19994 /* ZKJTopicVideoView.m in Sources */,
 				7B457CFE1E5C2FC6009149A1 /* ZKJEssenceController.m in Sources */,
 				7B8090EE1E88BD0C00C66E7F /* ZKJUser.m in Sources */,
+				7B97D6DC1E8E3A5900DCAE87 /* ZKJCommentCell.m in Sources */,
 				7B457D011E5C2FC6009149A1 /* ZKJNewController.m in Sources */,
 				7B710DE01E656DE000430C6C /* ZKJRecommendTagCell.m in Sources */,
 				7B457CFF1E5C2FC6009149A1 /* ZKJFriendTrendsController.m in Sources */,

@@ -7,7 +7,13 @@
 //
 
 #import "ZKJComment.h"
+#import <MJExtension.h>
 
 @implementation ZKJComment
+
++ (NSDictionary *)mj_replacedKeyFromPropertyName
+{
+    return @{@"ID" : @"id"};
+}
 
 @end

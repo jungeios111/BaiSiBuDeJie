@@ -29,6 +29,16 @@
 
 @implementation ZKJCommentCell
 
+- (BOOL)canBecomeFirstResponder
+{
+    return YES;
+}
+
+- (BOOL)canPerformAction:(SEL)action withSender:(id)sender
+{
+    return NO;
+}
+
 - (void)awakeFromNib {
     [super awakeFromNib];
     self.voiceButton.imageEdgeInsets = UIEdgeInsetsMake(0, 40, 0, 0);

@@ -36,8 +36,7 @@
         self.followCountLabel.text = [NSString stringWithFormat:@"%.1f万人关注", [userModel.fans_count integerValue] / 10000.0];
     }
     
-    [self.headImageView sd_setImageWithURL:[NSURL URLWithString:userModel.header] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
-//    self.headImageView.image = [UIImage imageWithClipImage:self.headImageView.image];
+    [self.headImageView setHead_image:userModel.header];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

@@ -19,6 +19,8 @@
 #import "UIImage+ZKJExtension.h"
 #import "NSDate+ZKJExtension.h"
 #import "ZKJConst.h"
+#import "UIImage+ZKJExtersion.h"
+#import "UIImageView+ZKJExtension.h"
 
 #ifdef DEBUG
 #define ZKJLog(...) NSLog(__VA_ARGS__)

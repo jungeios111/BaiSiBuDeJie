@@ -113,7 +113,7 @@
     self.sinaImgView.hidden = !topic.isSina_v;
     
     // 设置头像
-    [self.headImageView sd_setImageWithURL:[NSURL URLWithString:topic.profile_image] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
+    [self.headImageView setHead_image:topic.profile_image];
     
     // 设置名字
     self.nameLabel.text = topic.name;
@@ -192,6 +192,8 @@
     imgView.image = [UIImage imageNamed:@"mainCellBackground"];
     self.backgroundView = imgView;
     self.selectionStyle = UITableViewCellSelectionStyleNone;
+//    self.headImageView.layer.cornerRadius = self.headImageView.width * 0.5;
+//    self.headImageView.layer.masksToBounds = YES;
 }
 
 //- (void)layoutSubviews

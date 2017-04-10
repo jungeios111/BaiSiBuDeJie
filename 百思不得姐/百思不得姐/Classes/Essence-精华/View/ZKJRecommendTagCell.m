@@ -23,7 +23,7 @@
 - (void)setModel:(ZKJRecommendTag *)model
 {
     _model = model;
-    [self.listImageView sd_setImageWithURL:[NSURL URLWithString:model.image_list] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
+    [self.listImageView setHead_image:model.image_list];
     self.themeNameLabel.text = model.theme_name;
     
     NSString *subNumber = nil;

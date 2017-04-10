@@ -55,6 +55,8 @@
 		7B97D6D91E8DFC0300DCAE87 /* ZKJCommentHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B97D6D81E8DFC0300DCAE87 /* ZKJCommentHeadView.m */; };
 		7B97D6DC1E8E3A5900DCAE87 /* ZKJCommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B97D6DB1E8E3A5900DCAE87 /* ZKJCommentCell.m */; };
 		7B97D6DE1E8E3A7300DCAE87 /* ZKJCommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B97D6DD1E8E3A7300DCAE87 /* ZKJCommentCell.xib */; };
+		7BA10B9E1E9B12BC008805C2 /* UIImage+ZKJExtersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BA10B9D1E9B12BC008805C2 /* UIImage+ZKJExtersion.m */; };
+		7BA10BA11E9B183E008805C2 /* UIImageView+ZKJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BA10BA01E9B183E008805C2 /* UIImageView+ZKJExtension.m */; };
 		7BD1E8D01E72341500327D1D /* ZKJTopic.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BD1E8CF1E72341500327D1D /* ZKJTopic.m */; };
 		7BD1E8D31E724EFB00327D1D /* ZKJConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BD1E8D21E724EFB00327D1D /* ZKJConst.m */; };
 		7BD1E8D71E72819600327D1D /* ZKJTopicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BD1E8D51E72819600327D1D /* ZKJTopicCell.m */; };
@@ -150,6 +152,10 @@
 		7B97D6DA1E8E3A5900DCAE87 /* ZKJCommentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKJCommentCell.h; sourceTree = "<group>"; };
 		7B97D6DB1E8E3A5900DCAE87 /* ZKJCommentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKJCommentCell.m; sourceTree = "<group>"; };
 		7B97D6DD1E8E3A7300DCAE87 /* ZKJCommentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZKJCommentCell.xib; sourceTree = "<group>"; };
+		7BA10B9C1E9B12BC008805C2 /* UIImage+ZKJExtersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ZKJExtersion.h"; sourceTree = "<group>"; };
+		7BA10B9D1E9B12BC008805C2 /* UIImage+ZKJExtersion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ZKJExtersion.m"; sourceTree = "<group>"; };
+		7BA10B9F1E9B183E008805C2 /* UIImageView+ZKJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+ZKJExtension.h"; sourceTree = "<group>"; };
+		7BA10BA01E9B183E008805C2 /* UIImageView+ZKJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+ZKJExtension.m"; sourceTree = "<group>"; };
 		7BD1E8CE1E72341500327D1D /* ZKJTopic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKJTopic.h; sourceTree = "<group>"; };
 		7BD1E8CF1E72341500327D1D /* ZKJTopic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKJTopic.m; sourceTree = "<group>"; };
 		7BD1E8D11E724EFB00327D1D /* ZKJConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKJConst.h; sourceTree = "<group>"; };
@@ -429,6 +435,10 @@
 				7B169D4A1E5EBD2D00A17B5F /* UIImage+ZKJExtension.m */,
 				7BDD40B41E76424E00DD5A9D /* NSDate+ZKJExtension.h */,
 				7BDD40B51E76424E00DD5A9D /* NSDate+ZKJExtension.m */,
+				7BA10B9C1E9B12BC008805C2 /* UIImage+ZKJExtersion.h */,
+				7BA10B9D1E9B12BC008805C2 /* UIImage+ZKJExtersion.m */,
+				7BA10B9F1E9B183E008805C2 /* UIImageView+ZKJExtension.h */,
+				7BA10BA01E9B183E008805C2 /* UIImageView+ZKJExtension.m */,
 			);
 			path = "Category-类别";
 			sourceTree = "<group>";
@@ -656,6 +666,7 @@
 				7B8090F11E88F88C00C66E7F /* ZKJCommentVC.m in Sources */,
 				7B9300EE1E6E534F009939BE /* ZKJVerticalButton.m in Sources */,
 				7B9300F41E6EAE61009939BE /* ZKJTextField.m in Sources */,
+				7BA10B9E1E9B12BC008805C2 /* UIImage+ZKJExtersion.m in Sources */,
 				7B898B431E7919B2003D5F61 /* ZKJTopicPictureView.m in Sources */,
 				7B457D071E5C2FC6009149A1 /* main.m in Sources */,
 				7B457D031E5C2FC6009149A1 /* UIBarButtonItem+Extension.m in Sources */,
@@ -665,6 +676,7 @@
 				7B6D19261E5D42D000A143E9 /* ZKJRecommendViewController.m in Sources */,
 				7B6671FC1E6FA5D600F4A704 /* ZKJPushGuideView.m in Sources */,
 				844FAA7E1E866D7600C19994 /* ZKJTopicVideoView.m in Sources */,
+				7BA10BA11E9B183E008805C2 /* UIImageView+ZKJExtension.m in Sources */,
 				7B457CFE1E5C2FC6009149A1 /* ZKJEssenceController.m in Sources */,
 				7B8090EE1E88BD0C00C66E7F /* ZKJUser.m in Sources */,
 				7B97D6DC1E8E3A5900DCAE87 /* ZKJCommentCell.m in Sources */,

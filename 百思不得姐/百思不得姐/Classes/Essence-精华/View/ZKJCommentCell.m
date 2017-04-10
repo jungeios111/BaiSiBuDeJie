@@ -51,7 +51,7 @@
 - (void)setComment:(ZKJComment *)comment
 {
     _comment = comment;
-    [self.headImageView sd_setImageWithURL:[NSURL URLWithString:comment.user.profile_image] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
+    [self.headImageView setHead_image:comment.user.profile_image];
     self.sexImageView.image = [comment.user.sex isEqualToString:ZKJUserSexMale] ? [UIImage imageNamed:@"Profile_manIcon"] : [UIImage imageNamed:@"Profile_womanIcon"];
     self.nameLabel.text = comment.user.username;
     self.contentLabel.text = comment.content;

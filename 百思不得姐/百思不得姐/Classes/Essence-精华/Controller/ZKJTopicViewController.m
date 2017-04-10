@@ -25,6 +25,8 @@
 @property(nonatomic,assign) NSInteger page;
 /** 上次请求的参数 */
 @property(nonatomic,strong) NSDictionary *parameters;
+/** 上次选中的索引(或者控制器) */
+@property (nonatomic, assign) NSInteger lastSelIndex;
 
 @end
 
@@ -62,6 +64,18 @@ static NSString * const cellName = @"topic";
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.backgroundColor = [UIColor clearColor];
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([ZKJTopicCell class]) bundle:nil] forCellReuseIdentifier:cellName];
+    [ZKJDefaultCenter addObserver:self selector:@selector(tabBarSelect) name:ZKJTabBarDidSelectNotification object:nil];
+}
+
+- (void)tabBarSelect
+{
+    // 如果是连续选中2次, 直接刷新
+    if (self.lastSelIndex == self.tabBarController.selectedIndex && self.view.isShowingOnKeyWindow) {
+        [self.tableView.mj_header beginRefreshing];
+    }
+    
+    // 记录这一次选中的索引
+    self.lastSelIndex = self.tabBarController.selectedIndex;
 }
 
 /** 添加刷新控件 */

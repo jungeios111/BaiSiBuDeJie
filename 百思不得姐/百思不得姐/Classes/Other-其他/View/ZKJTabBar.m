@@ -41,6 +41,9 @@
 {
     [super layoutSubviews];
     
+    // 标记按钮是否已经添加过监听器
+    static BOOL addTag = NO;
+    
     CGFloat width = self.width;
     CGFloat height = self.height;
     
@@ -54,8 +57,10 @@
     CGFloat W = width / 5;
     CGFloat H = height;
     NSInteger index = 0;
-    for (UIView *btn in self.subviews) {
+    for (UIControl *btn in self.subviews) {
         if (![btn isKindOfClass:[UIControl class]] || btn == self.publishBtn) continue;
+        
+        ZKJLog(@"%@", self.subviews);
         
         // 计算按钮的x值
         X = W * ((index > 1) ? (index + 1) : index);
@@ -63,7 +68,18 @@
         
         // 增加索引
         index++;
+        
+        if (addTag == NO) {
+            // 监听按钮点击
+            [btn addTarget:self action:@selector(addClick) forControlEvents:UIControlEventTouchUpInside];
+        }
     }
+    addTag = YES;
+}
+
+- (void)addClick
+{
+    [ZKJDefaultCenter postNotificationName:ZKJTabBarDidSelectNotification object:nil userInfo:nil];
 }
 
 @end

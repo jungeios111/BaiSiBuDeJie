@@ -32,3 +32,10 @@ UIKIT_EXTERN NSString * const ZKJUserSexFemale;
 
 /** 精华-cell-最热评论标题的高度 */
 UIKIT_EXTERN CGFloat const ZKJTopicCellTopCmtTitleH;
+
+/** tabBar被选中的通知名字 */
+UIKIT_EXTERN NSString * const ZKJTabBarDidSelectNotification;
+/** tabBar被选中的通知 - 被选中的控制器的index key */
+UIKIT_EXTERN NSString * const ZKJSelectedControllerIndexKey;
+/** tabBar被选中的通知 - 被选中的控制器 key */
+UIKIT_EXTERN NSString * const ZKJSelectedControllerKey;

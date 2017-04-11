@@ -9,4 +9,5 @@ target '百思不得姐' do
 	pod 'MJRefresh'
 	pod 'DACircularProgress'
 	pod 'pop'
+	pod 'NJKWebViewProgress'
 end 	

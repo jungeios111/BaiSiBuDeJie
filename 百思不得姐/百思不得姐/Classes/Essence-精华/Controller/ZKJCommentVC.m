@@ -131,6 +131,12 @@ static NSString * const cellName = @"comment";
     [self.manager GET:@"http://api.budejie.com/api/api_open.php" parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         ZKJLog(@"responseObject:%@", responseObject);
         
+        // 说明没有评论数据
+        if (![responseObject isKindOfClass:[NSDictionary class]]) {
+            [self.tableView.mj_header endRefreshing];
+            return ;
+        }
+        
         // 最热评论
         self.hotComments = [ZKJComment mj_objectArrayWithKeyValuesArray:responseObject[@"hot"]];
         
@@ -178,6 +184,7 @@ static NSString * const cellName = @"comment";
         } else {
             self.tableView.mj_footer.hidden = YES;
 //            [self.tableView.mj_footer endRefreshingWithNoMoreData];
+            return ;
         }
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {

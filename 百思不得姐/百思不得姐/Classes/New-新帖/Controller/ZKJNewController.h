@@ -6,8 +6,8 @@
 //  Copyright © 2017年 ZKJ. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "ZKJEssenceController.h"
 
-@interface ZKJNewController : UIViewController
+@interface ZKJNewController : ZKJEssenceController
 
 @end

@@ -60,8 +60,6 @@
     for (UIControl *btn in self.subviews) {
         if (![btn isKindOfClass:[UIControl class]] || btn == self.publishBtn) continue;
         
-        ZKJLog(@"%@", self.subviews);
-        
         // 计算按钮的x值
         X = W * ((index > 1) ? (index + 1) : index);
         btn.frame = CGRectMake(X, Y, W, H);

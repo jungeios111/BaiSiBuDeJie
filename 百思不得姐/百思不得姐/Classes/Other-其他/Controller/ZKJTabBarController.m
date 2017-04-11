@@ -50,7 +50,7 @@
     [self setUpChildVc:[[ZKJEssenceController alloc] init] andTitle:@"精华" andNorImage:@"tabBar_essence_icon" andSelectImage:@"tabBar_essence_click_icon"];
     [self setUpChildVc:[[ZKJNewController alloc] init] andTitle:@"最新" andNorImage:@"tabBar_new_icon" andSelectImage:@"tabBar_new_click_icon"];
     [self setUpChildVc:[[ZKJFriendTrendsController alloc] init] andTitle:@"关注" andNorImage:@"tabBar_friendTrends_icon" andSelectImage:@"tabBar_friendTrends_click_icon"];
-    [self setUpChildVc:[[ZKJMeViewController alloc] init] andTitle:@"我" andNorImage:@"tabBar_me_icon" andSelectImage:@"tabBar_me_click_icon"];
+    [self setUpChildVc:[[ZKJMeViewController alloc] initWithStyle:UITableViewStyleGrouped] andTitle:@"我" andNorImage:@"tabBar_me_icon" andSelectImage:@"tabBar_me_click_icon"];
     
     // 更换tabBar
     //@property(nonatomic,readonly) UITabBar *tabBar NS_AVAILABLE_IOS(3_0),tabBar属性是readonly,不能通过alloc来赋值,通过kvc来赋值.

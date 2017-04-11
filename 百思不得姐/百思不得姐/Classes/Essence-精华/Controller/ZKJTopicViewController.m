@@ -14,6 +14,7 @@
 #import "ZKJTopic.h"
 #import "ZKJTopicCell.h"
 #import "ZKJCommentVC.h"
+#import "ZKJNewController.h"
 
 @interface ZKJTopicViewController ()
 
@@ -88,12 +89,18 @@ static NSString * const cellName = @"topic";
     self.tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreData)];
 }
 
+#pragma mark - a参数
+- (NSString *)a
+{
+    return [self.parentViewController isKindOfClass:[ZKJNewController class]] ? @"newlist" : @"list";
+}
+
 #pragma mark - 下拉刷新
 - (void)loadNewData
 {
     [self.tableView.mj_footer endRefreshing];
     NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
-    parameters[@"a"] = @"list";
+    parameters[@"a"] = self.a;
     parameters[@"c"] = @"data";
     parameters[@"type"] = @(self.type);
     self.parameters = parameters;
@@ -126,7 +133,7 @@ static NSString * const cellName = @"topic";
 {
     [self.tableView.mj_header endRefreshing];
     NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
-    parameters[@"a"] = @"list";
+    parameters[@"a"] = self.a;
     parameters[@"c"] = @"data";
     parameters[@"type"] = @(self.type);
     parameters[@"maxtime"] = self.maxtime;

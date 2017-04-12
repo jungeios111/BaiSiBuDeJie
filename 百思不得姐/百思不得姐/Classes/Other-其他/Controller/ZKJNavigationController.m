@@ -23,6 +23,19 @@
     // UINavigationBar *bar = [UINavigationBar appearanceWhenContainedIn:[self class], nil];
     UINavigationBar *bar = [UINavigationBar appearance];
     [bar setBackgroundImage:[UIImage imageNamed:@"navigationbarBackgroundWhite"] forBarMetrics:UIBarMetricsDefault];
+    [bar setTitleTextAttributes:@{NSFontAttributeName : [UIFont boldSystemFontOfSize:20]}];
+    
+    // normal
+    UIBarButtonItem *item = [UIBarButtonItem appearance];
+    NSMutableDictionary *normalDic = [NSMutableDictionary dictionary];
+    normalDic[NSFontAttributeName] = [UIFont systemFontOfSize:17];
+    normalDic[NSForegroundColorAttributeName] = [UIColor blackColor];
+    [item setTitleTextAttributes:normalDic forState:UIControlStateNormal];
+    
+    // disable
+    NSMutableDictionary *disableDic = [NSMutableDictionary dictionary];
+    disableDic[NSForegroundColorAttributeName] = [UIColor lightGrayColor];
+    [item setTitleTextAttributes:disableDic forState:UIControlStateDisabled];
 }
 
 - (void)viewDidLoad {

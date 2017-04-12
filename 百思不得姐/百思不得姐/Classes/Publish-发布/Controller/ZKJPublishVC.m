@@ -9,6 +9,8 @@
 #import "ZKJPublishVC.h"
 #import "ZKJVerticalButton.h"
 #import <POP.h>
+#import "ZKJPostWordVC.h"
+#import "ZKJNavigationController.h"
 
 static CGFloat const ZKJAnimationDelay = 0.1;
 static CGFloat const ZKJSpringFactor = 10;
@@ -102,7 +104,14 @@ static CGFloat const ZKJSpringFactor = 10;
 - (void)btnClick:(UIButton *)btn
 {
     [self animationOutCompletionBlock:^{
-        ZKJLog(@"%zd --- %@", btn.tag, btn.titleLabel.text);
+        if (btn.tag == 2) {
+            ZKJPostWordVC *postVC = [[ZKJPostWordVC alloc] init];
+            ZKJNavigationController *nav = [[ZKJNavigationController alloc] initWithRootViewController:postVC];
+            
+            // 这里不能使用self来弹出其他控制器, 因为self执行了dismiss操作
+            UIViewController *root = [UIApplication sharedApplication].keyWindow.rootViewController;
+            [root presentViewController:nav animated:YES completion:nil];
+        }
     }];
 }
 

@@ -11,7 +11,6 @@
 @class ZKJTopic;
 @interface ZKJTopicVideoView : UIView
 
-+ (instancetype)videoView;
 /** 数据模型 */
 @property (nonatomic, strong) ZKJTopic *topic;
 

@@ -100,7 +100,7 @@ static NSString * const cellName = @"comment";
     
     UIView *headerView = [[UIView alloc] init];
     
-    ZKJTopicCell *cell = [ZKJTopicCell cell];
+    ZKJTopicCell *cell = [ZKJTopicCell viewFromXib];
     cell.topic = self.topic;
     cell.size = CGSizeMake(ZKJScreenWidth, self.topic.cellHeight);
     [headerView addSubview:cell];

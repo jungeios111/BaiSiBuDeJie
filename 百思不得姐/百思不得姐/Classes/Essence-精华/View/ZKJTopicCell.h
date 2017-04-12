@@ -14,7 +14,4 @@
 /** 段子数据模型 */
 @property(nonatomic,strong) ZKJTopic *topic;
 
-/** 创建cell */
-+ (instancetype)cell;
-
 @end

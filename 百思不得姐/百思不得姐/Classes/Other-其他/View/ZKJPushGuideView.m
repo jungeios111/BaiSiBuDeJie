@@ -10,11 +10,6 @@
 
 @implementation ZKJPushGuideView
 
-+ (instancetype)pushGuideView
-{
-    return [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self) owner:nil options:nil] lastObject];
-}
-
 + (void)show
 {
     NSString *key = @"CFBundleShortVersionString";
@@ -22,7 +17,7 @@
     NSString *sandBoxVersion = [[NSUserDefaults standardUserDefaults] stringForKey:key];
     if (![currentVersion isEqualToString:sandBoxVersion]) {
         UIWindow *window = [UIApplication sharedApplication].keyWindow;
-        ZKJPushGuideView *pushView = [ZKJPushGuideView pushGuideView];
+        ZKJPushGuideView *pushView = [ZKJPushGuideView viewFromXib];
         pushView.frame = window.bounds;
         [window addSubview:pushView];
         [[NSUserDefaults standardUserDefaults] setValue:currentVersion forKey:key];

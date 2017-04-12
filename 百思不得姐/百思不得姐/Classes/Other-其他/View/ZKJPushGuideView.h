@@ -10,7 +10,6 @@
 
 @interface ZKJPushGuideView : UIView
 
-+ (instancetype)pushGuideView;
 + (void)show;
 
 @end

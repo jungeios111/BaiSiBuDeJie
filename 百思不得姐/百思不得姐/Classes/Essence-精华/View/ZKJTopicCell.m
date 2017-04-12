@@ -70,15 +70,10 @@
     2014-05-08 18:45:30
  */
 
-+ (instancetype)cell
-{
-    return [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self) owner:nil options:nil] lastObject];
-}
-
 - (ZKJTopicPictureView *)pictureView
 {
     if (!_pictureView) {
-        ZKJTopicPictureView *pictureView = [ZKJTopicPictureView pictureView];
+        ZKJTopicPictureView *pictureView = [ZKJTopicPictureView viewFromXib];
         [self.contentView addSubview:pictureView];
         _pictureView = pictureView;
     }
@@ -88,7 +83,7 @@
 - (ZKJTopicVoiceView *)voiceView
 {
     if (!_voiceView) {
-        ZKJTopicVoiceView *voiceView = [ZKJTopicVoiceView voiceView];
+        ZKJTopicVoiceView *voiceView = [ZKJTopicVoiceView viewFromXib];
         [self.contentView addSubview:voiceView];
         self.voiceView = voiceView;
     }
@@ -98,7 +93,7 @@
 - (ZKJTopicVideoView *)videoView
 {
     if (!_videoView) {
-        ZKJTopicVideoView *videoView = [ZKJTopicVideoView videoView];
+        ZKJTopicVideoView *videoView = [ZKJTopicVideoView viewFromXib];
         [self.contentView addSubview:videoView];
         self.videoView = videoView;
     }

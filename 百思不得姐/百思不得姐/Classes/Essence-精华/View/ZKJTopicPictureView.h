@@ -11,8 +11,6 @@
 @class ZKJTopic;
 @interface ZKJTopicPictureView : UIView
 
-+ (instancetype)pictureView;
-
 /** 图片帖子数据模型 */
 @property(nonatomic,strong) ZKJTopic *topic;
 

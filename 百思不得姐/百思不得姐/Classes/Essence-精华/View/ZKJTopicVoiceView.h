@@ -11,8 +11,6 @@
 @class ZKJTopic;
 @interface ZKJTopicVoiceView : UIView
 
-+ (instancetype)voiceView;
-
 /** 帖子模型 */
 @property (nonatomic, strong) ZKJTopic *topic;
 

@@ -40,11 +40,6 @@
     [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:vc animated:YES completion:nil];
 }
 
-+ (instancetype)voiceView
-{
-    return [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self) owner:nil options:nil] lastObject];
-}
-
 - (void)setTopic:(ZKJTopic *)topic
 {
     _topic = topic;

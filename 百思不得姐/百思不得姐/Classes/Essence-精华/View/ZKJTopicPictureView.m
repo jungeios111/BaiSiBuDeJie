@@ -44,11 +44,6 @@
     [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:vc animated:YES completion:nil];
 }
 
-+ (instancetype)pictureView
-{
-    return [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self) owner:nil options:nil] lastObject];
-}
-
 - (void)setTopic:(ZKJTopic *)topic
 {
     _topic = topic;

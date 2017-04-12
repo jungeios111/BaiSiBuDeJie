@@ -52,7 +52,7 @@
                         <state key="highlighted" image="cellmorebtnclick"/>
                     </button>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ag6-bd-TJo" userLabel="底部view">
-                        <rect key="frame" x="0.0" y="547.5" width="349" height="35"/>
+                        <rect key="frame" x="0.0" y="548" width="349" height="35"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="crf-tv-Atb" userLabel="顶">
                                 <rect key="frame" x="0.0" y="0.0" width="87.5" height="35"/>
@@ -164,10 +164,10 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O1P-dT-sZb" userLabel="底部热门评论的view">
-                        <rect key="frame" x="10" y="439.5" width="329" height="98"/>
+                        <rect key="frame" x="10" y="440" width="329" height="98"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="最热评论" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M25-DI-bBn" userLabel="最热评论">
-                                <rect key="frame" x="0.0" y="0.0" width="57.5" height="20"/>
+                                <rect key="frame" x="0.0" y="0.0" width="58" height="20"/>
                                 <color key="backgroundColor" red="0.67450980392156867" green="0.67450980392156867" blue="0.67450980392156867" alpha="0.63736087328767121" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="yyY-8t-Kdo"/>

@@ -66,11 +66,11 @@
 /**
  * 更新占位文字的尺寸
  */
-- (void)updatePlaceHolderLabelSize
+- (void)layoutSubviews
 {
-    CGSize size = CGSizeMake(ZKJScreenWidth - 2 * self.placeHolderLabel.x, MAXFLOAT);
-    self.placeHolderLabel.size = [self.placeHolder boundingRectWithSize:size options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : self.font} context:nil].size;
-    self.placeHolderLabel.backgroundColor = [UIColor redColor];
+    [super layoutSubviews];
+    self.placeHolderLabel.width = ZKJScreenWidth - 2 * self.placeHolderLabel.x;
+    [self.placeHolderLabel sizeToFit];
 }
 
 #pragma mark - 重写setter方法
@@ -78,7 +78,7 @@
 {
     _placeHolder = [placeHolder copy];
     self.placeHolderLabel.text = placeHolder;
-    [self updatePlaceHolderLabelSize];
+    [self setNeedsLayout];
 }
 
 - (void)setPlaceHolderColor:(UIColor *)placeHolderColor
@@ -91,7 +91,7 @@
 {
     [super setFont:font];
     self.placeHolderLabel.font = font;
-    [self updatePlaceHolderLabelSize];
+    [self setNeedsLayout];
 }
 
 - (void)setText:(NSString *)text
@@ -108,6 +108,10 @@
 
 @end
 
+/**
+ * setNeedsDisplay方法 : 会在恰当的时刻自动调用drawRect:方法
+ * setNeedsLayout方法 : 会在恰当的时刻调用layoutSubviews方法
+ */
 
 /**
  // 利用drawRect实现占位文字
@@ -167,9 +171,4 @@
     [self.placeHolder drawInRect:rect withAttributes:attsDic];
 }
  */
-
-
-
-
-
 

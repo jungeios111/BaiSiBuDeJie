@@ -15,7 +15,7 @@
     if (self = [super initWithFrame:frame]) {
         [self setImage:[UIImage imageNamed:@"chose_tag_close_icon"] forState:UIControlStateNormal];
         self.backgroundColor = ZKJTagButtonBGColor;
-        self.titleLabel.font = [UIFont systemFontOfSize:14];
+        self.titleLabel.font = ZKJTagFont;
     }
     return self;
 }
@@ -25,6 +25,7 @@
     [super setTitle:title forState:state];
     [self sizeToFit];
     self.width += 3 * ZKJTagMargin;
+    self.height = ZKJTagH;
 }
 
 - (void)layoutSubviews

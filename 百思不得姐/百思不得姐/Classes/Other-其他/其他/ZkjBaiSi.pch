@@ -36,6 +36,7 @@
 #define ZKJScreenHeight [UIScreen mainScreen].bounds.size.height
 #define ZKJDefaultCenter [NSNotificationCenter defaultCenter]
 #define ZKJTagButtonBGColor ZKJRGBColor(74, 139, 209)
+#define ZKJTagFont [UIFont systemFontOfSize:14]
 
 
 #endif /* ZkjBaiSi_pch */

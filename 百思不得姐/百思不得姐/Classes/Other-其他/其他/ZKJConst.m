@@ -34,3 +34,5 @@ NSString * const ZKJSelectedControllerKey = @"ZKJSelectedControllerKey";
 
 /** 标签-间距 */
 CGFloat const ZKJTagMargin = 5;
+/** 标签-高度 */
+CGFloat const ZKJTagH = 25;

@@ -103,7 +103,7 @@
         [btn setTitle:[self.childViewControllers[i] title] forState:UIControlStateNormal];
         [btn.titleLabel setTextAlignment:NSTextAlignmentCenter];
         [btn setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
-        [btn.titleLabel setFont:[UIFont systemFontOfSize:14]];
+        [btn.titleLabel setFont:ZKJTagFont];
         [btn addTarget:self action:@selector(titleBtnClick:) forControlEvents:UIControlEventTouchUpInside];
         [topView addSubview:btn];
         

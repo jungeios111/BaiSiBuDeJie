@@ -40,7 +40,7 @@
         btn.height = 35;
         [btn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [btn addTarget:self action:@selector(addBtnClick) forControlEvents:UIControlEventTouchUpInside];
-        btn.titleLabel.font = [UIFont systemFontOfSize:14];
+        btn.titleLabel.font = ZKJTagFont;
         btn.contentEdgeInsets = UIEdgeInsetsMake(0, ZKJTagMargin, 0, ZKJTagMargin);
         // 让按钮内部的文字和图片都左对齐
         btn.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;

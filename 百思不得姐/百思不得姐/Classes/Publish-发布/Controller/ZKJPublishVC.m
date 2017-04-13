@@ -63,7 +63,7 @@ static CGFloat const ZKJSpringFactor = 10;
         ZKJVerticalButton *btn = [ZKJVerticalButton buttonWithType:UIButtonTypeCustom];
         btn.tag = i;
         [btn setTitle:titles[i] forState:UIControlStateNormal];
-        [btn.titleLabel setFont:[UIFont systemFontOfSize:14]];
+        [btn.titleLabel setFont:ZKJTagFont];
         [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         [btn setImage:[UIImage imageNamed:images[i]] forState:UIControlStateNormal];
         [btn addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];

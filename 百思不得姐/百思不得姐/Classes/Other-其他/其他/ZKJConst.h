@@ -42,3 +42,5 @@ UIKIT_EXTERN NSString * const ZKJSelectedControllerKey;
 
 /** 标签-间距 */
 UIKIT_EXTERN CGFloat const ZKJTagMargin;
+/** 标签-高度 */
+UIKIT_EXTERN CGFloat const ZKJTagH;

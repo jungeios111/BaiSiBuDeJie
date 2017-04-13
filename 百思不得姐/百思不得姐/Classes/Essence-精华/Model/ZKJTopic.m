@@ -100,7 +100,7 @@
         CGSize maxSize = CGSizeMake(ZKJScreenWidth - 4 * ZKJTopicCellMargin, MAXFLOAT);
         
         // 计算文字的高度
-        CGFloat textH = [self.text boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:14]} context:nil].size.height;
+        CGFloat textH = [self.text boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : ZKJTagFont} context:nil].size.height;
         
         // 计算cell的高度
         // 文字部分的高度

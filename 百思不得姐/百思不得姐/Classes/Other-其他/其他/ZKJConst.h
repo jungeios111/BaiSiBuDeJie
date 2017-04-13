@@ -39,3 +39,6 @@ UIKIT_EXTERN NSString * const ZKJTabBarDidSelectNotification;
 UIKIT_EXTERN NSString * const ZKJSelectedControllerIndexKey;
 /** tabBar被选中的通知 - 被选中的控制器 key */
 UIKIT_EXTERN NSString * const ZKJSelectedControllerKey;
+
+/** 标签-间距 */
+UIKIT_EXTERN CGFloat const ZKJTagMargin;

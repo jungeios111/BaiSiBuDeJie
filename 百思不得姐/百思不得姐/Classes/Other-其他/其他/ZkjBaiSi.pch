@@ -35,7 +35,7 @@
 #define ZKJScreenWidth [UIScreen mainScreen].bounds.size.width
 #define ZKJScreenHeight [UIScreen mainScreen].bounds.size.height
 #define ZKJDefaultCenter [NSNotificationCenter defaultCenter]
-
+#define ZKJTagButtonBGColor ZKJRGBColor(74, 139, 209)
 
 
 #endif /* ZkjBaiSi_pch */

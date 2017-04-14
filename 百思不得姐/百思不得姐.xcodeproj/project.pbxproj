@@ -42,6 +42,7 @@
 		7B676B061E9E33AA00021F27 /* ZKJAddTagToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B676B051E9E33AA00021F27 /* ZKJAddTagToolbar.m */; };
 		7B676B081E9E33BD00021F27 /* ZKJAddTagToolbar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B676B071E9E33BD00021F27 /* ZKJAddTagToolbar.xib */; };
 		7B6938821E5ABFA0002BA43A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B6938811E5ABFA0002BA43A /* Assets.xcassets */; };
+		7B6A58181EA0626500187C3A /* ZKJTagTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B6A58171EA0626500187C3A /* ZKJTagTextField.m */; };
 		7B6D19221E5D31A700A143E9 /* ZKJFriendTrendsController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B6D19211E5D31A700A143E9 /* ZKJFriendTrendsController.xib */; };
 		7B6D19261E5D42D000A143E9 /* ZKJRecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B6D19241E5D42D000A143E9 /* ZKJRecommendViewController.m */; };
 		7B6D19271E5D42D000A143E9 /* ZKJRecommendViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B6D19251E5D42D000A143E9 /* ZKJRecommendViewController.xib */; };
@@ -143,6 +144,8 @@
 		7B6938721E5ABFA0002BA43A /* 百思不得姐.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "百思不得姐.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B6938811E5ABFA0002BA43A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7B6938861E5ABFA0002BA43A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7B6A58161EA0626500187C3A /* ZKJTagTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKJTagTextField.h; sourceTree = "<group>"; };
+		7B6A58171EA0626500187C3A /* ZKJTagTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKJTagTextField.m; sourceTree = "<group>"; };
 		7B6D19211E5D31A700A143E9 /* ZKJFriendTrendsController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZKJFriendTrendsController.xib; sourceTree = "<group>"; };
 		7B6D19231E5D42D000A143E9 /* ZKJRecommendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKJRecommendViewController.h; sourceTree = "<group>"; };
 		7B6D19241E5D42D000A143E9 /* ZKJRecommendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKJRecommendViewController.m; sourceTree = "<group>"; };
@@ -565,6 +568,8 @@
 				7B676B071E9E33BD00021F27 /* ZKJAddTagToolbar.xib */,
 				7B74ABE41E9F5AA100A49D8D /* ZKJTagButton.h */,
 				7B74ABE51E9F5AA100A49D8D /* ZKJTagButton.m */,
+				7B6A58161EA0626500187C3A /* ZKJTagTextField.h */,
+				7B6A58171EA0626500187C3A /* ZKJTagTextField.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -787,6 +792,7 @@
 				844FAA761E76EC5400C19994 /* ZKJTopicViewController.m in Sources */,
 				7B74ABE01E9F1D9000A49D8D /* ZKJAddTagViewController.m in Sources */,
 				7B97D6D91E8DFC0300DCAE87 /* ZKJCommentHeadView.m in Sources */,
+				7B6A58181EA0626500187C3A /* ZKJTagTextField.m in Sources */,
 				7B6194701E7F64E000B19E90 /* ZKJShowPictureVC.m in Sources */,
 				7B710DD91E6567A400430C6C /* ZKJRecommendTagsVC.m in Sources */,
 				7BD1E8D01E72341500327D1D /* ZKJTopic.m in Sources */,
@@ -915,7 +921,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nbcb.bsbdj01;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "e0d4ef46-0d85-4dc1-b602-79a923e4ad87";
+				PROVISIONING_PROFILE = "854482e9-a82c-46b4-a2e4-461c712d1d11";
 				PROVISIONING_PROFILE_SPECIFIER = AlexSongDev;
 			};
 			name = Debug;
@@ -935,7 +941,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nbcb.bsbdj01;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "e0d4ef46-0d85-4dc1-b602-79a923e4ad87";
+				PROVISIONING_PROFILE = "854482e9-a82c-46b4-a2e4-461c712d1d11";
 				PROVISIONING_PROFILE_SPECIFIER = AlexSongDev;
 			};
 			name = Release;

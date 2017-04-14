@@ -9,28 +9,28 @@ typedef enum : NSUInteger {
     ZKJTopicTypeVideo = 41,
 } ZKJTopicType;
 
-/** 精华-顶部标题的高度 */
+/** 精华-顶部标题的高度-35 */
 UIKIT_EXTERN CGFloat const ZKJTitilesViewH;
-/** 精华-顶部标题的Y */
+/** 精华-顶部标题的Y-64 */
 UIKIT_EXTERN CGFloat const ZKJTitilesViewY;
 
-/** 精华-cell-间距 */
+/** 精华-cell-间距-10 */
 UIKIT_EXTERN CGFloat const ZKJTopicCellMargin;
-/** 精华-cell-文字内容的Y值 */
+/** 精华-cell-文字内容的Y值-55 */
 UIKIT_EXTERN CGFloat const ZKJTopicCellTextY;
-/** 精华-cell-底部工具条的高度 */
+/** 精华-cell-底部工具条的高度-35 */
 UIKIT_EXTERN CGFloat const ZKJTopicCellBottomBarH;
 
-/** 精华-cell-图片帖子的最大高度 */
+/** 精华-cell-图片帖子的最大高度-1000 */
 UIKIT_EXTERN CGFloat const ZKJTopicCellPictureMaxH;
-/** 精华-cell-图片帖子一旦超过最大高度,就是用Break */
+/** 精华-cell-图片帖子一旦超过最大高度,就是用Break-250 */
 UIKIT_EXTERN CGFloat const ZKJTopicCellPictureBreakH;
 
 /** XMGUser模型-性别属性值 */
 UIKIT_EXTERN NSString * const ZKJUserSexMale;
 UIKIT_EXTERN NSString * const ZKJUserSexFemale;
 
-/** 精华-cell-最热评论标题的高度 */
+/** 精华-cell-最热评论标题的高度-20 */
 UIKIT_EXTERN CGFloat const ZKJTopicCellTopCmtTitleH;
 
 /** tabBar被选中的通知名字 */
@@ -40,7 +40,7 @@ UIKIT_EXTERN NSString * const ZKJSelectedControllerIndexKey;
 /** tabBar被选中的通知 - 被选中的控制器 key */
 UIKIT_EXTERN NSString * const ZKJSelectedControllerKey;
 
-/** 标签-间距 */
+/** 标签-间距-5 */
 UIKIT_EXTERN CGFloat const ZKJTagMargin;
-/** 标签-高度 */
+/** 标签-高度-25 */
 UIKIT_EXTERN CGFloat const ZKJTagH;

@@ -10,4 +10,9 @@
 
 @interface ZKJAddTagViewController : UIViewController
 
+/** 获取tags的block */
+@property (nonatomic, strong) void (^tagBlock)(NSArray *tags);
+/** 所有的标签 */
+@property (nonatomic, strong) NSArray *tags;
+
 @end

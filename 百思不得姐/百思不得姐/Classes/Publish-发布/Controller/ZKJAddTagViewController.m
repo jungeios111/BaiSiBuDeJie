@@ -8,13 +8,15 @@
 
 #import "ZKJAddTagViewController.h"
 #import "ZKJTagButton.h"
+#import "ZKJTagTextField.h"
+#import <SVProgressHUD.h>
 
-@interface ZKJAddTagViewController ()
+@interface ZKJAddTagViewController ()<UITextFieldDelegate>
 
 /** 内容view */
 @property (nonatomic, weak) UIView *contentView;
 /** 文本输入框 */
-@property (nonatomic, weak) UITextField *textField;
+@property (nonatomic, weak) ZKJTagTextField *textField;
 /** 添加按钮 */
 @property (nonatomic, weak) UIButton *addBtn;
 /** 所有的标签按钮 */
@@ -24,6 +26,7 @@
 
 @implementation ZKJAddTagViewController
 
+#pragma mark - 懒加载
 - (NSMutableArray *)tagButtonArray
 {
     if (!_tagButtonArray) {
@@ -51,6 +54,7 @@
     return _addBtn;
 }
 
+#pragma mark - 初始化
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -59,16 +63,28 @@
     [self setupContentView];
     
     [self setupTextField];
+    
+    [self setupTags];
+}
+
+- (void)setupTags
+{
+    for (NSString *tag in self.tags) {
+        self.textField.text = tag;
+        [self addBtnClick];
+    }
 }
 
 - (void)setupTextField
 {
-    UITextField *textField = [[UITextField alloc] init];
-    textField.width = ZKJScreenWidth;
-    textField.height = 25;
-    textField.placeholder = @"多个标签用逗号或者换行隔开";
-    // 设置了占位文字内容以后, 才能设置占位文字的颜色
-    [textField setValue:[UIColor grayColor] forKeyPath:@"_placeholderLabel.textColor"];
+    __weak typeof(self) weakSelf = self;
+    ZKJTagTextField *textField = [[ZKJTagTextField alloc] init];
+    textField.width = self.contentView.width;
+    [textField setDeleteTextBlock:^{
+        if (weakSelf.textField.hasText) return ;
+        [weakSelf tagBtnClick:[weakSelf.tagButtonArray lastObject]];
+    }];
+    textField.delegate = self;
     [textField addTarget:self action:@selector(textDidChange) forControlEvents:UIControlEventEditingChanged];
     [textField becomeFirstResponder];
     [self.contentView addSubview:textField];
@@ -94,46 +110,86 @@
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"完成" style:UIBarButtonItemStylePlain target:self action:@selector(doneClick)];
 }
 
+#pragma mark - 监听文字改变
 /**
  * 监听文字改变
  */
 - (void)textDidChange
 {
+    // 更新文本框的frame
+    [self updateTextFieldFrame];
+    
     if (self.textField.hasText) {
         // 有文字 显示"添加标签"的按钮
         self.addBtn.hidden = NO;
         self.addBtn.y = CGRectGetMaxY(self.textField.frame) + ZKJTagMargin;
         [self.addBtn setTitle:[NSString stringWithFormat:@"添加标签: %@", self.textField.text] forState:UIControlStateNormal];
+        
+        // 获得最后一个字符
+        NSString *text = self.textField.text;
+        NSInteger length = text.length;
+        NSString *lastLetter = [text substringFromIndex:length - 1];
+        if ([lastLetter isEqualToString:@","] || [lastLetter isEqualToString:@"，"]) {
+            // 去除逗号
+            self.textField.text = [text substringToIndex:length - 1];
+            [self addBtnClick];
+        }
     } else {
         // 没有文字 隐藏"添加标签"的按钮
         self.addBtn.hidden = YES;
     }
-    
-    // 更新标签和文本框的frame
-    [self updateTagButtonsFrame];
 }
 
+#pragma mark - 监听添加标签按钮点击
 /**
  * 监听"添加标签"按钮点击
  */
 - (void)addBtnClick
 {
+    if (self.tagButtonArray.count == 5) {
+        [SVProgressHUD showErrorWithStatus:@"最多添加5个标签"];
+        [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeBlack];
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [SVProgressHUD dismiss];
+        });
+        return;
+    }
+    
     // 添加一个"标签按钮"
     ZKJTagButton *tagBtn = [ZKJTagButton buttonWithType:UIButtonTypeCustom];
     [tagBtn addTarget:self action:@selector(tagBtnClick:) forControlEvents:UIControlEventTouchUpInside];
     [tagBtn setTitle:self.textField.text forState:UIControlStateNormal];
-    tagBtn.height = self.textField.height;
     [self.contentView addSubview:tagBtn];
     [self.tagButtonArray addObject:tagBtn];
-    
-    // 更新标签按钮的frame
-    [self updateTagButtonsFrame];
     
     // 清空textField文字
     self.textField.text = nil;
     self.addBtn.hidden = YES;
+    
+    // 更新标签按钮的frame
+    [self updateTagButtonsFrame];
+    
+    // 更新输入框的frame
+    [self updateTextFieldFrame];
 }
 
+#pragma mark - 监听标签按钮的点击
+/**
+ * 标签按钮的点击
+ */
+- (void)tagBtnClick:(ZKJTagButton *)button
+{
+    [button removeFromSuperview];
+    [self.tagButtonArray removeObject:button];
+    
+    // 重新更新所有标签按钮的frame
+    [UIView animateWithDuration:0.25 animations:^{
+        [self updateTagButtonsFrame];
+        [self updateTextFieldFrame];
+    }];
+}
+
+#pragma mark - 用来更新标签按钮的frame
 /**
  * 专门用来更新标签按钮的frame
  */
@@ -164,20 +220,27 @@
                 button.y = CGRectGetMaxY(lastButton.frame) + ZKJTagMargin;
             }
         }
-        
-        // 最后一个标签按钮
-        ZKJTagButton *lastTagBtn = [self.tagButtonArray lastObject];
-        CGFloat leftWidth = CGRectGetMaxX(lastTagBtn.frame) + ZKJTagMargin;
-        CGFloat rightWidth = self.contentView.width - leftWidth;
-        
-        // 更新textField的frame
-        if (rightWidth >= [self textFieldWidth]) {
-            self.textField.x = leftWidth;
-            self.textField.y = lastTagBtn.y;
-        } else {
-            self.textField.x = 0;
-            self.textField.y = CGRectGetMaxY(lastTagBtn.frame) + ZKJTagMargin;
-        }
+    }
+}
+
+#pragma mark - 更新textField的frame
+/**
+ * 更新textField的frame
+ */
+- (void)updateTextFieldFrame
+{
+    // 最后一个标签按钮
+    ZKJTagButton *lastTagBtn = [self.tagButtonArray lastObject];
+    CGFloat leftWidth = CGRectGetMaxX(lastTagBtn.frame) + ZKJTagMargin;
+    CGFloat rightWidth = self.contentView.width - leftWidth;
+    
+    // 更新textField的frame
+    if (rightWidth >= [self textFieldWidth]) {
+        self.textField.x = leftWidth;
+        self.textField.y = lastTagBtn.y;
+    } else {
+        self.textField.x = 0;
+        self.textField.y = CGRectGetMaxY(lastTagBtn.frame) + ZKJTagMargin;
     }
 }
 
@@ -190,18 +253,16 @@
     return MAX(100, width);
 }
 
+#pragma mark - <UITextFieldDelegate>
 /**
- * 标签按钮的点击
+ * 监听键盘最右下角按钮的点击（return key， 比如“换行”、“完成”等等）
  */
-- (void)tagBtnClick:(ZKJTagButton *)button
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
-    [button removeFromSuperview];
-    [self.tagButtonArray removeObject:button];
-    
-    // 重新更新所有标签按钮的frame
-    [UIView animateWithDuration:0.25 animations:^{
-        [self updateTagButtonsFrame];
-    }];
+    if (textField.hasText) {
+        [self addBtnClick];
+    }
+    return YES;
 }
 
 - (void)cancelClick
@@ -212,7 +273,17 @@
 
 - (void)doneClick
 {
+    // 传递数据给上一个控制器
+//    NSMutableArray *tags = [NSMutableArray array];
+//    for (ZKJTagButton *button in self.tagButtonArray) {
+//        [tags addObject:button.currentTitle];
+//    }
+//    ZKJLog(@"%@", tags);
     
+    // 传递tags给这个block
+    NSArray *tags = [self.tagButtonArray valueForKeyPath:@"currentTitle"];
+    !self.tagBlock ? : self.tagBlock(tags);
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 @end

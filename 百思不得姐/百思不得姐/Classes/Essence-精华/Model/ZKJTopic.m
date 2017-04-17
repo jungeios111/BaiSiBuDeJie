@@ -108,23 +108,24 @@
         
         // 根据段子的类型来计算cell的高度
         if (self.type == ZKJTopicTypePicture) {
-            
-            // 计算图片的frame
-            CGFloat pictureW = maxSize.width;
-            CGFloat pictureH = pictureW * self.height / self.width;
-            
-            // 判断是否是大图
-            if (pictureH > ZKJTopicCellPictureMaxH) {
-                pictureH = ZKJTopicCellPictureBreakH;
-                self.bigPicture = YES;
+            if (self.width != 0 && self.height != 0) {
+                // 计算图片的frame
+                CGFloat pictureW = maxSize.width;
+                CGFloat pictureH = pictureW * self.height / self.width;
+                
+                // 判断是否是大图
+                if (pictureH > ZKJTopicCellPictureMaxH) {
+                    pictureH = ZKJTopicCellPictureBreakH;
+                    self.bigPicture = YES;
+                }
+                
+                CGFloat pictureX = ZKJTopicCellMargin;
+                CGFloat pictureY = ZKJTopicCellTextY + textH + ZKJTopicCellMargin;
+                _picFrame = CGRectMake(pictureX, pictureY, pictureW, pictureH);
+                
+                // 图片部分的高度
+                _cellHeight += pictureH + ZKJTopicCellMargin;
             }
-            
-            CGFloat pictureX = ZKJTopicCellMargin;
-            CGFloat pictureY = ZKJTopicCellTextY + textH + ZKJTopicCellMargin;
-            _picFrame = CGRectMake(pictureX, pictureY, pictureW, pictureH);
-            
-            // 图片部分的高度
-            _cellHeight += pictureH + ZKJTopicCellMargin;
         } else if (self.type == ZKJTopicTypeVoice) {
             CGFloat voiceX = ZKJTopicCellMargin;
             CGFloat voiceY = ZKJTopicCellTextY + textH + ZKJTopicCellMargin;

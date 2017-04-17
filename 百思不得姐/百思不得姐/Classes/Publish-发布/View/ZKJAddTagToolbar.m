@@ -44,6 +44,9 @@
     btn.x = ZKJTagMargin;
     [self addSubview:btn];
     self.button = btn;
+    
+    // 默认就拥有2个标签
+    [self createTagLabel:@[@"吐槽", @"糗事"]];
 }
 
 - (void)btnClick
@@ -103,6 +106,12 @@
             self.button.y = CGRectGetMaxY(lastLabel.frame) + ZKJTagMargin;
         }
     }
+    
+    // 整体的高度
+    CGFloat oldH = self.height;
+    self.height = CGRectGetMaxY(self.button.frame) + 45;
+//    ZKJLog(@"oldH:%f    self.height:%f", oldH, self.height);
+    self.y -= self.height - oldH;
 }
 
 /**
@@ -127,6 +136,9 @@
         label.textColor = [UIColor whiteColor];
         [self.topView addSubview:label];
     }
+    
+    // 重新布局子控件
+    [self setNeedsLayout];
 }
 
 // a modal 出 b

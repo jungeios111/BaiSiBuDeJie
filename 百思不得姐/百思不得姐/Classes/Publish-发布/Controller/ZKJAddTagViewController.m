@@ -39,8 +39,8 @@
 {
     if (!_addBtn) {
         UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
-        btn.width = self.contentView.width;
         btn.height = 35;
+        btn.hidden = YES;
         [btn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [btn addTarget:self action:@selector(addBtnClick) forControlEvents:UIControlEventTouchUpInside];
         btn.titleLabel.font = ZKJTagFont;
@@ -54,17 +54,39 @@
     return _addBtn;
 }
 
+- (UIView *)contentView
+{
+    if (!_contentView) {
+        UIView *contentView = [[UIView alloc] init];
+        [self.view addSubview:contentView];
+        _contentView = contentView;
+    }
+    return _contentView;
+}
+
+- (ZKJTagTextField *)textField
+{
+    if (!_textField) {
+        __weak typeof(self) weakSelf = self;
+        ZKJTagTextField *textField = [[ZKJTagTextField alloc] init];
+        [textField setDeleteTextBlock:^{
+            if (weakSelf.textField.hasText) return ;
+            [weakSelf tagBtnClick:[weakSelf.tagButtonArray lastObject]];
+        }];
+        textField.delegate = self;
+        [textField addTarget:self action:@selector(textDidChange) forControlEvents:UIControlEventEditingChanged];
+        [textField becomeFirstResponder];
+        [self.contentView addSubview:textField];
+        _textField = textField;
+    }
+    return _textField;
+}
+
 #pragma mark - 初始化
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     [self setupBasic];
-    
-    [self setupContentView];
-    
-    [self setupTextField];
-    
-    [self setupTags];
 }
 
 - (void)setupTags
@@ -73,33 +95,7 @@
         self.textField.text = tag;
         [self addBtnClick];
     }
-}
-
-- (void)setupTextField
-{
-    __weak typeof(self) weakSelf = self;
-    ZKJTagTextField *textField = [[ZKJTagTextField alloc] init];
-    textField.width = self.contentView.width;
-    [textField setDeleteTextBlock:^{
-        if (weakSelf.textField.hasText) return ;
-        [weakSelf tagBtnClick:[weakSelf.tagButtonArray lastObject]];
-    }];
-    textField.delegate = self;
-    [textField addTarget:self action:@selector(textDidChange) forControlEvents:UIControlEventEditingChanged];
-    [textField becomeFirstResponder];
-    [self.contentView addSubview:textField];
-    self.textField = textField;
-}
-
-- (void)setupContentView
-{
-    UIView *contentView = [[UIView alloc] init];
-    contentView.x = ZKJTagMargin;
-    contentView.y = ZKJTagMargin + 64;
-    contentView.width = ZKJScreenWidth - 2 * contentView.x;
-    contentView.height = ZKJScreenHeight;
-    [self.view addSubview:contentView];
-    self.contentView = contentView;
+    self.tags = nil;
 }
 
 - (void)setupBasic
@@ -242,6 +238,9 @@
         self.textField.x = 0;
         self.textField.y = CGRectGetMaxY(lastTagBtn.frame) + ZKJTagMargin;
     }
+    
+    // 更新“添加标签”的frame
+    self.addBtn.y = CGRectGetMaxY(self.textField.frame) + ZKJTagMargin;
 }
 
 /**
@@ -284,6 +283,21 @@
     NSArray *tags = [self.tagButtonArray valueForKeyPath:@"currentTitle"];
     !self.tagBlock ? : self.tagBlock(tags);
     [self.navigationController popViewControllerAnimated:YES];
+}
+
+/**
+ * 布局控制器view的子控件
+ */
+- (void)viewDidLayoutSubviews
+{
+    [super viewDidLayoutSubviews];
+    self.contentView.x = ZKJTagMargin;
+    self.contentView.y = ZKJTagMargin + 64;
+    self.contentView.width = ZKJScreenWidth - 2 * self.contentView.x;
+    self.contentView.height = ZKJScreenHeight;
+    self.textField.width = self.contentView.width;
+    self.addBtn.width = self.contentView.width;
+    [self setupTags];
 }
 
 @end

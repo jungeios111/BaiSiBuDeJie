@@ -9,6 +9,7 @@
 #import "ZKJMeViewController.h"
 #import "ZKJMeCell.h"
 #import "ZKJMeFooterView.h"
+#import "ZKJSettingVC.h"
 
 @interface ZKJMeViewController ()
 
@@ -48,7 +49,7 @@ static NSString *cellName = @"me";
 {
     [super viewDidAppear:animated];
 //    [self.footView setNeedsDisplay];
-    ZKJLog(@"%@", NSStringFromCGRect(self.tableView.frame));
+//    ZKJLog(@"%@", NSStringFromCGRect(self.tableView.frame));
 }
 
 - (void)setUpNav
@@ -109,7 +110,8 @@ static NSString *cellName = @"me";
 
 - (void)setClick
 {
-    ZKJLogFunC;
+    ZKJSettingVC *vc = [[ZKJSettingVC alloc] initWithStyle:UITableViewStyleGrouped];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)moonClick

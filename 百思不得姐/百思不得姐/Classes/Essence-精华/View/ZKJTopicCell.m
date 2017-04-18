@@ -14,8 +14,10 @@
 #import "ZKJTopicVideoView.h"
 #import "ZKJComment.h"
 #import "ZKJUser.h"
+#import "ZKJLoginTool.h"
+#import "ZKJLoginRegisterVC.h"
 
-@interface ZKJTopicCell ()
+@interface ZKJTopicCell ()<UIActionSheetDelegate>
 
 /** 头像 */
 @property (weak, nonatomic) IBOutlet UIImageView *headImageView;
@@ -190,6 +192,35 @@
 //    self.headImageView.layer.cornerRadius = self.headImageView.width * 0.5;
 //    self.headImageView.layer.masksToBounds = YES;
 }
+
+- (IBAction)moreClick
+{
+    UIActionSheet *sheet = [[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles:@"收藏", @"举报", nil];
+    [sheet showInView:self.window];
+}
+
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+//    if (buttonIndex == 2) return;
+//    if ([ZKJLoginTool getUid:YES] == nil) {
+//        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//            ZKJLoginRegisterVC *vc = [[ZKJLoginRegisterVC alloc] init];
+//            [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:vc animated:YES completion:nil];
+//        });
+//    }
+}
+
+- (void)actionSheet:(UIActionSheet *)actionSheet didDismissWithButtonIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex == 2) return;
+    if ([ZKJLoginTool getUid:YES] == nil) {
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            ZKJLoginRegisterVC *vc = [[ZKJLoginRegisterVC alloc] init];
+            [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:vc animated:YES completion:nil];
+        });
+    }
+}
+
 
 //- (void)layoutSubviews
 //{

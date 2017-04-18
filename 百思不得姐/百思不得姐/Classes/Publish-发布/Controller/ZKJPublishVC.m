@@ -11,6 +11,7 @@
 #import <POP.h>
 #import "ZKJPostWordVC.h"
 #import "ZKJNavigationController.h"
+#import "ZKJLoginTool.h"
 
 static CGFloat const ZKJAnimationDelay = 0.1;
 static CGFloat const ZKJSpringFactor = 10;
@@ -105,6 +106,9 @@ static CGFloat const ZKJSpringFactor = 10;
 {
     [self animationOutCompletionBlock:^{
         if (btn.tag == 2) {
+            
+//            if ([ZKJLoginTool getUid:YES] == nil) return ;
+            
             ZKJPostWordVC *postVC = [[ZKJPostWordVC alloc] init];
             ZKJNavigationController *nav = [[ZKJNavigationController alloc] initWithRootViewController:postVC];
             
